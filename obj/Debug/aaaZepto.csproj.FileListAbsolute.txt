@@ -1,0 +1,10 @@
+C:\jobs\Projetos\aaaZepto\bin\aaaZepto.dll
+C:\jobs\Projetos\aaaZepto\bin\aaaZepto.pdb
+C:\jobs\Projetos\aaaZepto\obj\Debug\aaaZepto.csprojResolveAssemblyReference.cache
+C:\jobs\Projetos\aaaZepto\obj\Debug\aaaZepto.dll
+C:\jobs\Projetos\aaaZepto\obj\Debug\aaaZepto.pdb
+C:\jobs\Projetos\mobile-app\bin\aaaZepto.dll
+C:\jobs\Projetos\mobile-app\bin\aaaZepto.pdb
+C:\jobs\Projetos\mobile-app\obj\Debug\aaaZepto.dll
+C:\jobs\Projetos\mobile-app\obj\Debug\aaaZepto.pdb
+C:\jobs\Projetos\mobile-app\obj\Debug\aaaZepto.csprojResolveAssemblyReference.cache
