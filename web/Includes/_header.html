@@ -1,0 +1,86 @@
+﻿<div id='header-content'>
+    <input type="button" id="btnMenuHeader" value="menu"/>
+    <img src="http://www.guiademoteis.com.br/imagens/logo.png" style="height:40px;width:40px;" />
+    <input id='txtNome' type="text" size="20" maxlength="30"/><br><br>
+    <select name='ddlMacro' id='ddlMacro'></select>
+    <select name='ddlMicro' id='ddlMicro'></select>
+    <input type="button" id="btnBuscaHeader" value="OK"/><br>
+    <p id="status">Procurando sua localização...</p>
+</div>
+<script type="text/javascript">
+
+    function LoadMacros(callback) {
+        $.ajax({
+            type: "POST",
+            url: "http://api.guiademoteis.com.br/macro/getall",
+            data: "",
+            success: SucessoLoadMacros,
+            complete: callback,
+            dataType: "json"
+        });
+
+        //callback();
+    }
+
+    //Popula o drop de Macros
+    function SucessoLoadMacros(dados) {
+        $("#ddlMicro").hide();
+        $("#ddlMacro").append($("<option></option>").val("0").html("Escolha"));
+        $.each(dados.Macros, function (i, item) {
+            $("#ddlMacro").append($("<option></option>").val(item.MacId).html(item.Name));
+        });
+
+        $("#ddlMacro").change(function () {
+            $("#ddlMicro").show();
+            var param = {
+                macroId: $("#ddlMacro").val()
+            };
+
+            $.ajax({
+                type: "POST",
+                url: "http://api.guiademoteis.com.br/micro/GetMicrosByMacro",
+                data: param,
+                success: SucessoMicrosPorMacroId,
+                dataType: "json"
+            });
+
+        });
+
+    }
+
+    function SucessoMicrosPorMacroId(dados) {
+        var qtde = dados.Micros.length;
+        console.log(dados.Micros);
+        $("#ddlMicro").empty();
+        if (qtde > 1) {
+            $("#ddlMicro").append($("<option></option>").val("0").html("Escolha"));
+            $.each(dados.Micros, function (i, item) {
+                $("#ddlMicro").append($("<option></option>").val(item.MicroId).html(item.Name));
+            });
+        }
+    }
+
+    $('#btnBuscaHeader').click(function () {
+
+        //TODO: Como checar se é  null?????
+        alert("micro: " + $("#ddlMicro").val());
+        var microId;
+        if ($("#ddlMacro").val() != ' ' || $("#ddlMacro").val() == "0")
+            microId = 0;
+        else
+            microId = $("#ddlMacro").val();
+        ////////////////////////////////////////////////////
+
+        if ($("#ddlMacro").val() != "0") {
+            var param = {
+                macroId: $("#ddlMacro").val(),
+                microId: $("#ddlMicro").val()
+            };
+            //console.log(param);
+
+        }
+
+    }); //btnBuscaHeader click
+
+    //Tenta localizar a latitude e longitude
+</script>
