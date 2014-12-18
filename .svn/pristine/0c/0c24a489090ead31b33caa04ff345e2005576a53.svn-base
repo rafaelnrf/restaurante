@@ -1,0 +1,12 @@
+﻿<div id="suite-<suiteId>" style="border: 1px solid black;">
+    <h2></h2>
+    <div id="slider-suite-<suiteId>"></div>
+    <div id="det-periodo-pernoite-<suiteId>"></div>
+    <div id="det-suite-tens-<suiteId>"></div>
+    <div id="det-info-importante-<suiteId>"></div>
+    <script type="text/javascript">
+        $('#slider-suite-<suiteId>').swipeSlide({
+            visibleSlides: 1
+        });
+    </script>
+</div>

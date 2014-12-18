@@ -1,0 +1,7 @@
+﻿<div class='header-content'>
+    <span class="menu-bt"></span>
+    <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
+    <input type="button" id="btnBuscaHeader" class="bt-search"/>
+    <input id='txtNomeBusca' type="text" size="20" maxlength="30" class="search"/>
+    <p id="status">Procurando sua localização...</p>
+</div>

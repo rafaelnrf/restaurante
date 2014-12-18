@@ -1,0 +1,1030 @@
+/* Versão portrait pra iphone - largura 320px*/
+@media only screen and (max-width : 470px) {
+    #wrapper, body {
+        width:320px;
+    }
+    #wrapper {
+        top: -25px;
+    }
+    #jqt .toolbar {
+        height: 60px;
+        background-size: auto 60px;
+    }
+    .toggle{
+        top: 20px;
+        left: 10px;
+    }
+    .menu-bt {
+        width: 20px;
+        height: 20px;
+        background-size: 20px 20px;
+    }
+    .mobile-logo {
+        width: 65px;
+        height: 61px;
+        top: -4px;
+    }
+    .search {
+        width: 169px;
+        height: 28px;
+        background-size: 169px 28px;
+        margin-top: -58px;
+        margin-right: 39px;
+        text-indent:8px;
+    }
+    .bt-search {
+        width: 35px;
+        height: 28px;
+        background-size: 35px 28px;
+        margin: 8px 0 0 4px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000000;
+        height: 116px;
+    }
+    #tv-home > div {
+        height: 116px;
+    }
+    figcaption {
+        font-size:12px;
+        bottom: 19px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -20px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px 0 0 !important;
+        background-size: 11px 11px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 11px 11px;
+    }
+    #home h2 {
+        background-size: 13px 21px;
+        text-indent: 21px;
+        font-size: 21px;
+        background-position: 13px 11px;
+        border-bottom: 3px solid #e64177;
+        padding-left: 13px;
+        padding-top: 6px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 93px;
+        background-size: 100% 93px;
+    }
+    .premium-left {
+        height: 59px;
+        background-size: 88px 59px;
+        margin-top: 18px;
+    }
+    .premium-left img {
+        width: 70px;
+        margin: 5px 0 0 12px;
+    }
+    .premium-left .distancia {
+        font-size: 8px;
+        margin: 6px 0 0 14px;
+    }
+    .premium-right {
+        height: 94px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 37px;
+    }
+    .premium-right .nome {
+        margin: 23px 0 0 7px;
+        font-size: 15px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 11px;
+    }
+    #go-site {
+        margin-top:22px;
+    }
+    #go-site .versao-desktop {
+        width:148px;
+        margin-right:35px;
+    }
+    #go-site .topo {
+        width:131px;
+    }
+    #go-site .versao-desktop, #go-site .topo, #go-site .versao-desktop a, #go-site .topo a{
+        height:37px;
+        font-size:12px;
+        line-height:37px;
+    }
+    #go-site .versao-desktop a span{
+        width: 23px;
+        height: 22px;
+        background-size:23px 22px;
+        margin: 0 8px 0 0px;
+        top: 7px;
+    }
+    #go-site .topo a span{
+        width: 13px;
+        height: 14px;
+        background-size:13px 14px;
+        margin: 0 6px 0 0px;
+        top: 2px;
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:12px;
+    }
+    .m-l {
+        margin-left:0;
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"] {
+        height:32px;
+        margin-bottom:14px;
+        text-indent:9px;
+        font-size:18px;
+    }
+    #login h2{
+        font-size:21px;
+        border-bottom:3px solid #e2316b;
+        text-indent:13px;
+        margin:20px 0 20px 0; 
+    }
+    .forgotpass, #btnFazerLogin {
+        width:141px;
+        font-size:12px;
+    }
+    .forgotpass {
+        margin:0 14px 0 13px!important;
+        height:38px;
+        line-height:38px;
+    }
+    #btnFazerLogin {
+        margin:0!important;
+        height:43px;
+        line-height:40px;
+        text-indent: -12px;
+    }
+    .seta-blue {
+        width: 7px;
+        height: 11px;
+        right: 35px;
+        top: 15px;
+        background-size:7px 11px;
+    }
+    #register {
+        margin: 21px 0 13px 0;
+    }
+    #register a{
+      height:65px;
+      padding:22px 0  0 13px;
+      font-size:19px;
+      background-position:95% 35px;
+      background-size:11px 17px;
+    }
+    .bt-call, .bt-descontos, .bt-cortesias {
+        height:38px;
+        line-height:38px;
+        font-size:15px;
+    }
+    .bt-call{
+        width:82px;
+    }
+    .bt-descontos{
+        width:110px;
+    }
+    .bt-cortesias{
+        width:97px;
+    }
+    #det-botoes {
+        margin: 12px 0 19px 0;
+}
+    .bt-call, .bt-descontos, .bt-cortesias{
+        margin-left:6px;
+    }
+    .bt-call span, .bt-descontos span, .bt-cortesias span{
+        height:19px;
+    }
+    .bt-call span{
+        width:14px;
+        background-position: -5px 0;
+        margin:10px 5px 0 13px;
+    }
+    .bt-descontos span{
+        width:9px;
+        background-position: -27px 0;
+        margin:12px 6px 0 11px;
+    }
+    .bt-cortesias span{
+        width:17px;
+        background-position: -43px 0;
+        margin:11px 2px 0 4px;
+    }
+    .det-dados {
+        margin: 25px 0 0 13px;
+    }
+    .det-dados h2{
+        font-size:18px;
+    }
+    .det-dados span{
+        font-size:11px;
+    }
+}
+/* Versão Landscape pra iphone - largura 480px*/
+@media only screen and (min-width : 471px) and (max-width : 560px) {
+    #wrapper, body {
+        width:480px;
+    }
+    #wrapper {
+        top: -35px;
+    }
+    #jqt .toolbar {
+        height: 90px;
+        background-size: auto 90px;
+    }
+    .toggle{
+        top: 29px;
+        left: 18px;
+    }
+    .menu-bt {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+    .mobile-logo {
+        width: 97px;
+        height: 96px;
+        top: -7px;
+        left: 12px;
+    }
+    .search {
+        width: 252px;
+        height: 44px;
+        background-size: 252px 44px;
+        left: 2px;
+        top: 14px;
+        text-indent:16px;
+        font-size:19px;
+    }
+    .bt-search {
+        width: 51px;
+        height: 41px;
+        background-size: 51px 41px;
+        margin: 16px 0 0 9px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000000;
+        height: 173px;
+    }
+    #tv-home > div {
+        height: 173px;
+    }
+    figcaption {
+        font-size:18px;
+        bottom: 29px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -22px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 14px;
+        height: 16px;
+        margin: 0 6px 0 0 !important;
+        background-size: 14px 16px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 14px 16px;
+    }
+    #home h2 {
+        background-size: 19px 31px;
+        text-indent: 30px;
+        font-size: 31px;
+        background-position: 15px 13px;
+        border-bottom: 5px solid #e64177;
+        padding-left: 13px;
+        padding-top: 7px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 140px;
+        background-size: 100% 140px;
+    }
+    .premium-left {
+        height: 87px;
+        background-size: 132px 87px;
+        margin-top: 28px;
+    }
+    .premium-left img {
+        width: 106px;
+        margin: 6px 0 0 18px;
+    }
+    .premium-left .distancia {
+        font-size: 12px;
+        margin: 4px 0 0 18px;
+    }
+    .premium-right {
+        height: 94px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 58px;
+    }
+    .premium-right .nome {
+        margin: 31px 0 0 7px;
+        font-size: 22px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 16px;
+    }
+    #go-site .versao-desktop {
+        width:223px;
+        margin-right:58px;
+    }
+    #go-site .topo {
+        width:197px;
+    }
+    #go-site .versao-desktop, #go-site .topo, #go-site .versao-desktop a, #go-site .topo a{
+       height:57px;
+       font-size:18px;
+       line-height:57px;
+    }
+    #go-site .versao-desktop a span{
+        width: 35px;
+        height: 34px;
+        background-size:35px 34px;
+        margin: 0 11px 0 0px;
+        top: 11px;
+    }
+    #go-site .topo a span{
+        width: 18px;
+        height: 21px;
+        background-size:18px 21px;
+        margin: 0 8px 0 0px;
+        top: 4px; 
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:18px;
+    }
+    .m-l {
+        margin-left:5px;
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"] {
+        height:51px;
+        margin-bottom:21px;
+        text-indent:14px;
+        font-size:27px;
+    }
+    .forgotpass, #btnFazerLogin {
+        width:211px;
+        font-size:18px;
+    }
+    .forgotpass {
+        margin:0 22px 0 19px!important;
+        height:58px;
+        line-height:58px;
+    }
+    #btnFazerLogin {
+        margin:0!important;
+        height:63px;
+        line-height:58px;
+        text-indent: -12px;
+    }
+    .seta-blue {
+        width: 13px;
+        height: 18px;
+        right: 48px;
+        top: 22px;
+        background-size:13px 18px;
+    }
+    #login h2{
+        font-size:31px;
+        border-bottom:4px solid #e2316b;
+        text-indent:20px;
+        margin:25px 0 25px 0; 
+    }
+    #register {
+        margin: 17px 0 24px 0;
+    }
+    #register a{
+      height:98px;
+      padding:33px 0  0 20px;
+      font-size:28px;
+      background-position:95% 53px;
+      background-size:18px 26px;
+    }
+    .bt-call, .bt-descontos, .bt-cortesias {
+        height:58px;
+        line-height:58px;
+        font-size:22px;
+    }
+    .bt-call{
+        width:123px;
+    }
+    .bt-descontos{
+        width:165px;
+    }
+    .bt-cortesias{
+        width:145px;
+    }
+    #det-botoes {
+        margin: 20px 0 30px 0;
+}
+    .bt-call, .bt-descontos, .bt-cortesias{
+        margin-left:9px;
+    }
+    .bt-call span, .bt-descontos span, .bt-cortesias span{
+        height:28px;
+    }
+    .bt-call span{
+        width:21px;
+        background-position: -7px 0;
+        margin:16px 8px 0 19px;
+    }
+    .bt-descontos span{
+        width:13px;
+        background-position: -40px 0;
+        margin:17px 9px 0 17px;
+    }
+    .bt-cortesias span{
+        width:23px;
+        background-position: -63px 0;
+        margin:18px 4px 0 7px;
+    }
+    .det-dados {
+        margin: 26px 0 0 15px;
+    }
+    .det-dados h2{
+        font-size:27px;
+    }
+    .det-dados span{
+        
+        font-size:16px;
+    }
+}
+/* Versão Landscape pra iphone5 - largura 570px*/
+@media only screen and (min-width : 561px) {
+    #wrapper, body {
+        width:570px;
+    }
+    #wrapper {
+        top: -41px;
+    }
+    #jqt .toolbar {
+        height: 107px;
+        background-size: auto 107px;
+    }
+    .toggle{
+        top: 36px;
+        left:21px;
+    }
+    .menu-bt {
+        width: 35px;
+        height: 36px;
+        background-size: 35px 36px;
+    }
+    .mobile-logo {
+        width: 116px;
+        height: 111px;
+        top: -2px;
+        left: 19px;
+    }
+    .search {
+        width: 300px;
+        height: 53px;
+        background-size: 300px 53px;
+        left: 2px;
+        top: 16px;
+        font-size:21px;
+        text-indent:15px;
+    }
+    .bt-search {
+        width: 60px;
+        height: 47px;
+        background-size: 60px 47px;
+        margin: 20px 0 0 9px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000;
+        height: 207px;
+    }
+    #tv-home > div {
+        height: 207px;
+    }
+    figcaption {
+        font-size:21px;
+        bottom: 36px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -22px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 16px;
+        height: 17px;
+        margin: 0 6px 0 0 !important;
+        background-size: 16px 17px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 16px 17px;
+    }
+    #home h2 {
+        background-size: 22px 36px;
+        text-indent: 38px;
+        font-size: 37px;
+        background-position: 15px 13px;
+        border-bottom: 5px solid #e64177;
+        padding-left: 13px;
+        padding-top: 7px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 167px;
+        background-size: 100% 167px;
+    }
+    .premium-left {
+        height: 102px;
+        background-size: 156px 102px;
+        margin-top: 28px;
+    }
+    .premium-left img {
+        width: 125px;
+        margin: 8px 0 0 21px;
+    }
+    .premium-left .distancia {
+        font-size: 14px;
+        margin: 4px 0 0 26px;
+    }
+    .premium-right {
+        height: 166px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 69px;
+    }
+    .premium-right .nome {
+        margin: 31px 0 0 7px;
+        font-size: 22px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 16px;
+    }
+    #go-site .versao-desktop {
+        width:265px;
+        margin-right:68px;
+    }
+    #go-site .topo {
+        width:233px;
+    }
+    #go-site .versao-desktop, #go-site .topo, #go-site .versao-desktop a, #go-site .topo a{
+        height:67px;
+        font-size:21px;
+        line-height:67px;
+    }
+    #login h2{
+        font-size:37px;
+        border-bottom:5px solid #e2316b;
+        text-indent:25px;
+        margin:30px 0 30px 0; 
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"] {
+        height:61px;
+        margin-bottom:26px;
+        text-indent:17px;
+        font-size:32px;
+    }
+    .forgotpass, #btnFazerLogin {
+        width:251px;
+        font-size:21px;
+    }
+    .forgotpass {
+        margin:0 23px 0 22px!important;
+        height:68px;
+        line-height:68px;
+    }
+    #btnFazerLogin {
+        margin:0!important;
+        height:73px;
+        line-height:73px;
+        text-indent: -12px;
+    }
+    .seta-blue {
+        width: 12px;
+        height: 19px;
+        right: 59px;
+        top: 28px;
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:21px;
+    }
+    .m-l {
+        margin-left:10px;
+    }
+    #register {
+        margin: 24px 0 28px 0;
+    }
+    #register a{
+      height:108px;
+      padding:44px 0  0 23px;
+      font-size:33px;
+      background-position:95% 67px;
+    }
+    #go-site .versao-desktop a span{
+        width: 41px;
+        height: 40px;
+        margin: 0 11px 0 0px;
+        top: 11px;
+    }
+    #go-site .topo a span{
+        width: 22px;
+        height: 24px;
+        margin: 0 8px 0 0px;
+        top: 4px;
+    }
+    .bt-call, .bt-descontos, .bt-cortesias {
+        height:68px;
+        line-height:68px;
+        font-size:26px;
+    }
+    .bt-call{
+        width:148px;
+    }
+    .bt-descontos{
+        width:198px;
+    }
+    .bt-cortesias{
+        width:175px;
+    }
+    #det-botoes {
+    margin: 22px 0 34px 0;
+}
+    .bt-call, .bt-descontos, .bt-cortesias{
+        margin-left:11px;
+    }
+    .bt-call span, .bt-descontos span, .bt-cortesias span{
+        height:33px;
+    }
+    .bt-call span{
+        width:28px;
+        background-position: -8px 0;
+        margin:19px 7px 0 16px;
+    }
+    .bt-descontos span{
+        width:16px;
+        background-position: -46px 0;
+        margin:20px 9px 0 22px;
+    }
+    .bt-cortesias span{
+        width:30px;
+        background-position: -73px 0;
+        margin:21px 5px 0 10px;
+    }
+    .det-dados {
+        margin: 25px 0 0 18px;
+    }
+    .det-dados h2{
+        font-size:32px;
+    }
+    .det-dados span{
+        font-size:19px;
+    }
+}
+
+/* geral */
+*{margin: 0; padding: 0;}
+body {
+    overflow-x:hidden;
+}
+#status {
+    display:none;
+}
+#wrapper {
+    position:relative;
+    float:left;
+}
+.menu{
+    float: left;
+    width: 80%;
+    height: 200px;
+    margin-left: -100%;
+}
+.menu-on, .menu-off {
+    -moz-transition:margin-left 1s;
+    -webkit-transition:margin-left 1s;
+    -o-transition:margin-left 1s;
+    transition:margin-left 1s;
+}
+.menu-on{
+    margin-left: 0px;
+}
+.menu-off{
+    margin-left: -80%;
+}
+.wrapper-on {
+    margin-right:-80%;
+}    
+#slidemenu {
+    position:absolute;
+    display:none;
+}
+figure {
+    margin:0;
+    padding:0;
+    position:relative;
+}
+figure a{
+    position:relative;
+}
+ #jqt .toolbar {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 6px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 1px 6px;
+    border-bottom: 1px solid #2a3441;
+    z-index: 10;
+    position: relative;
+    padding: 10px;
+    background: url(../img/mobile-menu-bg.jpg) repeat-x;
+}
+ .toggle{
+    cursor: pointer;
+    position: relative;
+    z-index: 99999999;
+    background-image: url(../img/mobile-menu.png);
+}
+.menu-bt, .mobile-logo, .search {
+    position: relative;
+    display: inline-block;
+    background-color:transparent;
+    background-repeat: no-repeat;
+}
+.search {
+    background-image: url(../img/mobile-search.png);
+    border: 0;
+    float: right;
+    color:#666;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bt-search {
+    background-image: url(../img/bt-search.png);
+    background-repeat: no-repeat;
+    background-color:transparent;
+    border: 0;
+    float: right;
+    cursor:pointer;
+}
+#tv-home {
+    margin: 0;
+    padding: 0;
+}
+ul.ui-swipeslide-bullets {
+    position: absolute;
+    background: none !important;
+    border: none !important;
+    width: 100%;
+}
+figcaption {
+    position: absolute;
+    left: 0;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999999;
+    float: left;
+    margin-top: -56px;
+    font-weight:bold;
+}
+.ui-swipeslide-bullets li {
+    background: url(../img/bullets.png) no-repeat;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+.ui-swipeslide-bullets li.active {
+    background: url(../img/bullets-active.png) no-repeat;
+}
+#jqt h2{
+    font-weight: 900;
+    font-family: "Arial Black", Arial, sans-serif;
+    display: inline-block;
+}
+#home h2 {
+    background: url(../img/icon-proximos.png) no-repeat;
+    color: #dd0048;
+}
+#jqt ul#moteis-premium li {
+    border-bottom: 1px solid #e2e2e2;
+    background: url(../img/premium-bg.png) repeat-x;      
+}
+.premium-left {
+    float: left;
+    width: 28%;
+    background-image: url(../img/premium-left.png);
+    background-repeat: no-repeat;
+}
+.premium-left img {
+    float: left;
+    height: auto;
+    clear: both;
+}
+.premium-left .distancia {
+    float: left;
+    clear: both;
+    color: #282828;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+.premium-right {
+    float: left;
+    width: 72%;
+    color: #282828;
+}
+.premium-right .nome {
+    float: left;
+    clear: both;
+    font-weight: bold;
+}
+.premium-right .endereco {
+    float: left;
+    clear: both;
+}
+#go-site .versao-desktop {
+    -webkit-border-radius: 0 8px 8px 0;
+    -moz-border-radius: 0 8px 8px 0;
+    border-radius: 0 8px 8px 0;
+    border-left:none !important;
+}
+#go-site .topo {
+    -webkit-border-radius: 8px 0 0 8px;
+    -moz-border-radius: 8px 0 0 8px;
+    border-radius: 8px 0 0 8px;
+    border-right:none !important;
+}
+#go-site .versao-desktop a, #go-site .topo a{
+    width:100%;
+    color:#282828;
+    font-family:Arial;
+}
+#go-site .versao-desktop a span, #go-site .topo a span{
+    background-repeat:no-repeat;
+    display: inline-block;
+    position: relative;
+}
+#go-site .versao-desktop a span{
+    background-image: url(../img/icon-desktop.png);
+}
+#go-site .topo a span{
+    background-image: url(../img/icon-setaup.png);
+}
+#login {
+    background:#f5f5f5;
+}
+#login h2{
+    color:#dd0048;
+}
+#jqt ul li input[type="email"], 
+#jqt ul li input[type="password"] {
+    width:92% !important;
+    margin-left: 4%  !important;
+    border-right:2px solid #cecece;
+    border-left:2px solid #cecece;
+    border-top:4px solid #cecece;
+    border-bottom:2px solid #e0e0e0;
+    background: -moz-linear-gradient(top,  #f5f5f5 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top,  #f5f5f5 0%,#ffffff 100%);
+    background: -o-linear-gradient(top,  #f5f5f5 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top,  #f5f5f5 0%,#ffffff 100%);
+    background: linear-gradient(to bottom,  #f5f5f5 0%,#ffffff 100%);
+    color:#666;
+}
+.forgotpass {
+    color:#282828;
+}
+#btnFazerLogin {
+    cursor:pointer;
+    color:#148ac1;
+}
+.forgotpass, #btnFazerLogin,
+#jqt ul li input[type="email"], 
+#jqt ul li input[type="password"],
+.bt-call, .bt-descontos, .bt-cortesias {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.forgotpass, #btnFazerLogin, #go-site .versao-desktop, #go-site .topo {
+    background: -moz-linear-gradient(top,  #ffffff 0%, #fefefe 52%, #f2f2f2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(52%,#fefefe), color-stop(100%,#f2f2f2));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#fefefe 52%,#f2f2f2 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#fefefe 52%,#f2f2f2 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#fefefe 52%,#f2f2f2 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#fefefe 52%,#f2f2f2 100%);
+    border:1px solid #cdcdcd;
+    border-bottom:4px solid #cecece;
+    text-shadow: 0px -2px 2px rgba(206, 206, 206, 1);
+    font-weight:bold;
+    text-align:center;
+}
+.seta-blue {
+    background-image: url(../img/seta-azul.png);
+    background-repeat:no-repeat;
+    float: left;
+    position: absolute;
+}
+.f-l {
+    float:left;
+}
+.f-r {
+    float:right;
+}
+.info ul.links {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+.info ul.links li, .info ul.links li a{
+   color:#282828;
+   font-family:Arial;
+   font-weight:normal;
+   line-height: initial;
+   padding:0 5px 0 5px;
+}
+#register {
+    width:100%;
+    border-bottom:2px solid #e3e3e3;
+    border-top:1px solid #f8f8f8;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(236,236,236,1) 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(236,236,236,1))); 
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%); 
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%);
+    font-family:Arial;
+}
+#register a{
+    background-image: url(../img/seta.png);
+    background-repeat:no-repeat;
+    color:#282828;
+    text-transform:uppercase;
+}
+#register a span{
+    color:#dd0048;
+}
+#mask {
+        position: relative;   
+    }
+.info {
+    position:relative;
+}
+#rodape, .rodape {
+    margin-top:22px;
+}
+.bt-call {
+    background: #00ce74;
+    background: -moz-linear-gradient(top,  #00ce74 0%, #00cd73 39%, #00c06d 58%, #00ab61 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00ce74), color-stop(39%,#00cd73), color-stop(58%,#00c06d), color-stop(100%,#00ab61));
+    background: -webkit-linear-gradient(top,  #00ce74 0%,#00cd73 39%,#00c06d 58%,#00ab61 100%);
+    background: -o-linear-gradient(top,  #00ce74 0%,#00cd73 39%,#00c06d 58%,#00ab61 100%);
+    background: -ms-linear-gradient(top,  #00ce74 0%,#00cd73 39%,#00c06d 58%,#00ab61 100%);
+    background: linear-gradient(to bottom,  #00ce74 0%,#00cd73 39%,#00c06d 58%,#00ab61 100%);
+    border:1px solid #009c58;
+    border-bottom:4px solid #009c58;
+    text-shadow: 0px -2px 0px rgba(0, 156, 88, 1);
+}
+.bt-descontos {
+    background: -moz-linear-gradient(top,  #f10056 0%, #ef0054 39%, #d60043 58%, #bf0032 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f10056), color-stop(39%,#ef0054), color-stop(58%,#d60043), color-stop(100%,#bf0032));
+    background: -webkit-linear-gradient(top,  #f10056 0%,#ef0054 39%,#d60043 58%,#bf0032 100%);
+    background: -o-linear-gradient(top,  #f10056 0%,#ef0054 39%,#d60043 58%,#bf0032 100%);
+    background: -ms-linear-gradient(top,  #f10056 0%,#ef0054 39%,#d60043 58%,#bf0032 100%);
+    background: linear-gradient(to bottom,  #f10056 0%,#ef0054 39%,#d60043 58%,#bf0032 100%);
+    border:1px solid #980028;
+    border-bottom:4px solid #980028;
+    text-shadow: 0px -2px 0px rgba(185, 0, 50, 1);
+}
+.bt-cortesias {
+    background: -moz-linear-gradient(top,  #e00081 0%, #de007f 39%, #c70063 58%, #b2004c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e00081), color-stop(39%,#de007f), color-stop(58%,#c70063), color-stop(100%,#b2004c));
+    background: -webkit-linear-gradient(top,  #e00081 0%,#de007f 39%,#c70063 58%,#b2004c 100%);
+    background: -o-linear-gradient(top,  #e00081 0%,#de007f 39%,#c70063 58%,#b2004c 100%);
+    background: -ms-linear-gradient(top,  #e00081 0%,#de007f 39%,#c70063 58%,#b2004c 100%);
+    background: linear-gradient(to bottom,  #e00081 0%,#de007f 39%,#c70063 58%,#b2004c 100%);
+    border:1px solid #7a0033;
+    border-bottom:4px solid #7a0033;
+    text-shadow: 0px -2px 0px rgba(132, 0, 57, 0.6);
+}
+.bt-call, .bt-descontos, .bt-cortesias{
+    color:#fff;
+    font-weight:bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.bt-call span, .bt-descontos span, .bt-cortesias span{
+    background-image:url(../img/sprite.png);
+    background-repeat:no-repeat;
+    background-size:auto 100%;
+    float:left;
+}
+.det-dados {
+    float:left;
+    width: 67%;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.det-dados h2{
+    width:100%;
+    color:#282828;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.det-dados span{
+    color:#282828;
+    margin-left:2px;
+}
+

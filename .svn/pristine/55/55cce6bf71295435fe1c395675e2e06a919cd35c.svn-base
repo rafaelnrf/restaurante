@@ -1,0 +1,1842 @@
+/* Versão portrait pra iphone - largura 320px*/
+@media only screen and (max-width : 470px) {
+    #wrapper, body {
+        width:320px;
+    }
+    #wrapper {
+        top: -25px;
+    }
+    #jqt .toolbar {
+        height: 60px;
+        background-size: auto 60px;
+    }
+    .toggle{
+        top: 20px;
+        left: 10px;
+    }
+    .menu-bt {
+        width: 20px;
+        height: 20px;
+    }
+    .mobile-logo {
+        width: 65px;
+        height: 61px;
+        top: -4px;
+    }
+    .search {
+        width: 169px;
+        height: 28px;
+        margin-top: -58px;
+        margin-right: 39px;
+        text-indent:8px;
+    }
+    .bt-search {
+        width: 35px;
+        height: 28px;
+        background-size: 35px 28px;
+        margin: 8px 0 0 4px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000000;
+        height: 116px;
+    }
+    #tv-home > div {
+        height: 116px;
+    }
+    figcaption {
+        font-size:12px;
+        bottom: 19px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -20px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px 0 0 !important;
+        background-size: 11px 11px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 11px 11px;
+    }
+    #home h2 {
+        background-size: 13px 21px;
+        text-indent: 21px;
+        font-size: 21px;
+        background-position: 13px 11px;
+        border-bottom: 3px solid #e64177;
+        padding-left: 13px;
+        padding-top: 6px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 93px;
+        background-size: 100% 93px;
+    }
+    .premium-left {
+        height: 59px;
+        background-size: 88px 59px;
+        margin-top: 18px;
+    }
+    .premium-left img {
+        width: 70px;
+        margin: 5px 0 0 12px;
+    }
+    .premium-left .distancia {
+        font-size: 8px;
+        margin: 6px 0 0 14px;
+    }
+    .premium-right {
+        height: 94px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 37px;
+    }
+    .premium-right .nome {
+        margin: 23px 0 0 7px;
+        font-size: 15px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 11px;
+    }
+    #go-site {
+        margin-top:22px;
+    }
+    #go-site .versao-desktop {
+        width:148px;
+        margin-right:35px;
+    }
+    #go-site .topo {
+        width:131px;
+    }
+    #go-site .versao-desktop, #go-site .topo, #go-site .versao-desktop a, #go-site .topo a{
+        height:37px;
+        font-size:12px;
+        line-height:37px;
+    }
+    #go-site .versao-desktop a span{
+        width: 23px;
+        height: 22px;
+        background-size:23px 22px;
+        margin: 0 8px 0 0px;
+        top: 7px;
+    }
+    #go-site .topo a span{
+        width: 13px;
+        height: 14px;
+        background-size:13px 14px;
+        margin: 0 6px 0 0px;
+        top: 2px;
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:12px;
+    }
+    .m-l {
+        margin-left:0;
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"], #jqt ul li input[type="text"], input[type="date"], #txtCep  {
+        height:32px;
+        margin-bottom:14px;
+        text-indent:9px;
+        font-size:18px;
+    }
+    #login h2, #cadastro h2{
+        font-size:21px;
+        border-bottom:3px solid #e2316b;
+        text-indent:13px;
+        margin:20px 0 20px 0; 
+    }
+    .forgotpass, #btnFazerLogin {
+        width:141px;
+        font-size:12px;
+    }
+    .forgotpass {
+        margin:0 14px 0 13px!important;
+        height:38px;
+        line-height:38px;
+    }
+    #btnFazerLogin {
+        margin:0!important;
+        height:43px;
+        line-height:40px;
+        text-indent: -12px;
+    }
+    .seta-blue {
+        width: 7px;
+        height: 11px;
+        right: 35px;
+        top: 15px;
+        background-size:7px 11px;
+    }
+    #register {
+        margin: 21px 0 13px 0;
+    }
+    #register a{
+      height:65px;
+      padding:22px 0  0 13px;
+      font-size:19px;
+      background-position:95% 35px;
+      background-size:11px 17px;
+    }
+    .bt-call, .bt-descontos, .bt-cortesias {
+        height:38px;
+        line-height:38px;
+        font-size:15px;
+    }
+    .bt-call{
+        width:82px;
+    }
+    .bt-descontos{
+        width:110px;
+    }
+    .bt-cortesias{
+        width:97px;
+    }
+    #det-botoes {
+        margin: 12px 0 19px 0;
+}
+    .bt-call, .bt-descontos, .bt-cortesias{
+        margin-left:6px;
+    }
+    .bt-call span, .bt-descontos span, .bt-cortesias span, #det-descontos .seta{
+        height:19px;
+    }
+    .bt-call span{
+        width: 16px;
+        background-position: 0 0;
+        margin: 9px 5px 0 10px;
+    }
+    .bt-descontos span{
+        width: 9px;
+        background-position: -26px 0;
+        margin: 9px 6px 0 11px;
+    }
+    .bt-cortesias span{
+        width: 18px;
+        background-position: -43px 0;
+        margin: 10px 3px 0 4px;
+    }
+    #det-descontos .seta{
+        width: 19px;
+        background-position: -64px 0;
+        top: -7px;
+    }
+    .det-dados {
+        margin: 18px 0 0 13px;
+    }
+    .det-dados h2{
+        font-size:18px;
+    }
+    .det-dados span{
+        font-size:11px;
+    }
+    #det-suites .entry h2{
+        font-size:17px;
+        text-indent:35px;
+    }
+    #descontos h2 {
+        font-size:23px;
+    }
+    #det-suites .entry span {
+        height: 8px;
+        background-size: auto 8px;
+    }
+    #det-suites .entry .infos {
+        margin-left:26px;
+        padding-right: 21px;
+        font-size:11px;
+    }
+    .ui-swipeslide-reel {
+        height:215px;
+    }
+    #det-suites .entry {    
+        padding-bottom:10px;
+    }
+    .donot-print {
+        font-size:7px;
+    }
+    .desc-aviso {
+        font-size:11px;
+    }
+    .oqueeh-cupomdigital, #det-descontos {
+        padding:10px;
+        font-size:9px;
+        margin-top:10px;
+    }
+    .oqueeh-cupomdigital h4 {
+        font-size:14px;
+    }
+    #descontos #conteudo{
+        padding:15px 10px 0 10px;
+    }
+    #det-descontos .desconto {
+        margin-bottom:10px;
+        padding-bottom:10px;
+        font-size:11px; 
+    }
+    #det-descontos .desconto h3{
+        margin:0 0 5px 0;
+        font-size:15px;
+    }
+    #det-descontos .desconto p{
+        margin-bottom:5px;
+    }
+    .btn-add-cupomdigital, .btn-print {
+        width:121px;
+        height:33px;
+        line-height:36px;
+        font-size:11px;
+    }
+    .ou {
+        line-height:36px;
+        font-size:10px;
+        margin:0 3px 0 3px;
+    }
+    .desconto ul {
+        margin-top:10px;
+    }
+    li#moteisperto-next {
+        height:86px !important;
+    }
+    #moteisperto-next a{
+        line-height: 86px;
+        text-indent:15px;
+        font-size:19px;
+    }
+    .scroll.alterardados, #senha-altera .scroll {
+        margin:24px 7px 0 7px;
+    }
+    #cadastro.alterardados > h2, #senha-altera .scroll > h2{
+        font-size:16px;
+        line-height: 26px;
+        margin:10px 0 10px 13px;
+    }
+    #cadastro li label:first-child, #senha-altera label, li.user-nome .user-nome, li.user-email .user-email  {
+        font-size:16px;
+        line-height: 26px;
+        margin:0 0 0 13px;
+    }
+    .option-wrap {
+        margin: 10px 0 10px 13px;
+        height: 35px;
+    }
+    .option-wrap label{
+        font-size:18px;
+        margin-right: 10px;
+    }
+    #cadastro.alterardados input[type="date"] {
+        margin: 0 0 10px 13px;
+        width:148px !important;
+        text-indent: 2px !important;
+    }
+    #cadastro.alterardados input[type="text"]#txtCpf, #cadastro.alterardados input#txtCep {
+        width:148px !important;
+    }
+    #cadastro input.submit, #senha-altera input.submit {
+        font-size:15px;
+        height:37px;
+        width:183px;
+        left:68px;
+        margin:0 0 20px 0;
+    }
+    #cadastro.alterardados .maior{
+        margin:0 0 20px 17px;
+    }
+    #cadastro.alterardados .maior,
+    #cadastro.alterardados .cpf-aviso,
+    #cadastro.alterardados .cep-aviso {
+        font-size:11px;
+    }
+    #cadastro.alterardados .cpf-aviso,
+    #cadastro.alterardados .cep-aviso{
+        margin:0 0 0 5px;
+    }
+
+    #jqt ul li input[type="checkbox"] {
+        margin: 0 0 0 13px;
+        font-size:32px;
+    }
+    #det-mapa {
+        height:49px;
+        margin-top:20px;
+    }
+    .motel-premium, .motel-indicado {
+        width:70px;
+        height:70px;
+    }
+    #cortesia ul{
+        padding-top:10px;
+    }
+    #cortesia-dados ul li{
+        padding:10px 20px 10px 20px;
+    }
+    .cortesia-nome {
+        font-size:17px;
+    }
+    .cortesia-obs {
+        font-size:11px;
+    }
+    .instrucao {
+        font-size:18px;
+        margin:0 13px 22px 13px;
+    }
+    #cadastro.cadastro li > input[type="date"]{
+        width:134px !important;
+        text-indent: 5px;
+    }
+    #cadastro.cadastro #txtCep{
+        width:149px !important;
+        text-indent: 5px;
+    }
+    #cadastro.cadastro .txtData {
+        margin-left: 7px;
+        padding-right: 7px;
+    }
+    #cadastro.cadastro .txtCep {
+        padding-right: 7px;
+    }
+    #cadastro.cadastro .cbxNews label, #cadastro.cadastro .cbxPubli label  {
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    #cadastro.cadastro .cbxNews input, #cadastro.cadastro .cbxPubli input {
+        margin-top: 3px;
+    }
+    #cadastro.cadastro .cbxNews, #cadastro.cadastro .cbxPubli  {
+        margin-bottom:18px;
+    }
+    li.user-email{
+        margin-bottom:20px;
+    }
+    li.user-nome .user-nome, li.user-email .user-email{
+        margin-left:7px !important;
+    }
+}
+/* Versão Landscape pra iphone - largura 480px*/
+@media only screen and (min-width : 471px) and (max-width : 560px) {
+    #wrapper, body {
+        width:480px;
+    }
+    #wrapper {
+        top: -35px;
+    }
+    #jqt .toolbar {
+        height: 90px;
+        background-size: auto 90px;
+    }
+    .toggle{
+        top: 29px;
+        left: 18px;
+    }
+    .menu-bt {
+        width: 30px;
+        height: 30px;
+    }
+    .mobile-logo {
+        width: 97px;
+        height: 96px;
+        top: -7px;
+        left: 12px;
+    }
+    .search {
+        width: 252px;
+        height: 44px;
+        left: 2px;
+        top: 14px;
+        text-indent:16px;
+        font-size:19px;
+    }
+    .bt-search {
+        width: 51px;
+        height: 41px;
+        background-size: 51px 41px;
+        margin: 16px 0 0 9px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000000;
+        height: 173px;
+    }
+    #tv-home > div {
+        height: 173px;
+    }
+    figcaption {
+        font-size:18px;
+        bottom: 29px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -22px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 14px;
+        height: 16px;
+        margin: 0 6px 0 0 !important;
+        background-size: 14px 16px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 14px 16px;
+    }
+    #home h2 {
+        background-size: 19px 31px;
+        text-indent: 30px;
+        font-size: 31px;
+        background-position: 15px 13px;
+        border-bottom: 5px solid #e64177;
+        padding-left: 13px;
+        padding-top: 7px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 140px;
+        background-size: 100% 140px;
+    }
+    .premium-left {
+        height: 87px;
+        background-size: 132px 87px;
+        margin-top: 28px;
+    }
+    .premium-left img {
+        width: 106px;
+        margin: 6px 0 0 18px;
+    }
+    .premium-left .distancia {
+        font-size: 12px;
+        margin: 4px 0 0 18px;
+    }
+    .premium-right {
+        height: 94px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 58px;
+    }
+    .premium-right .nome {
+        margin: 31px 0 0 7px;
+        font-size: 22px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 16px;
+    }
+    #go-site .versao-desktop {
+        width:223px;
+        margin-right:58px;
+    }
+    #go-site .topo {
+        width:197px;
+    }
+    #go-site .versao-desktop, #go-site .topo, #go-site .versao-desktop a, #go-site .topo a{
+       height:57px;
+       font-size:18px;
+       line-height:57px;
+    }
+    #go-site .versao-desktop a span{
+        width: 35px;
+        height: 34px;
+        background-size:35px 34px;
+        margin: 0 11px 0 0px;
+        top: 11px;
+    }
+    #go-site .topo a span{
+        width: 18px;
+        height: 21px;
+        background-size:18px 21px;
+        margin: 0 8px 0 0px;
+        top: 4px; 
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:18px;
+    }
+    .m-l {
+        margin-left:5px;
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"], #jqt ul li input[type="text"], input[type="date"], #txtCep {
+        height:51px;
+        margin-bottom:21px;
+        text-indent:14px;
+        font-size:27px;
+    }
+    .forgotpass, #btnFazerLogin {
+        width:211px;
+        font-size:18px;
+    }
+    .forgotpass {
+        margin:0 22px 0 19px!important;
+        height:58px;
+        line-height:58px;
+    }
+    #btnFazerLogin {
+        margin:0!important;
+        height:63px;
+        line-height:58px;
+        text-indent: -12px;
+    }
+    .seta-blue {
+        width: 13px;
+        height: 18px;
+        right: 48px;
+        top: 22px;
+        background-size:13px 18px;
+    }
+    #login h2, #cadastro h2{
+        font-size:31px;
+        border-bottom:4px solid #e2316b;
+        text-indent:20px;
+        margin:25px 0 25px 0; 
+    }
+    #register {
+        margin: 17px 0 24px 0;
+    }
+    #register a{
+      height:98px;
+      padding:33px 0  0 20px;
+      font-size:28px;
+      background-position:95% 53px;
+      background-size:18px 26px;
+    }
+    .bt-call, .bt-descontos, .bt-cortesias {
+        height:58px;
+        line-height:58px;
+        font-size:22px;
+    }
+    .bt-call{
+        width:123px;
+    }
+    .bt-descontos{
+        width:165px;
+    }
+    .bt-cortesias{
+        width:145px;
+    }
+    #det-botoes {
+        margin: 20px 0 30px 0;
+}
+    .bt-call, .bt-descontos, .bt-cortesias{
+        margin-left:9px;
+    }
+    .bt-call span, .bt-descontos span, .bt-cortesias span, #det-descontos .seta{
+        height:28px;
+    }
+    .bt-call span{
+        width: 23px;
+        background-position: 0px 0;
+        margin: 15px 8px 0 15px;
+    }
+    .bt-descontos span{
+        width: 13px;
+        background-position: -38px 0;
+        margin: 15px 9px 0 17px;
+    }
+    .bt-cortesias span{
+        width: 23px;
+        background-position: -66px 0;
+        margin: 16px 4px 0 7px;
+    }
+    #det-descontos .seta{
+        width: 28px;
+        background-position: -95px 0;
+        top: -10px;
+    }
+    .det-dados {
+        margin: 26px 0 0 15px;
+    }
+    .det-dados h2{
+        font-size:27px;
+    }
+    .det-dados span{
+        font-size:16px;
+    }
+    #det-suites .entry h2{
+        font-size:25px;
+        text-indent:45px;
+    }
+    #descontos h2 {
+        font-size:34px;
+    }
+    #det-suites .entry span {
+        height: 11px;
+        background-size: auto 11px;
+    }
+    #det-suites .entry .infos {
+        margin-left:41px;
+        padding-right: 35px;
+        font-size:16px;
+    }
+    .ui-swipeslide-reel {
+        height:323px;
+    }
+    #det-suites .entry {    
+        padding-bottom:20px;
+    }
+    .donot-print {
+        font-size:10px;
+    }
+    .desc-aviso {
+        font-size:16px;
+    }
+    .oqueeh-cupomdigital, #det-descontos {
+        padding:15px;
+        font-size:13px;
+        margin-top:15px;
+    }
+    .oqueeh-cupomdigital h4 {
+        font-size:21px;
+    }
+    #descontos #conteudo{
+        padding:15px 20px 0 20px;
+    }
+    #det-descontos .desconto {
+        margin-bottom:15px;
+        padding-bottom:15px;
+        font-size:16px; 
+    }
+    #det-descontos .desconto h3{
+        margin:0 0 10px 0;
+        font-size:22px;
+    }
+    #det-descontos .desconto p{
+        margin-bottom:7px;
+    }
+    .btn-add-cupomdigital, .btn-print {
+        width:182px;
+        height:49px;
+        line-height:51px;
+        font-size:16px;
+    }
+    .ou {
+        line-height:51px;
+        font-size:15px;
+        margin:0 5px 0 5px;
+    }
+    .desconto ul {
+        margin-top:15px;
+    }
+    li#moteisperto-next {
+        height:131px !important;
+    }
+    #moteisperto-next a{
+        line-height: 131px;
+        text-indent:20px;
+        font-size:28px;
+    }
+    .scroll.alterardados, #senha-altera .scroll {
+        margin:24px 11px 0 11px;
+    }
+    #cadastro.alterardados h2, #senha-altera .scroll > h2{
+        font-size:24px;
+        line-height: 35px;
+        margin:20px 0 20px 19px;
+    }
+    #cadastro li label:first-child, #senha-altera label, li.user-nome .user-nome, li.user-email .user-email   {
+        font-size:24px;
+        line-height: 34px;
+        margin:0 0 0 19px;
+    }
+    .option-wrap {
+        margin: 10px 0 20px 19px;
+        height: 35px;
+    }
+    .option-wrap label{
+        font-size:27px;
+        margin-right: 15px;
+    }
+    #cadastro.alterardados input[type="date"] {
+        margin: 0 0 10px 19px;
+        width:224px !important;
+        text-indent: 3px !important;
+    }
+    #cadastro.alterardados input[type="text"]#txtCpf, #cadastro.alterardados input#txtCep {
+        width:224px !important;
+    }
+    #cadastro input.submit, #senha-altera input.submit {
+        font-size:22px;
+        height:57px;
+        width:274px;
+        left:103px;
+        margin:0 0 20px 0;
+    }
+    #cadastro.alterardados .maior{
+        margin:0 0 20px 22px;
+    }
+    #cadastro.alterardados .maior,
+    #cadastro.alterardados .cpf-aviso,
+    #cadastro.alterardados .cep-aviso {
+        font-size:16px;
+    }
+    #cadastro.alterardados .cpf-aviso,
+    #cadastro.alterardados .cep-aviso{
+        margin:0 0 0 10px;
+    }
+
+    #jqt ul li input[type="checkbox"] {
+        margin: 0 0 0 19px;
+        font-size:32px;
+    }
+    #det-mapa {
+        height:73px;
+        margin-top:25px;
+    }
+    .motel-premium, .motel-indicado {
+        width:105px;
+        height:105px;
+    }
+    #cortesia ul{
+        padding-top:30px;
+    }
+    #cortesia-dados ul li{
+        padding:15px 35px 15px 35px;
+    }
+    .cortesia-nome {
+        font-size:25px;
+    }
+    .cortesia-obs {
+        font-size:16px;
+    }
+    .instrucao {
+        font-size:27px;
+        margin:0 21px 30px 20px;
+    }
+    #cadastro.cadastro li > input[type="date"]{
+        width:202px !important;
+        text-indent: 5px;
+    }
+    #cadastro.cadastro #txtCep{
+        width:223px !important;
+        text-indent: 5px;
+    }
+    #cadastro.cadastro .txtData {
+        margin-left: 11px;
+        padding-right: 11px;
+    }
+    #cadastro.cadastro .txtCep {
+        padding-right: 11px;
+    }
+    #cadastro.cadastro .cbxNews label, #cadastro.cadastro .cbxPubli label  {
+        margin-left: 7px;
+        font-size: 27px;
+    }
+    #cadastro.cadastro .cbxNews input, #cadastro.cadastro .cbxPubli input {
+        margin-top: 7px;
+    }
+    #cadastro.cadastro .cbxNews, #cadastro.cadastro .cbxPubli  {
+        margin-bottom:28px;
+    }
+    li.user-email{
+        margin-bottom:30px;
+    }
+    li.user-nome .user-nome, li.user-email .user-email{
+        margin-left:10px !important;
+    }
+}
+/* Versão Landscape pra iphone5 - largura 570px*/
+@media only screen and (min-width : 561px) {
+    #wrapper, body {
+        width:570px;
+    }
+    #wrapper {
+        top: -41px;
+    }
+    #jqt .toolbar {
+        height: 107px;
+        background-size: auto 107px;
+    }
+    .toggle{
+        top: 36px;
+        left:21px;
+    }
+    .menu-bt {
+        width: 35px;
+        height: 36px;
+    }
+    .mobile-logo {
+        width: 116px;
+        height: 111px;
+        top: -2px;
+        left: 19px;
+    }
+    .search {
+        width: 300px;
+        height: 53px;
+        left: 2px;
+        top: 16px;
+        font-size:21px;
+        text-indent:15px;
+    }
+    .bt-search {
+        width: 60px;
+        height: 47px;
+        background-size: 60px 47px;
+        margin: 20px 0 0 9px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000;
+        height: 207px;
+    }
+    #tv-home > div {
+        height: 207px;
+    }
+    figcaption {
+        font-size:21px;
+        bottom: 36px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -22px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 16px;
+        height: 17px;
+        margin: 0 6px 0 0 !important;
+        background-size: 16px 17px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 16px 17px;
+    }
+    #home h2 {
+        background-size: 22px 36px;
+        text-indent: 38px;
+        font-size: 37px;
+        background-position: 15px 13px;
+        border-bottom: 5px solid #e64177;
+        padding-left: 13px;
+        padding-top: 7px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 167px;
+        background-size: 100% 167px;
+    }
+    .premium-left {
+        height: 102px;
+        background-size: 156px 102px;
+        margin-top: 28px;
+    }
+    .premium-left img {
+        width: 125px;
+        margin: 8px 0 0 21px;
+    }
+    .premium-left .distancia {
+        font-size: 14px;
+        margin: 4px 0 0 26px;
+    }
+    .premium-right {
+        height: 166px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 69px;
+    }
+    .premium-right .nome {
+        margin: 31px 0 0 7px;
+        font-size: 22px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 16px;
+    }
+    #go-site .versao-desktop {
+        width:265px;
+        margin-right:68px;
+    }
+    #go-site .topo {
+        width:233px;
+    }
+    #go-site .versao-desktop, #go-site .topo, #go-site .versao-desktop a, #go-site .topo a{
+        height:67px;
+        font-size:21px;
+        line-height:67px;
+    }
+    #login h2, #cadastro h2{
+        font-size:37px;
+        border-bottom:5px solid #e2316b;
+        text-indent:25px;
+        margin:30px 0 30px 0; 
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"], #jqt ul li input[type="text"], input[type="date"],  #txtCep {
+        height:61px;
+        margin-bottom:26px;
+        text-indent:17px;
+        font-size:32px;
+    }
+    .forgotpass, #btnFazerLogin {
+        width:251px;
+        font-size:21px;
+    }
+    .forgotpass {
+        margin:0 23px 0 22px!important;
+        height:68px;
+        line-height:68px;
+    }
+    #btnFazerLogin {
+        margin:0!important;
+        height:73px;
+        line-height:73px;
+        text-indent: -12px;
+    }
+    .seta-blue {
+        width: 12px;
+        height: 19px;
+        right: 59px;
+        top: 28px;
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:21px;
+    }
+    .m-l {
+        margin-left:10px;
+    }
+    #register {
+        margin: 24px 0 28px 0;
+    }
+    #register a{
+      height:108px;
+      padding:44px 0  0 23px;
+      font-size:33px;
+      background-position:95% 67px;
+    }
+    #go-site .versao-desktop a span{
+        width: 41px;
+        height: 40px;
+        margin: 0 11px 0 0px;
+        top: 11px;
+    }
+    #go-site .topo a span{
+        width: 22px;
+        height: 24px;
+        margin: 0 8px 0 0px;
+        top: 4px;
+    }
+    .bt-call, .bt-descontos, .bt-cortesias {
+        height:68px;
+        line-height:68px;
+        font-size:26px;
+    }
+    .bt-call{
+        width:148px;
+    }
+    .bt-descontos{
+        width:198px;
+    }
+    .bt-cortesias{
+        width:175px;
+    }
+    #det-botoes {
+    margin: 22px 0 34px 0;
+}
+    .bt-call, .bt-descontos, .bt-cortesias{
+        margin-left:11px;
+    }
+    .bt-call span, .bt-descontos span, .bt-cortesias span, #det-descontos .seta{
+        height:33px;
+    }
+    .bt-call span{
+        width:28px;
+        background-position: 0 0;
+        margin:16px 7px 0 16px;
+    }
+    .bt-descontos span{
+        width:16px;
+        background-position: -45px 0;
+        margin:17px 9px 0 22px;
+    }
+    .bt-cortesias span{
+        width:30px;
+        background-position: -76px 0;
+        margin:18px 5px 0 10px;
+    }
+    #det-descontos .seta{
+        width: 31px;
+        background-position: -113px 0;
+        top: -12px;
+    }
+    .det-dados {
+        margin: 25px 0 0 18px;
+    }
+    .det-dados h2{
+        font-size:32px;
+    }
+    .det-dados span{
+        font-size:19px;
+    }
+    #det-suites .entry h2{
+        font-size:30px;
+        text-indent:53px;
+    }
+    #descontos h2 {
+        font-size:40px;
+    }
+    #det-suites .entry span {
+        height: 13px;
+        background-size: auto 13px;
+    }
+    #det-suites .entry .infos {
+        margin-left:49px;
+        padding-right: 40px;
+        font-size:19px;
+    }
+    .ui-swipeslide-reel {
+        height:384px;
+    }
+    #det-suites .entry {    
+        padding-bottom:30px;
+    }
+    .donot-print {
+        font-size:12px;
+    }
+    .desc-aviso {
+        font-size:19px;
+    }
+    .oqueeh-cupomdigital, #det-descontos {
+        padding:20px;
+        font-size:16px;
+        margin-top:20px;
+    }
+    .oqueeh-cupomdigital h4 {
+        font-size:24px;
+    }
+    #descontos #conteudo{
+        padding:15px 30px 0 30px;
+    }
+    #det-descontos .desconto {
+        margin-bottom:20px;
+        padding-bottom:20px;
+        font-size:19px; 
+    }
+    #det-descontos .desconto h3{
+        margin:0 0 15px 0;
+        font-size:26px;
+    }
+    #det-descontos .desconto p{
+        margin-bottom:10px;
+    }
+    .btn-add-cupomdigital, .btn-print {
+        width:216px;
+        height:59px;
+        line-height:61px;
+        font-size:19px;
+    }
+    .ou {
+        line-height:61px;
+        font-size:17px;
+        margin:0 7px 0 7px;
+    }
+    .desconto ul {
+        margin-top:20px;
+    }
+    li#moteisperto-next {
+        height:155px !important;
+    }
+    #moteisperto-next a{
+        line-height: 155px;
+        text-indent:25px;
+        font-size:33px;
+    }
+    .scroll.alterardados, #senha-altera .scroll  {
+        margin:24px 12px 0 12px;
+    }
+    #cadastro.alterardados h2, #senha-altera .scroll > h2{
+        font-size:28px;
+        line-height: 40px;
+        margin:20px 0 20px 23px;
+    }
+    #cadastro li label:first-child, #senha-altera label, li.user-nome .user-nome, li.user-email .user-email   {
+        font-size:28px;
+        line-height: 38px;
+        margin:0 0 0 23px;
+    }
+    .option-wrap {
+        margin: 10px 0 20px 23px;
+        height: 35px;
+    }
+    .option-wrap label{
+        font-size:32px;
+        margin-right: 20px;
+    }
+    #cadastro.alterardados input[type="date"] {
+        margin: 0 0 10px 23px;
+        width:246px !important;
+        text-indent: 4px !important;
+    }
+    #cadastro.alterardados input[type="text"]#txtCpf,  #cadastro.alterardados input#txtCep {
+        width:246px !important;
+    }
+    #jqt ul li input[type="checkbox"] {
+        margin: 0 0 0 23px;
+        font-size:32px;
+    }
+    #cadastro input.submit, #senha-altera input.submit {
+        font-size:26px;
+        height:67px;
+        width:326px;
+        left:122px;
+        margin:0 0 20px 0;
+    }
+    #cadastro.alterardados .maior{
+        margin:0 0 20px 24px;
+    }
+    #cadastro.alterardados .maior,
+    #cadastro.alterardados .cpf-aviso,
+    #cadastro.alterardados .cep-aviso {
+        font-size:19px;
+    }
+    #cadastro.alterardados .cpf-aviso,
+    #cadastro.alterardados .cep-aviso{
+        margin:0 0 0 10px;
+    }
+    #det-mapa {
+        height:87px;
+        margin-top:35px;
+    }
+    .motel-premium, .motel-indicado {
+        width:124px;
+        height:124px;
+    }
+    #cortesia ul{
+        padding-top:40px;
+    }
+    #cortesia-dados ul li{
+        padding:20px 44px 20px 44px;
+    }
+    .cortesia-nome {
+        font-size:30px;
+    }
+    .cortesia-obs {
+        font-size:19px;
+    }
+    .instrucao {
+        font-size:32px;
+        margin:0 31px 35px 23px;
+    }
+    #cadastro.cadastro li > input[type="date"]{
+        width:241px !important;
+        text-indent: 5px;
+    }
+    #cadastro.cadastro #txtCep{
+        width:264px !important;
+        text-indent: 5px;
+    }
+    #cadastro.cadastro .txtData {
+        margin-left: 13px;
+        padding-right: 13px;
+    }
+    #cadastro.cadastro .txtCep {
+        padding-right: 13px;
+    }
+    #cadastro.cadastro .cbxNews label, #cadastro.cadastro .cbxPubli label  {
+        margin-left: 10px;
+        font-size:32px;
+    }
+    #cadastro.cadastro .cbxNews input, #cadastro.cadastro .cbxPubli input {
+        margin-top: 10px;
+    }
+    #cadastro.cadastro .cbxNews, #cadastro.cadastro .cbxPubli  {
+        margin-bottom:38px;
+    }
+    li.user-email{
+        margin-bottom:35px;
+    }
+    li.user-nome .user-nome, li.user-email .user-email{
+        margin-left:11px !important;
+    }
+}
+
+/* geral */
+*{margin: 0; padding: 0;}
+body {
+    overflow-x:hidden;
+    color:#282828;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#status {
+    display:none;
+}
+#wrapper {
+    position:relative;
+    float:left;
+}
+.menu{
+    float: left;
+    width: 80%;
+    height: 200px;
+    margin-left: -100%;
+}
+.menu-on, .menu-off {
+    -moz-transition:margin-left 1s;
+    -webkit-transition:margin-left 1s;
+    -o-transition:margin-left 1s;
+    transition:margin-left 1s;
+}
+.menu-on{
+    margin-left: 0px;
+}
+.menu-off{
+    margin-left: -80%;
+}
+.wrapper-on {
+    margin-right:-80%;
+}    
+#slidemenu {
+    position:absolute;
+    display:none;
+}
+figure {
+    margin:0;
+    padding:0;
+    position:relative;
+}
+figure a{
+    position:relative;
+}
+ #jqt .toolbar {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 6px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 1px 6px;
+    border-bottom: 1px solid #2a3441;
+    z-index: 10;
+    position: relative;
+    padding: 10px;
+    background-image: url(../img/mobile-menu-bg.jpg);
+    background-repeat:repeat-x;
+}
+ .toggle{
+    cursor: pointer;
+    position: relative;
+    z-index: 99999999;
+    background-image: url(../img/mobile-menu.png);
+}
+.menu-bt, .mobile-logo, .search {
+    position: relative;
+    display: inline-block;
+    background-color:transparent;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+.search {
+    background-image: url(../img/mobile-search.png);
+    border: 0;
+    float: right;
+    color:#666;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bt-search {
+    background-image: url(../img/bt-search.png);
+    background-repeat: no-repeat;
+    background-color:transparent;
+    border: 0;
+    float: right;
+    cursor:pointer;
+}
+#tv-home {
+    margin: 0;
+    padding: 0;
+}
+ul.ui-swipeslide-bullets {
+    position: absolute;
+    background: none !important;
+    border: none !important;
+    width: 100%;
+}
+figcaption {
+    position: absolute;
+    left: 0;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999999;
+    float: left;
+    margin-top: -56px;
+    font-weight:bold;
+}
+.ui-swipeslide-bullets li {
+    background-image: url(../img/bullets.png);
+    background-repeat: no-repeat;
+    background-color:transparent;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+.ui-swipeslide-bullets li.active {
+    background-image: url(../img/bullets-active.png);
+    background-repeat: no-repeat;
+}
+#jqt h2{
+    font-weight: 900;
+    font-family: "Arial Black", Arial, sans-serif;
+    display: inline-block;
+}
+#home h2 {
+    background-image: url(../img/icon-proximos.png);
+    background-repeat:no-repeat;
+    color: #dd0048;
+}
+#jqt ul#moteis-premium li {
+    border-bottom: 1px solid #e2e2e2;
+    background-image: url(../img/premium-bg.png);
+    background-repeat: repeat-x;      
+}
+.premium-left {
+    float: left;
+    width: 28%;
+    background-image: url(../img/premium-left.png);
+    background-repeat: no-repeat;
+}
+.premium-left img {
+    float: left;
+    height: auto;
+    clear: both;
+}
+.premium-left .distancia {
+    float: left;
+    clear: both;
+    color: #282828;
+}
+.premium-right {
+    float: left;
+    width: 72%;
+    color: #282828;
+}
+.premium-right .nome {
+    float: left;
+    clear: both;
+    font-weight: bold;
+}
+.premium-right .endereco {
+    float: left;
+    clear: both;
+}
+#moteisperto-next a{
+    text-transform: capitalize;
+    color:#282828;
+    float:left;
+    width:60%;
+}
+#moteisperto-next .premium-right{
+    width:38%;
+}
+#go-site .versao-desktop {
+    -webkit-border-radius: 0 8px 8px 0;
+    -moz-border-radius: 0 8px 8px 0;
+    border-radius: 0 8px 8px 0;
+    border-left:none !important;
+}
+#go-site .topo {
+    -webkit-border-radius: 8px 0 0 8px;
+    -moz-border-radius: 8px 0 0 8px;
+    border-radius: 8px 0 0 8px;
+    border-right:none !important;
+}
+#go-site .versao-desktop a, #go-site .topo a{
+    width:100%;
+    color:#282828;
+}
+#go-site .versao-desktop a span, #go-site .topo a span{
+    background-repeat:no-repeat;
+    display: inline-block;
+    position: relative;
+}
+#go-site .versao-desktop a span{
+    background-image: url(../img/icon-desktop.png);
+}
+#go-site .topo a span{
+    background-image: url(../img/icon-setaup.png);
+}
+#login, #descontos {
+    background:#f5f5f5;
+}
+#login h2, #cadastro h2{
+    color:#dd0048;
+}
+#jqt ul li input[type="email"], 
+#jqt ul li input[type="password"],
+#jqt ul li input[type="text"], input[type="date"], #txtCep {
+    width:92% !important;
+    margin-left: 4%  !important;
+    border-right:2px solid #cecece;
+    border-left:2px solid #cecece;
+    border-top:4px solid #cecece;
+    border-bottom:2px solid #e0e0e0;
+    background: -moz-linear-gradient(top,  #f5f5f5 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top,  #f5f5f5 0%,#ffffff 100%);
+    background: -o-linear-gradient(top,  #f5f5f5 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top,  #f5f5f5 0%,#ffffff 100%);
+    background: linear-gradient(to bottom,  #f5f5f5 0%,#ffffff 100%);
+    color:#666;
+}
+.forgotpass {
+    color:#282828;
+}
+#btnFazerLogin {
+    cursor:pointer;
+    color:#148ac1;
+}
+.forgotpass, #btnFazerLogin,
+#jqt ul li input[type="email"], 
+#jqt ul li input[type="password"], 
+#jqt ul li input[type="text"],
+.bt-call, .bt-descontos, .bt-cortesias,
+.btn-add-cupomdigital, .btn-print, input[type="date"], #txtCep, #cadastro .submit, #senha-altera input.submit {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.forgotpass, #btnFazerLogin, #go-site .versao-desktop, #go-site .topo, .btn-print {
+    background: -moz-linear-gradient(top,  #ffffff 0%, #fefefe 52%, #f2f2f2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(52%,#fefefe), color-stop(100%,#f2f2f2));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#fefefe 52%,#f2f2f2 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#fefefe 52%,#f2f2f2 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#fefefe 52%,#f2f2f2 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#fefefe 52%,#f2f2f2 100%);
+    border:1px solid #cdcdcd;
+    border-bottom:4px solid #cecece;
+    text-shadow: 0px -2px 2px rgba(206, 206, 206, 1);
+    font-weight:bold;
+    text-align:center;
+}
+.seta-blue {
+    background-image: url(../img/seta-azul.png);
+    background-repeat:no-repeat;
+    float: left;
+    position: absolute;
+}
+.f-l {
+    float:left;
+}
+.f-r {
+    float:right;
+}
+.info ul.links {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+.info ul.links li, .info ul.links li a{
+   color:#282828;
+   font-weight:normal;
+   line-height: initial;
+   padding:0 5px 0 5px;
+}
+#register {
+    width:100%;
+    border-bottom:2px solid #e3e3e3;
+    border-top:1px solid #f8f8f8;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(236,236,236,1) 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(236,236,236,1))); 
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%); 
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%);
+}
+#register a{
+    background-image: url(../img/seta.png);
+    background-repeat:no-repeat;
+    color:#282828;
+    text-transform:uppercase;
+}
+#register a span{
+    color:#dd0048;
+}
+#mask {
+        position: relative;   
+    }
+.info {
+    position:relative;
+}
+#rodape, .rodape {
+    margin-top:22px;
+}
+.bt-call {
+    background: -moz-linear-gradient(top,  #00ce74 0%, #00cd73 39%, #00c06d 58%, #00ab61 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00ce74), color-stop(39%,#00cd73), color-stop(58%,#00c06d), color-stop(100%,#00ab61));
+    background: -webkit-linear-gradient(top,  #00ce74 0%,#00cd73 39%,#00c06d 58%,#00ab61 100%);
+    background: -o-linear-gradient(top,  #00ce74 0%,#00cd73 39%,#00c06d 58%,#00ab61 100%);
+    background: -ms-linear-gradient(top,  #00ce74 0%,#00cd73 39%,#00c06d 58%,#00ab61 100%);
+    background: linear-gradient(to bottom,  #00ce74 0%,#00cd73 39%,#00c06d 58%,#00ab61 100%);
+    border:1px solid #009c58;
+    border-bottom:4px solid #009c58;
+    text-shadow: 0px -2px 0px rgba(0, 156, 88, 1);
+}
+.bt-descontos {
+    background: -moz-linear-gradient(top,  #f10056 0%, #ef0054 39%, #d60043 58%, #bf0032 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f10056), color-stop(39%,#ef0054), color-stop(58%,#d60043), color-stop(100%,#bf0032));
+    background: -webkit-linear-gradient(top,  #f10056 0%,#ef0054 39%,#d60043 58%,#bf0032 100%);
+    background: -o-linear-gradient(top,  #f10056 0%,#ef0054 39%,#d60043 58%,#bf0032 100%);
+    background: -ms-linear-gradient(top,  #f10056 0%,#ef0054 39%,#d60043 58%,#bf0032 100%);
+    background: linear-gradient(to bottom,  #f10056 0%,#ef0054 39%,#d60043 58%,#bf0032 100%);
+    border:1px solid #980028;
+    border-bottom:4px solid #980028;
+    text-shadow: 0px -2px 0px rgba(185, 0, 50, 1);
+}
+.bt-cortesias {
+    background: -moz-linear-gradient(top,  #e00081 0%, #de007f 39%, #c70063 58%, #b2004c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e00081), color-stop(39%,#de007f), color-stop(58%,#c70063), color-stop(100%,#b2004c));
+    background: -webkit-linear-gradient(top,  #e00081 0%,#de007f 39%,#c70063 58%,#b2004c 100%);
+    background: -o-linear-gradient(top,  #e00081 0%,#de007f 39%,#c70063 58%,#b2004c 100%);
+    background: -ms-linear-gradient(top,  #e00081 0%,#de007f 39%,#c70063 58%,#b2004c 100%);
+    background: linear-gradient(to bottom,  #e00081 0%,#de007f 39%,#c70063 58%,#b2004c 100%);
+    border:1px solid #7a0033;
+    border-bottom:4px solid #7a0033;
+    text-shadow: 0px -2px 0px rgba(132, 0, 57, 0.6);
+}
+.bt-call, .bt-descontos, .bt-cortesias{
+    color:#fff;
+    font-weight:bold;
+}
+.bt-call span, .bt-descontos span, .bt-cortesias span, #det-descontos .seta{
+    background-image:url(../img/sprite.png);
+    background-repeat:no-repeat;
+    background-size:auto 100%;
+    float:left;
+}
+.det-dados {
+    float:left;
+    width: 67%;
+}
+.det-dados h2{
+    width:100%;
+    color:#282828;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.det-dados span{
+    color:#282828;
+    margin-left:2px;
+    width: 100%;
+    clear: both;
+    float: left;
+}
+#detalhes  {
+    background: -moz-linear-gradient(top, #fdfdfd 0%, #fbfbfb 5%, #f8f8f8 7%, #f5f5f5 9%, #f5f5f5 99%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(1%,#fbfbfb), color-stop(2%,#f8f8f8), color-stop(7%,#f5f5f5), color-stop(99%,#f5f5f5));
+    background: -webkit-linear-gradient(top, #fdfdfd 0%,#fbfbfb 1%,#f8f8f8 2%,#f5f5f5 7%,#f5f5f5 99%);
+    background: -o-linear-gradient(top, #fdfdfd 0%,#fbfbfb 1%,#f8f8f8 2%,#f5f5f5 7%,#f5f5f5 99%);
+    background: -ms-linear-gradient(top, #fdfdfd 0%,#fbfbfb 1%,#f8f8f8 2%,#f5f5f5 7%,#f5f5f5 99%);
+    background: linear-gradient(to bottom, #fdfdfd 0%,#fbfbfb 5%,#f8f8f8 7%,#f5f5f5 9%,#f5f5f5 99%);
+}
+#det-suites .entry .slider{
+    -webkit-box-shadow: 0px 5px 5px rgba(170, 170, 170, 1);
+    -moz-box-shadow:    0px 5px 5px rgba(170, 170, 170, 1);
+    box-shadow:         0px 5px 5px rgba(170, 170, 170, 1);
+}
+#det-suites .entry h2, #descontos h2 {
+    color:#d0003e;
+    font-family: Arial, Helvetica, sans-serif;
+    width:100%;
+}
+#det-suites .entry span {
+    background-image:url(../img/det-suites-figure.png);
+    background-repeat:no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+}
+.donot-print {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.oqueeh-cupomdigital, #det-descontos, .scroll.alterardados, #senha-altera .scroll  {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border:1px solid #e6e6e6;
+}
+.oqueeh-cupomdigital {
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f8f8f8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f8f8f8));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f8f8f8 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#f8f8f8 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f8f8f8 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#f8f8f8 100%);
+    border-bottom:2px solid #e6e6e6;
+}
+.oqueeh-cupomdigital h4 {
+    font-weight:normal;
+}
+#det-descontos {
+    background:#fff;
+    border-top:2px solid #e6e6e6;
+    border-bottom:2px solid #e6e6e6;
+    position:relative;
+}
+#det-descontos .seta{
+    position: absolute;
+}
+#det-descontos .desconto {
+    border-bottom: 2px dotted #e6e6e6;
+}
+#det-descontos .desconto:last-child {
+    border-bottom: none;
+}
+.btn-add-cupomdigital {
+    background: -moz-linear-gradient(top,  #f10056 0%, #c00033 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f10056), color-stop(100%,#c00033));
+    background: -webkit-linear-gradient(top,  #f10056 0%,#c00033 100%);
+    background: -o-linear-gradient(top,  #f10056 0%,#c00033 100%);
+    background: -ms-linear-gradient(top,  #f10056 0%,#c00033 100%);
+    background: linear-gradient(to bottom,  #f10056 0%,#c00033 100%);
+    border:1px solid #820023;
+    border-bottom-width:4px;
+    text-shadow: 0px -2px 2px rgba(151, 0, 52, 1);
+    font-weight:bold;
+    text-align:center;
+    color:#fff;
+}
+.btn-print{
+    color:#e9274b;
+    text-shadow: none;
+}
+#cadastro.alterardados, #senha-altera{
+    background:#f5f5f5;
+}
+.scroll.alterardados, #senha-altera .scroll  {
+    background:#fff;
+}
+#cadastro.alterardados .scroll.alterardados > h2, #senha-altera .scroll > h2{
+    color:#d80044;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: none;
+    text-indent: inherit;
+}
+#cadastro li label:first-child, #senha-altera label   {
+    width: 100%;
+    clear: both;
+    float: left;
+}
+#cadastro.alterardados input {
+    color:#b3b3b3 !important;
+}
+.option-wrap {
+    float: left;
+}
+.option-wrap label{
+    font-weight:bold;
+}
+#jqt ul li input[type="checkbox"] {
+    color:#b3b3b3;
+}
+#cadastro input.submit, #senha-altera input.submit {
+    background: -moz-linear-gradient(top,  #1b70b2 0%, #148ac1 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1b70b2), color-stop(100%,#148ac1));
+    background: -webkit-linear-gradient(top,  #1b70b2 0%,#148ac1 100%);
+    background: -o-linear-gradient(top,  #1b70b2 0%,#148ac1 100%);
+    background: -ms-linear-gradient(top,  #1b70b2 0%,#148ac1 100%);
+    background: linear-gradient(to bottom,  #1b70b2 0%,#148ac1 100%);
+    text-shadow: 0px -2px 2px rgba(15, 100, 163, 1);
+    color:#fff !important;
+    font-weight:bold;
+    position:relative;
+    cursor:pointer;
+}
+.maior, .cpf-aviso, .cep-aviso {
+    display:none;
+}
+#cadastro.alterardados .maior{
+    display:block;
+}
+#cadastro.alterardados .maior,
+#cadastro.alterardados .cpf-aviso,
+#cadastro.alterardados .cep-aviso {
+    color:#b3b3b3;
+}
+#cadastro.alterardados .cpf-aviso,
+#cadastro.alterardados .cep-aviso{
+    display:inline-block;
+}
+.loader {
+    width:150px;
+    height:100px;
+    display: none;
+    position:fixed;
+    background-image:url(../img/loader_animacao.gif);
+    background-repeat:no-repeat;
+    background-position: center 35%;
+    background-color: #000;
+    opacity: 0.9;
+    z-index: 99999999;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -50px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    color:#fff;
+    font-weight:bold;
+    text-align:center;
+}
+.loader p {
+    position: absolute;
+    bottom: 10px;
+    width: 150px;
+}
+#cadastro.alterardados .instrucao {
+    display:none;
+}
+#det-mapa {
+    background-image:url(../img/detalhes-mapa.png);
+    background-repeat:no-repeat;
+    background-size: 100% auto;
+    width:100%;
+    float:left;
+}
+.motel-premium, .motel-indicado {
+    background-repeat:no-repeat;
+    background-size: 100% auto;
+    position:absolute;
+    left: 0;
+    top: -1px;
+}
+#moteis-premium li:first-child .motel-premium{
+    background-image:url(../img/home_premium-first.png);
+}
+#moteis-premium li:first-child .motel-indicado{
+    background-image:url(../img/home_indicado-first.png);
+}
+#jqt ul#moteis-premium li:first-child{
+    position:relative;
+    top:10px;
+    background-image:url(../img/premium-bg-first.png);
+}
+.motel-premium{
+    background-image:url(../img/home_premium.png);
+}
+.motel-indicado {
+    background-image:url(../img/home_indicado.png);
+}
+#cortesia {
+    background:#ebebeb;
+}
+#cortesia ul{
+    position: relative;
+}
+#cortesia-dados ul li{
+    -webkit-box-shadow: 0px 3px 5px rgba(211, 211, 211, 0.75);
+    -moz-box-shadow:    0px 3px 5px rgba(211, 211, 211, 0.75);
+    box-shadow:         0px 3px 5px rgba(211, 211, 211, 0.75);
+}
+.cortesia-nome {
+    font-weight:bold;
+    color:#d50042;
+    width: 100%;
+    float: left;
+}
+#cortesia-dados .cortesia-obs b:before {
+    content: ' - ';
+}
+#cadastro.cadastro .txtData {
+    float:left;
+}
+#cadastro.cadastro .cbxNews label, #cadastro.cadastro .cbxPubli label  {
+    color:#b3b3b3;
+    width: 84%;
+    float: left;
+}
+#cadastro.cadastro .cbxNews input, #cadastro.cadastro .cbxPubli input {
+    float:left;
+}
+#cadastro.cadastro  {
+    background: -moz-linear-gradient(top, #fdfdfd 0%, #fbfbfb 25%, #f8f8f8 35%, #f5f5f5 40%, #f5f5f5 99%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(25%,#fbfbfb), color-stop(35%,#f8f8f8), color-stop(40%,#f5f5f5), color-stop(99%,#f5f5f5));
+    background: -webkit-linear-gradient(top, #fdfdfd 0%,#fbfbfb 25%,#f8f8f8 35%,#f5f5f5 40%,#f5f5f5 99%);
+    background: -o-linear-gradient(top, #fdfdfd 0%,#fbfbfb 25%,#f8f8f8 35%,#f5f5f5 40%,#f5f5f5 99%);
+    background: -ms-linear-gradient(top, #fdfdfd 0%,#fbfbfb 25%,#f8f8f8 35%,#f5f5f5 40%,#f5f5f5 99%);
+    background: linear-gradient(to bottom, #fdfdfd 0%,#fbfbfb 25%,#f8f8f8 35%,#f5f5f5 40%,#f5f5f5 99%);
+}
+li.user-nome label, li.user-email label{
+    clear:none !important;
+    width:auto !important;
+}
+li.user-nome .user-nome, li.user-email .user-email{
+    float:left;
+    color:#b3b3b3;
+}

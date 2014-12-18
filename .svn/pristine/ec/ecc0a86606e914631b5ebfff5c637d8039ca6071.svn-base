@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ansi" />
+  <link rel="apple-touch-icon" href="../themes/img/icon.png"/> 
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+  <title>Guia de Motéis</title>
+  <link rel="stylesheet" href="../themes/css/apple.css" title="jQTouch">
+  <script src="lib/zepto.min.js" type="text/javascript"></script>
+  <script src="../swipeslide.js" type="text/javascript"></script>
+  <script src="../src/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../extensions/jqt.themeswitcher.min.js" type="application/x-javascript" charset="utf-8"></script>
+  <script src="../toastmessages/javascript/toastmessage.js" type="application/x-javascript" charset="utf-8"></script>
+  <script src="../geral.js"></script>
+  <link rel="stylesheet" href="../swipeslide.css">
+  <link rel="stylesheet" href="../toastmessages/resources/css/toastmessage.css">
+  <link href="../themes/css/main.css" rel="stylesheet" />
+  <style type="text/css">
+    /* Accordion */
+    .accord {
+        border:black 1px solid;
+        margin-bottom: 10px;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .cupom {
+        display: block;
+        border:black 1px solid;
+        margin-bottom: 10px;
+    }
+    .cupom a {
+        background: gray;
+        padding: 3px;
+        color: white;
+    }
+    .close a {
+        background: yellow;
+        color: black;
+    }
+    .cupom-dados {
+        padding: 5px;
+        background: white;
+        color: black;
+    }
+
+  </style>
+
+  <script type="text/javascript">
+
+      $(document).ready(function () {
+          //IncludeHeader(function () {
+            initGeoLocalizacao(function () {
+                LoadTVPorIP(function () {
+                    HomeTVLoad();
+                    IncludeHeader();
+                }); //TV
+            }); //geo
+          //}); //Header
+
+          $('#home').bind(HomeTVLoad);
+          $('#cadastro form').submit(ValidaDadosUsuario);
+      })
+
+      var jQT = new $.jQTouch({
+          icon: 'jqtouch.png',
+          icon4: 'jqtouch4.png',
+          addGlossToIcon: false,
+          startupScreen: 'jqt_startup.png',
+          statusBar: 'black-translucent',
+          themeSelectionSelector: '#jqt #themes ul',
+          useTouchScroll: false
+      });
+
+      function ReloadTV() {
+          $('#slider-3-content').empty();
+          LoadTVPorIP(function () {
+              HomeTVLoad();
+          }); //TV
+      }
+
+
+  </script>
+  <!-- Referência:
+      Protótipo....: http://www.clickmoteis.com.br/prototipo_webapp/
+      Jqtouch local: file:///C:/jobs/Projetos/a_webapi/jqtouch-1.0-b4-rc/demos/main/index.html#forms
+      zpto.........: http://zeptojs.com/
+      ex rating....: http://css-tricks.com/star-ratings/
+                     http://www.cssnolanche.com.br/dicas-para-migrar-do-jquery-para-zepto-js/ 
+      icone no desk: http://mobile.tutsplus.com/tutorials/iphone/iphone-web-app-meta-tags/
+      mensagem.....: http://jsfiddle.net/Sk8erPeter/QCs6n/
+                     documentacao: https://github.com/akquinet/jquery-toastmessage-plugin/wiki
+      data on div..: http://stackoverflow.com/questions/15346037/jquery-data-get-only-html-5-attributes-and-not-the-data-store-values-set-by
+      accordion....: http://jsfiddle.net/s5x9A/
+      teste........: http://www.api.guiademoteis.com.br/Motel/GetDestaqueTV?latitude=-23,605292&longitude=-46,6929234&pageNumber=1
+   -->
+    	
+</head>
+<body>
+    <input type="hidden" id="hidLatitude" />
+    <input type="hidden" id="hidLongitude" />
+    <!-- Menu ----------------------------------------------------->
+	<div class="menu">
+		<ul>
+            <!--li><a apple-interchange-newline="" href="#" onclick="javascript:tog<br class=">Informativos</a></li-->
+			<li id="menu-login"><a href="#login" onclick="javascript:toggleMenu();">Login</a></li>
+			<li><a href="#home" onclick="javascript:toggleMenu(); ReloadTV();">home</a></li>
+			<li><a href="#" onclick="javascript:toggleMenu(); LoadCuponsDigitais();">Cupons Digitais</a></li>
+			<li><a href="#cadastro" onclick="javascript:toggleMenu();">Cadastro</a></li>
+            <li id="menu-altera-dados"><a href="#" onclick="javascript:toggleMenu(); AlterarMeusDados();">Alterar meus dados</a></liid="menu->
+            <li id="menu-senha-altera"><a href="#senha-altera" onclick="javascript:toggleMenu();">Altera Senha</a></li>
+            <li id="menu-informativo"><a href="#" onclick="javascript:toggleMenu(); LoadInformativo();">Informativos</a></li>
+            <li><a href="#" onclick="javascript:toggleMenu(); LoadMeusMoteis();">Meus motéis</a></li>
+			<li id="menu-logout" style="display:none"><a href="#" onclick="javascript:toggleMenu(); Logout();">Sair</a></li>
+		</ul>
+	</div>
+    <!-- Menu - Fim ------------------------------------------------->
+    <a class="toggle menu-bt"></a>
+    <div id="mask"> </div>
+    <div id="wrapper" class="wrapper">
+        <div id="jqt">
+            <!--- Home --------------------------------------------->
+            <div id="home" class="current">
+                <div class="toolbar">
+                    <div class="header">
+                        <span class="menu-bt"></span>
+                        <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
+                        <input type="button" class="bt-search" onclick='BuscaPorNome(this);'/>
+                        <input type="text" size="20" maxlength="30" class="search" placeholder="motel, cidade ou bairro" />
+                    </div>
+                </div>
+                <div id="spiner-tv" style="display:none;">Carregando a TV   <img id="Img1" src="../themes/img/apple/loading.gif" /></div>
+                <section id="tv-home"><div id="slider-3-content"></div></section>
+                <h2>Motéis mais próximos<img id="spiner-motel-perto" src="../themes/img/apple/loading.gif" style="display:none;" /></h2>
+                <ul id="moteis-premium" class="rounded"></ul>
+                <div id="rodape">
+                    <div class="info">
+                        <div id="go-site">
+                            <ul class="individual">
+                                 <li class="versao-desktop"><a target="_blank" href="http://www.guiademoteis.com.br" style="" ><span></span>Versão Desktop</a></li>
+                                 <li class="topo"><a href="#" onclick="GoTop();" style="" ><span></span>Topo da página</a></li>
+                             </ul>
+                            <br /><br />
+                        </div>
+                        <ul class="links">
+                            <li>Guia de Motéis © - 1999-2013</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--- Home - Fim --------------------------------------->
+            <!--- Login -------------------------------------------->
+            <div id="login">
+                <div class="toolbar"><div class="header"></div></div>
+                <form class="scroll">
+                    <h2>Login</h2>
+                    <ul class="edit rounded">
+                        <li><input type="email" name="txtEmail" placeholder="E-mail" id="txtEmail" /></li>
+                        <li>
+                            <input type="password" name="txtSenha" placeholder="Senha" id="txtSenha" />
+                        </li>
+                        <li class="f-l"><a href="#esqueci-senha" class="forgotpass">Recuperar Senha</a></li>
+                        <li class="f-l"><input type="button" id="btnFazerLogin" value="Continuar"  onclick="Login();" /><span class="seta-blue"></span></li>
+                    </ul>
+                </form>
+                <div id="register">
+                    <a href="#cadastro" >Ainda não é cadastrado? <br />
+                    <span>Cadastre-se grátis!</span></a>
+
+                </div>
+                <div class="rodape"></div>
+            </div>
+            <!--- Esqueci minha senha ------------------------------>
+            <div id="esqueci-senha">
+                <div class="toolbar"><div class='header'></div></div>
+                <form class="scroll">
+                    <h2>Por favor, informe E-mail ou CPF</h2>
+                    <ul class="edit rounded">
+                        <li><input type="text" name="txtEmailOuCpf" placeholder="Email ou CPF" id="txtEmailOuCpf" /></li>
+                        <li><input type="button" id="btnReenvioSenha" value="OK" onclick="ReenvioDeSenha();" /></li>
+                    </ul>
+                </form>
+                <div class="rodape"></div>
+            </div>
+            <!--- Altera Senha ------------------------------------->
+            <div id="senha-altera">
+                <div class="toolbar"><div class='header'></div></div>
+                <form class="scroll">
+                    <h2>Altera minha senha</h2>
+                    <ul class="edit rounded">
+                        <li><b>Usuário:</b>&nbsp;<span class="user-nome" /></li>
+                        <li><b>E-mail:</b>&nbsp;<span class="user-email" /></li>
+                        <li><input type="password" name="txtSenhaAtual" placeholder="Senha atual" id="txtSenhaAtual" /></li>
+                        <li><input type="password" name="txtNovaSenha1" placeholder="Nova senha" id="txtNovaSenha1" /></li>
+                        <li><input type="password" name="txtNovaSenha2" placeholder="Confirmar nova senha" id="txtNovaSenha2" /></li>
+                        <li><input type="button" value="OK" onclick="TrocaSenha();" /></li>
+                    </ul>
+                </form>
+                <div class="rodape"></div>
+            </div>
+            <!--- Informativo - Altera recebimento ------------------>        
+            <div id="informativo-altera">
+                <div class="toolbar"><div class='header'></div></div>
+                <form class="scroll">
+                    <h2>Alterar informativos</h2>
+                    <ul class="edit rounded">
+                        <li><input type="checkbox" name="cbxPromoAltera" value="promo" title="Receber descontos/promoções." /></li>
+                        <li><input type="checkbox" name="cbxPubliAltera" value="publi" title="Rreceber publicidade." /></li>
+                        <li><input type="button" value="Confirmar alteração" onclick="AlteraRecebimentoInformativo();" /></li>
+                    </ul>
+                </form>
+                <div class="rodape"></div>
+            </div>
+            <!--- Cadastro ---------------------------------------->
+            <div id="cadastro">
+                <div class="toolbar"><div class='header'></div></div>
+                <form class="scroll">
+                    <h2>Preencha os campos abaixo para fazer seu cadastro Guia de Motéis, é grátis!!</h2>
+                    <ul class="edit rounded">
+                        <li><input type="text" name="txtNome" placeholder="Nome completo" id="txtNome"></li>
+                        <li>&nbsp;Sexo:&nbsp;<input type="radio" id="sexo_F" name="rdlSexo" value="F" />&nbsp;<label>Feminino</label>&nbsp;<input type="radio" id="sexo_M" name="rdlSexo"  value="M" />&nbsp;<label>Masculino</label></li>
+                        <li>Data: <input type="date" name="txtData" id="txtData"></li>
+                        <li>CEP:  <input name="txtCep" id="txtCep" placeholder="CEP formato: 99999-999"></li>
+                        <li><input type="email" name="txtEmail1" placeholder="E-mail" id="txtEmail1"></li>
+                        <li><input type="email" name="txtEmail2" placeholder="Confirme o e-mail" id="txtEmail2"></li>
+                        <li><input type="text" name="txtCpf" id="txtCpf" placeholder="CPF formato: 999.999.999-99"></li>
+                        <li id="li_senha"><input type="password" name="txtSenha" placeholder="Senha" id="txtSenha"></li>
+                        <li><input type="checkbox" name="cbxNews"   value="promo" title="Receber descontos/promoções"/></li>
+                        <li><input type="checkbox" name="cbxPubli"  value="publi" title="Receber publicidade." /></li>
+                        <li><input type="submit" class="submit" name="btnGrava" value="Gravar"></li>
+                    </ul>
+                </form>
+                <div class="rodape"></div>
+            </div>
+            <!------------------------------------------------------->
+            <!-- Detalhes ------------------------------------------->
+            <div id="detalhes">
+                <div class="toolbar"><div class='header'></div></div>
+                <div class="det-topo">
+                    <div class="premium-left">
+                        <img class="det-logo" src="" alt="" />
+                    </div>
+                    <div class="det-dados">
+                        <h2></h2>
+                        <span class="det-endereco"></span>
+                        <span class="det-end-bai-cid"></span>
+                    </div>
+                </div>
+                <div id="det-botoes">
+                    <ul class="individual">
+                         <li><a id="btn_det_ligar" class="bt-call" href="" target="_blank"><span></span>Ligar</a></li>
+                         <li><a id="btn_det_descontos" class="bt-descontos" href="#descontos"><span></span>Descontos</a></li>
+                        <li><a id="btn_det_cortesias" class="bt-cortesias" href="#descontos"><span></span>Cortesias</a></li>
+                     </ul>
+                </div>
+                <div id="det-suites"></div>
+                <!---- suiteTemplate --------------------------->
+                <div id="suiteTemplate" class="entry" style="display:none">
+                    <h2></h2>
+                    <span></span>
+                    <div class="slider"></div>
+                    <div class="periodo infos"></div>
+                    <div class="pernoite infos"></div>
+                    <div class="itens infos"></div>
+                    <div class="obs infos"></div>
+                    <div class="cortesia"></div>
+                    <br>
+                </div>            
+                <!---- suiteTemplate - FIM ---------------------->
+                <div class="rodape"></div>
+            </div>
+            <!------------------------------------------------------->
+            <!-- Descontos ------------------------------------------->
+            <div id="descontos">
+                <div class="toolbar"><div class='header'></div></div>
+                <div class="det-topo">
+                    <br /><br />
+                    <img class="det-logo" src="" alt="" />
+                    <h2></h2>
+                    <span class="det-endereco"></span><br/>
+                    <span class="det-end-bai-cid"></span>
+                </div>
+                <strong>Descontos</strong><br />
+                <div class="oqueeh-cupomdigital" style="width: 70%; border: 1px solid black; margin: 5px; padding: 3px;">
+                        <h4>O que é Cupom Digital?</h4>
+                        Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.
+                </div>
+                <br />
+                <div class="desconto" style="display:none;">
+                    <div class="titulo"></div>
+                    <div class="subtitulo"></div>
+                    <div class="descricao"></div>
+                    <br />
+                    <ul class="individual">
+                         <li><a class="btn-add-cupomdigital" href="#">Adicionar Cupom</a></li>
+                     </ul>
+                    <br /><br />
+                </div>
+                <div id="det-descontos"></div>
+                <br /><br />
+                <div class="rodape"></div>
+            </div>
+            <!-- Descontos - Fim --------------------------------------->
+            <!-- Cupom digital ----------------------------------------->
+            <div id="cupons-digitais">
+                <div class="toolbar"><div class='header'></div></div>
+                <div id="meus-cupons"></div>
+                <!-- Template accordion -->
+                <div class="accord" style="display:none;">
+                    <span class="cupom"><a href="#">Motel</a></span>
+                </div>
+                <div class="cupom-dados" style="display:none;">
+                    <div class="cupom-dados-2">
+                        <br />
+                        <span class="cupom-titulo" style="color: red; font: bold;"></span><br/><br />
+                        <span class="cupom-vaidade"></span><br/>
+         		        <span class="cupom-descricao"></span><br/>
+                        <a class="cupom-remover" href="#">Remover</a>
+                    </div>
+                </div>
+                <!-- Template accordion - Fim -->
+                <div class="rodape"></div>
+            </div>
+            <!-- Cupom digital - Fim ----------------------------------->
+            <!-- Motéis favoritos -------------------------------------->
+            <div id="moteis-favoritos">
+                <div class="toolbar"><div class='header'></div></div>
+                <div id="meus-moteis"></div>
+                <!-- Template accordion -->
+                <!-- Usa o accordion do cupom digital -->
+                <div class="meus-mts-dados" style="display:none;">
+                    <div class="favoritos-dados">
+                        <br />
+                        <span class="meus-mts-titulo" style="color: red; font: bold;"></span>
+                        <span class="meus-mts-star-rating"></span>
+                        <br/><br />
+         		        <span class="meus-mts-descricao"></span><br/>
+                        <a class="meus-mts-remover" href="#">Remover</a>
+                    </div>
+                </div>
+                <!-- Template accordion - Fim -->
+                <div class="rodape"></div>
+            </div>
+            <!--  Motéis favoritos - Fim -------------------------------->
+            <!-- Busca por Nome ----------------------------------------->
+            <div id="buscaPorNome">
+                <div class="toolbar"><div class='header'></div></div>
+                <ul id="pre-result" class="edgetoedge scroll"></ul>
+                <!--Templates - Inicio -->
+                <li class="pre-result-sep" style="display:none"><span class="titulo"></span></li>
+                <li id="pre-result-item" style="display:none"><a href="#"></a></li>
+                <!--Templates - Inicio - Fim -->
+                <div class="rodape"></div>
+            </div>
+            <!-- Busca por Nome - Fim ----------------------------------->
+            <!--- Sem Geo Location --------------------------------->
+            <div id="sem-geolocation">
+                <div class="toolbar">
+                    <h1>Guia de Motéis</h1>
+                </div>
+                <div class="scroll">
+                    <h1>Não foi possível detectar sua localização!<br/>
+                    Uma das seguintes situações deve ter ocorrido:</h1>
+                    <ul class="rounded">
+                        <li>
+                                01) Quando o sistema pediu permição para usar sua localização, você negou.<br />
+                                Para resolver esse problema, simplesmente feche e abra o programa novamente.<br />
+                                E, quando um pop-up aparecer perguntando se permite usar sua localização, concorde.
+                        </li>
+                        <li>
+                                02) O serviço de localização do seu aparelho esta desligado.<br />
+                                Para resolver esse problema, acesse as configurações de seu aparelho (normalmente é um icone com o desenho de uma engrenagem), 
+                                e habilite o serviço de navegação. Dependendo do aparelho (iphone, por exemplo), vc vai conseguir habilitar/desabilitar esse serviço
+                                para cada item do seu aparelho. Então, localize o icone do Safari, e habilite o serviço de localização para ele.
+                        </li>
+                        <li>
+                                Opcionalmente, você pode fazer uma busca por todos os motéis de uma cidade ou bairro. 
+                                Digite o nome de uma cidade ou bairro no campo abaixo, e clique no botão OK.
+                        </li>
+                        <li>
+                                <input type="text" size="20" maxlength="30" placeholder="bairro ou cidade">
+                                <input type="button" id="Button2" value="OK">
+                        </li>
+                    </ul>
+                </div>
+                <div class="rodape"></div>
+            </div>
+        </div>
+   </div>
+    <script type="text/javascript">
+        var toggle = document.querySelector(".toggle"),
+				toggleStatus = false,
+				menu = document.querySelector(".menu");
+        toggle.addEventListener('click', function (event) {
+            toggleMenu();
+        }, false);
+        function toggleMenu() {
+            if (!toggleStatus) {
+                menu.classList.remove("menu-off");
+                menu.classList.add("menu-on");
+                wrapper.classList.add("wrapper-on");
+                mask.classList.add("mask-on");
+                toggleStatus = true;
+            } else {
+                menu.classList.remove("menu-on");
+                mask.classList.remove("mask-on");
+                menu.classList.add("menu-off");
+                toggleStatus = false;
+            };
+        }
+	</script>
+    
+</body>
+</html>
+

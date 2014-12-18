@@ -1,0 +1,768 @@
+*{margin: 0; padding: 0;}
+body {
+    overflow-x:hidden;
+}
+#status {
+    display:none;
+}
+#wrapper {
+    position:relative;
+    float:left;
+}
+.menu{
+    float: left;
+    width: 80%;
+    height: 200px;
+    margin-left: -100%;
+}
+.menu-on{
+    margin-left: 0px;
+    -moz-transition:margin-left 1s;
+    -webkit-transition:margin-left 1s;
+    -o-transition:margin-left 1s;
+    transition:margin-left 1s;
+}
+.menu-off{
+    margin-left: -80%;
+    -moz-transition:margin-left 1s;
+    -webkit-transition:margin-left 1s;
+    -o-transition:margin-left 1s;
+    transition:margin-left 1s;
+}
+.wrapper-on {
+    margin-right:-80%;
+}
+        
+#slidemenu {
+    position:absolute;
+    display:none;
+}
+figure {
+    margin:0;
+    padding:0;
+    position:relative;
+}
+figure a{
+    position:relative;
+}
+ #jqt .toolbar {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 6px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 1px 6px;
+    border-bottom: 1px solid #2a3441;
+    z-index: 10;
+    position: relative;
+    padding: 10px;
+    background: url(../img/mobile-menu-bg.jpg) repeat-x;
+}
+ .toggle{
+    cursor: pointer;
+    position: relative;
+    z-index: 99999999;
+    background: url(../img/mobile-menu.png) no-repeat;
+}
+.menu-bt, .mobile-logo, .search {
+    position: relative;
+    display: inline-block;
+}
+.menu-bt {
+    
+}
+.search {
+    background: url(../img/mobile-search.png) no-repeat;
+    border: 0;
+    float: right;
+    color:#666;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bt-search {
+    background: url(../img/bt-search.png) no-repeat;
+    border: 0;
+    float: right;
+    cursor:pointer;
+}
+#tv-home {
+    margin: 0;
+    padding: 0;
+}
+ul.ui-swipeslide-bullets {
+    position: absolute;
+    background: none !important;
+    border: none !important;
+    width: 100%;
+}
+figcaption {
+    position: absolute;
+    left: 0;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999999;
+    float: left;
+    margin-top: -56px;
+    font-weight:bold;
+}
+.ui-swipeslide-bullets li {
+    background: url(../img/bullets.png) no-repeat;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+.ui-swipeslide-bullets li.active {
+    background: url(../img/bullets-active.png) no-repeat;
+}
+#jqt h2{
+    font-weight: 900;
+    font-family: "Arial Black", Arial, sans-serif;
+    display: inline-block;
+}
+#home h2 {
+    background: url(../img/icon-proximos.png) no-repeat;
+    color: #dd0048;
+}
+#jqt ul#moteis-premium li {
+    border-bottom: 1px solid #e2e2e2;
+    background: url(../img/premium-bg.png) repeat-x;      
+}
+.premium-left {
+    float: left;
+    width: 28%;
+    background: url(../img/premium-left.png) no-repeat;
+}
+.premium-left img {
+    float: left;
+    height: auto;
+    clear: both;
+}
+.premium-left .distancia {
+    float: left;
+    clear: both;
+    color: #282828;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+.premium-right {
+    float: left;
+    width: 72%;
+    color: #282828;
+}
+.premium-right .nome {
+    float: left;
+    clear: both;
+    font-weight: bold;
+}
+.premium-right .endereco {
+    float: left;
+    clear: both;
+}
+#go-site .versao-desktop {
+    background: url(../img/versao-desktop.png) no-repeat;
+    border:none !important;
+}
+#go-site .topo {
+    background: url(../img/topo-da-pagina.png) no-repeat;
+    border:none !important;
+}
+#go-site .versao-desktop a, #go-site .topo a{
+    width:100%;
+}
+#login {
+    background:#f5f5f5;
+}
+#login h2{
+    color:#dd0048;
+}
+#jqt ul li input[type="email"], #jqt ul li input[type="password"] {
+    width:92% !important;
+    margin-left: 4%  !important;
+    border-right:2px solid #cecece;
+    border-left:2px solid #cecece;
+    border-top:4px solid #cecece;
+    border-bottom:2px solid #e0e0e0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: rgb(245,245,245); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,245,245,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(245,245,245,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(245,245,245,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(245,245,245,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(245,245,245,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    color:#666;
+}
+.forgotpass {
+    background: url(../img/bt-recuperar-senha.png) no-repeat;
+}
+#btnFazerLogin {
+    background: url(../img/bt-continuar-login.png) no-repeat;
+    border:none;
+    cursor:pointer;
+}
+.f-l {
+    float:left;
+}
+.f-r {
+    float:right;
+}
+.info ul.links {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+.info ul.links li, .info ul.links li a{
+   color:#282828;
+   font-family:Arial;
+   font-weight:normal;
+   line-height: initial;
+   padding:0 5px 0 5px;
+}
+/* Versão portrait pra iphone - largura 320px*/
+@media screen and (max-width: 320px) {
+    #wrapper, body {
+        width:320px;
+    }
+    #wrapper {
+        top: -25px;
+    }
+    #jqt .toolbar {
+        height: 60px;
+        background-size: auto 60px;
+    }
+    .toggle{
+        top: 20px;
+        left: 10px;
+    }
+    .menu-bt {
+        width: 20px;
+        height: 20px;
+        background-size: 20px 20px;
+    }
+    .mobile-logo {
+        width: 65px;
+        height: 61px;
+        top: -4px;
+    }
+    .search {
+        width: 169px;
+        height: 28px;
+        background-size: 169px 28px;
+        margin-top: -58px;
+        margin-right: 39px;
+        text-indent:8px;
+    }
+    .bt-search {
+        width: 35px;
+        height: 28px;
+        background-size: 35px 28px;
+        margin: 8px 0 0 4px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000000;
+        height: 116px;
+    }
+    #tv-home > div {
+        height: 116px;
+    }
+    figcaption {
+        font-size:12px;
+        bottom: 19px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -20px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px 0 0 !important;
+        background-size: 11px 11px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 11px 11px;
+    }
+    #home h2 {
+        background-size: 13px 21px;
+        text-indent: 21px;
+        font-size: 21px;
+        background-position: 13px 11px;
+        border-bottom: 3px solid #e64177;
+        padding-left: 13px;
+        padding-top: 6px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 93px;
+        background-size: 100% 93px;
+    }
+    .premium-left {
+        height: 59px;
+        background-size: 88px 59px;
+        margin-top: 18px;
+    }
+    .premium-left img {
+        width: 70px;
+        margin: 5px 0 0 12px;
+    }
+    .premium-left .distancia {
+        font-size: 8px;
+        margin: 6px 0 0 14px;
+    }
+    .premium-right {
+        height: 94px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 37px;
+    }
+    .premium-right .nome {
+        margin: 23px 0 0 7px;
+        font-size: 15px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 11px;
+    }
+    #go-site {
+        margin-top:22px;
+    }
+    #go-site .versao-desktop {
+        width:147px;
+        height:43px;
+        background-size: 147px 43px;
+    }
+    #go-site .topo {
+        width:136px;
+        height:43px;
+        background-size: 136px 43px;
+    }
+    #go-site .versao-desktop a, #go-site .topo a{
+        height:43px;
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:12px;
+    }
+    .m-l {
+        margin-left:0;
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"] {
+        height:32px;
+        margin-bottom:14px;
+        text-indent:9px;
+        font-size:18px;
+    }
+    #login h2{
+        font-size:21px;
+        border-bottom:3px solid #e2316b;
+        text-indent:13px;
+        margin:20px 0 20px 0; 
+    }
+    .forgotpass {
+        width:141px;
+        height:42px;
+        margin:0 0 0 13px!important;
+        background-size:141px 42px;
+        padding:0 !important;
+    }
+    #btnFazerLogin {
+        width:142px;
+        height:42px;
+        margin:0 9px 0 0!important;
+        background-size:142px 42px;
+    }
+    #register {
+        margin: 21px 0 13px 0;
+    }
+    #register a{
+      height:65px;
+      padding:22px 0  0 13px;
+      font-size:19px;
+      background-position:95% 35px;
+      background-size:11px 17px;
+    }
+}
+/* Versão Landscape pra iphone - largura 480px*/
+@media only screen and (min-width : 321px) and (max-width : 480px) {
+    #wrapper, body {
+        width:480px;
+    }
+    #wrapper {
+        top: -35px;
+    }
+    #jqt .toolbar {
+        height: 90px;
+        background-size: auto 90px;
+    }
+    .toggle{
+        top: 29px;
+        left: 18px;
+    }
+    .menu-bt {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+    .mobile-logo {
+        width: 97px;
+        height: 96px;
+        top: -7px;
+        left: 12px;
+    }
+    .search {
+        width: 252px;
+        height: 44px;
+        background-size: 252px 44px;
+        left: 2px;
+        top: 14px;
+        text-indent:16px;
+        font-size:19px;
+    }
+    .bt-search {
+        width: 51px;
+        height: 41px;
+        background-size: 51px 41px;
+        margin: 16px 0 0 9px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000000;
+        height: 173px;
+    }
+    #tv-home > div {
+        height: 173px;
+    }
+    figcaption {
+        font-size:18px;
+        bottom: 29px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -22px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 14px;
+        height: 16px;
+        margin: 0 6px 0 0 !important;
+        background-size: 14px 16px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 14px 16px;
+    }
+    #home h2 {
+        background-size: 19px 31px;
+        text-indent: 30px;
+        font-size: 31px;
+        background-position: 15px 13px;
+        border-bottom: 5px solid #e64177;
+        padding-left: 13px;
+        padding-top: 7px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 140px;
+        background-size: 100% 140px;
+    }
+    .premium-left {
+        height: 87px;
+        background-size: 132px 87px;
+        margin-top: 28px;
+    }
+    .premium-left img {
+        width: 106px;
+        margin: 6px 0 0 18px;
+    }
+    .premium-left .distancia {
+        font-size: 12px;
+        margin: 4px 0 0 18px;
+    }
+    .premium-right {
+        height: 94px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 58px;
+    }
+    .premium-right .nome {
+        margin: 31px 0 0 7px;
+        font-size: 22px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 16px;
+    }
+    #go-site {
+        margin-top:22px;
+    }
+    #go-site .versao-desktop {
+        width:220px;
+        height:62px;
+        background-size: 220px 62px;
+    }
+    #go-site .topo {
+        width:204px;
+        height:62px;
+        background-size: 204px 62px;
+    }
+    #go-site .versao-desktop a, #go-site .topo a{
+       height:62px;
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:18px;
+    }
+    .m-l {
+        margin-left:5px;
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"] {
+        height:51px;
+        margin-bottom:21px;
+        text-indent:14px;
+        font-size:27px;
+    }
+    .forgotpass {
+        width:213px;
+        height:63px;
+        margin:0 0 0 18px!important;
+        background-size:213px 63px;
+    }
+    #btnFazerLogin {
+        width:214px;
+        height:63px;
+        margin:0 15px 0 0!important;
+        background-size:214px 63px;
+    }
+    #login h2{
+        font-size:31px;
+        border-bottom:4px solid #e2316b;
+        text-indent:20px;
+        margin:25px 0 25px 0; 
+    }
+    #register {
+        margin: 17px 0 24px 0;
+    }
+    #register a{
+      height:98px;
+      padding:33px 0  0 20px;
+      font-size:28px;
+      background-position:95% 53px;
+      background-size:18px 26px;
+    }
+}
+/* Versão Landscape pra iphone5 - largura 570px*/
+@media only screen and (min-width : 481px) {
+    #wrapper, body {
+        width:570px;
+    }
+    #wrapper {
+        top: -41px;
+    }
+    #jqt .toolbar {
+        height: 107px;
+        background-size: auto 107px;
+    }
+    .toggle{
+        top: 36px;
+        left:21px;
+    }
+    .menu-bt {
+        width: 35px;
+        height: 36px;
+        background-size: 35px 36px;
+    }
+    .mobile-logo {
+        width: 116px;
+        height: 111px;
+        top: -2px;
+        left: 19px;
+    }
+    .search {
+        width: 300px;
+        height: 53px;
+        background-size: 300px 53px;
+        left: 2px;
+        top: 16px;
+        font-size:21px;
+        text-indent:15px;
+    }
+    .bt-search {
+        width: 60px;
+        height: 47px;
+        background-size: 60px 47px;
+        margin: 20px 0 0 9px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000000;
+        height: 207px;
+    }
+    #tv-home > div {
+        height: 207px;
+    }
+    figcaption {
+        font-size:21px;
+        bottom: 36px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -22px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 16px;
+        height: 17px;
+        margin: 0 6px 0 0 !important;
+        background-size: 16px 17px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 16px 17px;
+    }
+    #home h2 {
+        background-size: 22px 36px;
+        text-indent: 38px;
+        font-size: 37px;
+        background-position: 15px 13px;
+        border-bottom: 5px solid #e64177;
+        padding-left: 13px;
+        padding-top: 7px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 167px;
+        background-size: 100% 167px;
+    }
+    .premium-left {
+        height: 102px;
+        background-size: 156px 102px;
+        margin-top: 28px;
+    }
+    .premium-left img {
+        width: 125px;
+        margin: 8px 0 0 21px;
+    }
+    .premium-left .distancia {
+        font-size: 14px;
+        margin: 4px 0 0 26px;
+    }
+    .premium-right {
+        height: 166px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 69px;
+    }
+    .premium-right .nome {
+        margin: 31px 0 0 7px;
+        font-size: 22px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 16px;
+    }
+    #go-site {
+        margin-top:22px;
+    }
+    #go-site .versao-desktop {
+        width:220px;
+        height:62px;
+        background-size: 220px 62px;
+    }
+    #go-site .topo {
+        width:204px;
+        height:62px;
+        background-size: 204px 62px;
+    }
+    #go-site .versao-desktop a, #go-site .topo a{
+        height:62px;
+    }
+    #login h2{
+        font-size:37px;
+        border-bottom:5px solid #e2316b;
+        text-indent:25px;
+        margin:30px 0 30px 0; 
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"] {
+        height:61px;
+        margin-bottom:26px;
+        text-indent:17px;
+        font-size:32px;
+    }
+    .forgotpass {
+        width:251px;
+        height:73px;
+        margin:0 0 0 22px!important
+    }
+    #btnFazerLogin {
+        width:252px;
+        height:73px;
+        margin:0 19px 0 0!important
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:21px;
+    }
+    .m-l {
+        margin-left:10px;
+    }
+    #register {
+        margin: 24px 0 28px 0;
+    }
+    #register a{
+      height:108px;
+      padding:44px 0  0 23px;
+      font-size:33px;
+      background-position:95% 67px;
+    }
+}
+#register {
+    width:100%;
+    border-bottom:2px solid #e3e3e3;
+    border-top:1px solid #f8f8f8;
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(236,236,236,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(236,236,236,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(236,236,236,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+    font-family:Arial;
+}
+#register a{
+    background-image: url(../img/seta.png);
+    background-repeat:no-repeat;
+    color:#282828;
+    text-transform:uppercase;
+}
+#register a span{
+    color:#dd0048;
+}
+
+
+#mask {
+        position: relative;   
+    }
+.info {
+    position:relative;
+}
+/* line 404, ../scss/include/_skeleton.scss */
+.menu ul, .menu ul li {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
+  border: 1px solid #52657f;
+}
+/* line 409, ../scss/include/_skeleton.scss */
+.menu ul {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 412, ../scss/include/_skeleton.scss */
+#jqt .menu ul li:first-child, .menu ul li:first-child a {
+  border-top: 0;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+/* line 416, ../scss/include/_skeleton.scss */
+.menu ul li:last-child, .menu ul li:last-child a {
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.menu ul, .menu ul li {
+  background-color: white;
+  color: gray;
+  text-shadow: white 0 1px 0;
+  border: 1px solid #d9d9d9;
+  font: bold 18px "Helvetica Neue", Helvetica;
+}
+.menu ul li {
+border-top: 1px solid #f2f2f2;
+list-style-type: none;
+overflow: hidden;
+padding: 10px;
+-webkit-transform: translate3d(0, 0, 0);
+}

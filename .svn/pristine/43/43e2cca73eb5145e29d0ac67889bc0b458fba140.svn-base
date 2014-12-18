@@ -1,0 +1,453 @@
+﻿var urlDados = "http://www.api.guiademoteis.com.br/";
+//var urlDados = "http://localhost:2236/";
+var urlImg  = "http://www.guiademoteis.com.br/";
+
+//Carrega o botão baixar app, header, e footer
+function IncludeHeader(callback) {
+   // $('#header').append($("<div>").load('Includes/_baixaApp.html'));
+    $('#header').append($("<div>").load("../Includes/_header.html", callback));
+} 
+
+//Pega a latitude e longitude do usuário
+function initGeoLocalizacao(callback) {
+    if (navigator.geolocation) {
+        //navigator.geolocation.getCurrentPosition(locSucesso, erro);
+        navigator.geolocation.getCurrentPosition(function (position) {
+            locSucesso(position, callback);
+        }, erro);
+    } else {
+        $('#status').text('Seu browser não suporta geolocalização!');
+    }
+        
+}
+
+function locSucesso(position, callback) {
+    //Armazena Latitude e longitude
+    var geo = {
+        Latitude:  position.coords.latitude,
+        Longitude: position.coords.longitude
+    };
+    sessionStorage.setItem('Geo', JSON.stringify(geo));
+
+    $('#hidLatitude').val(position.coords.latitude);
+    $('#hidLongitude').val(position.coords.longitude);
+    $('#spiner-motel-perto').show();
+   
+    //Se tudo deu certo, lê os motéis da região (pela latitude e longitude) 
+    $('#status').text("Latitude: " + $('#hidLatitude').val().replace(".", ",") + " - Longitude: " + $('#hidLongitude').val().replace(".", ","));
+   var param = {
+        latitude:  $('#hidLatitude').val().replace(".", ","),
+        longitude: $('#hidLongitude').val().replace(".", ",")
+    };
+    
+    //Motéis Perto
+    $.ajax({
+        type: "POST",
+        url: urlDados + "Motel/GetNearMotels",
+        data: param,
+        success: SucessoLoadPremiumPorIP,
+        complete: callback,
+        dataType: "json"
+    });
+
+}
+
+function erro(error) {
+    $('#hidLatitude').val("0");
+    $('#hidLongitude').val("0");
+    $('#status').text(error == typeof msg == 'string' ? msg : "falha ao localizar");
+    $('#status').css('background-color', '#F00').css('padding', '5px');
+}
+//##############################################################
+
+function SucessoLoadPremiumPorIP(dados) {
+    //console.log(dados.Motels);
+
+    $('#spiner-motel-perto').hide();
+    $.each(dados.Motels, function (i, item) {
+        var km = item.Distance.toString();
+        var background = "";
+        var tipo = "";
+        if (item.PlanoRedef == "1") {
+            tipo = ""; //'<span style='color:red;'>*premium*</span>";
+            background = ""; //"style='background: #f9eff0;'";
+        }
+        else if (item.PlanoRedef == "2") {
+            tipo = ""; //"<span style='color:red;'>*indicado*</span>";
+            background = ""; //"style='background: #FFFFCC;";
+        }
+
+        var texto = "<li id='motel-" + item.MotelId + "' " + background + ">";
+        texto = texto + "<a href='#detalhes' onclick='LoadDetalhesMotel(" + item.MotelId + ")' >";
+        texto = texto + "<img src='" + item.Logo + "'/>";
+        texto = texto + "Distância: " + km.substring(0, 4) + " km " + tipo + " <br>";
+        texto = texto + item.MotelName + "<br>";
+        texto = texto + item.City + " - " + item.Uf;
+        texto = texto + "</a></li>"
+        $("#moteis-premium").append(texto);
+
+    });
+}
+
+
+//TV por IP
+function LoadTVPorIP(callback) {
+    var param = {
+        latitude:  $('#hidLatitude').val().replace(".", ","),
+        longitude: $('#hidLongitude').val().replace(".", ","),
+        pageNumber: "1"
+    };
+
+    $('#spiner-tv').show();
+    $.ajax({
+        type: "POST",
+        url: urlDados + "Motel/GetDestaqueTV/",
+        data: param,
+        success: SucessoLoadTVPorIP,
+        complete: callback,
+        dataType: "json"
+    });
+}
+
+function SucessoLoadTVPorIP(dados) {
+    $('#spiner-tv').hide();
+    $.each(dados, function (i, item) {
+        i++;
+        var texto = "<figure id='" + item.Id + "'>";
+        texto = texto + "<a href='#detalhes' onclick='LoadDetalhesMotel(" + item.Id + ")' >";
+        texto = texto + "<img src='" + urlImg +  item.Imagem + "'/>";
+        texto = texto + "<figcaption >" + item.Titulo + "</figcaption>";
+        texto = texto + "</a>";
+        texto = texto + "</figure>"
+        $("#slider-3-content").append(texto);
+    });
+
+}
+//##############################################################
+
+
+//LoadDetalhesMotel (load motel, detalhes)
+//No evento "LoadDetalhesMotel" as suites são lidas
+function LoadDetalhesMotel(motel_id) {
+    var param = {
+        id: motel_id
+    };
+
+    $.ajax({
+        type: "POST",
+        url: urlDados + "Motel/GetMotelById",
+        data: param,
+        success: SucessoLoadDetalhesMotel,
+        dataType: "json"
+    });
+}
+
+function SucessoLoadDetalhesMotel(dados) {
+    console.log("Motel: " + dados.Motel.MotelId + " - " + dados.Motel.MotelName);
+    console.log(dados.Motel);
+    var motel = dados.Motel;
+
+    $('#det-descontos').empty();
+    $('#detalhes h1').html(dados.Motel.MotelName);
+    //$('#descontos h1').html(dados.Motel.MotelName); // Troquei o nome da suite, pelo título DESCONTOS
+    $(".det-logo").attr("src",  urlImg + motel.Logo);
+    $(".det-logo").attr("alt", motel.MotelName);
+    $('.det-topo h2').html(motel.MotelName);
+    $('.det-endereco').html(motel.Address);
+    $('.det-end-bai-cid').html(motel.District + " - " + motel.City + " - " + motel.Uf);
+    $('#btn_det_ligar').html(" " + motel.Phone + " ");
+    $('#btn_det_ligar').attr("href", motel.Phone)
+
+    //Descontos
+    //Se houver, habilita  o botão
+    if (motel.Discounts.length >= 1)
+        $('#btn_det_descontos').parents().show();
+    else
+        $('#btn_det_descontos').parent().hide();
+
+    $.each(motel.Discounts, function (i, desconto) {
+        var divId = "#desconto-mt-" + motel.MotelId;
+        var newDesconto = $('.desconto').clone();
+        newDesconto.removeAttr('id');
+        newDesconto.removeAttr('style');
+        newDesconto.removeAttr('class');
+        newDesconto.data('entryId', "desconto-mt-" + motel.MotelId);
+
+        newDesconto.find(".titulo").html(desconto.DiscountId + " - <b>" + desconto.DiscountTitle + "( " + desconto.Type + " )</b>");
+        newDesconto.find(".subtitulo").html(desconto.DiscountSubTitle);
+        newDesconto.find(".descricao").html(desconto.Description);
+
+        var botao = "<a class='btn-add-cupomdigital' href='#' onclick='AddCupomDigital(" + desconto.DiscountId + ")' >Adicionar Cupom</a>";
+        newDesconto.find(".individual li").html(botao);
+        
+        $('#det-descontos').append(newDesconto);
+    });
+
+    //LoadSuites
+    var param = {
+        id: motel.MotelId
+    };
+
+    $.ajax({
+        type: "POST",
+        url: urlDados + "Suites/GetMotelSuites",
+        data: param,
+        success: SucessoLoadSuites,
+        dataType: "json"
+    });
+
+
+}
+
+function SucessoLoadSuites(dados) {
+    var url      = dados.BaseImageUrl;
+    var suites   = dados.Suites;
+
+    console.log("suites");
+    console.log(suites);
+    $('#det-suites').empty();
+    $.each(suites, function (i, suite) {
+        var newSuite = $('#suiteTemplate').clone();
+        var divTvId  = "#fotos_" + suite.SuiteId;
+        newSuite.removeAttr('id');
+        newSuite.removeAttr('style');
+        newSuite.data('entryId', "suite-" + suite.SuiteId);
+        newSuite.find("h2").html(suite.SuiteName);
+        newSuite.find(".slider").attr('id', "fotos_" + suite.SuiteId);
+
+        //Lendo as imagens da suite     
+        var fotos = suite.Photos;
+        var texto = "<div id='slider-" + suite.SuiteId + "-content'>";
+        $.each(fotos, function (i, foto) {
+            texto = texto + "<figure>";
+            texto = texto + "<img src='" + urlImg +  "imagens/suites/" + foto + "'/>";
+            texto = texto + "<figcaption>Assine</figcaption>";
+            texto = texto + "</figure>";
+        });
+        newSuite.find('.slider').append(texto + "</div>");
+
+        //Periodo
+        var periodos = "";
+        $.each(suite.Periods, function (i, periodo) {
+            periodos = periodos + suite.SuiteId + " - " + periodo.Description + " " + periodo.Price + "<br>";
+        });
+
+        if (periodos != "") 
+            newSuite.find('.periodo').html("<br><h4>Períodos:</h4>" + periodos);
+
+        //Pernoite
+        var pernoite = "";
+        $.each(suite.Overnights, function (i, overnight) {
+            pernoite = pernoite + overnight.Description + " " + overnight.Price + "<br>";
+        });
+
+        if (pernoite != "")
+            newSuite.find('.pernoite').html("<br><h4>Pernoite</h4>" + pernoite);
+
+        //Itens da suíte
+        var itens = "";
+        var qtde = (suite.Items.length -1);
+        $.each(suite.Items, function (i, item) {
+            itens = itens + item;
+            if (qtde > i)
+                itens = itens + ", ";
+        });
+
+        if (itens != "")
+            newSuite.find('.itens').html("<br><h4>Essa suíte tem:</h4>" + itens + ".");
+
+        if (suite.Observation != "")
+            newSuite.find('.obs').html("<br><h4>Observações:</h4>" + suite.Observation);
+
+        var conteudo = newSuite; 
+        $('#det-suites').append(conteudo);
+
+        $(divTvId.toString()).swipeSlide({ visibleSlides: 1 });
+    });
+}
+//##############################################################
+
+//Logout
+function Logout() {
+    sessionStorage.removeItem("Usuario");
+    window.location = "#home";
+    $().toastmessage('showWarningToast', 'Logout concluido!');
+}
+
+//Login
+function Login() {
+
+    if ($('#txtEmail').val() == "") {
+        $().toastmessage('showErrorToast', 'Digite o e-mail!');
+        return false;
+    } else if ($('#txtSenha').val() == "") {
+        $().toastmessage('showErrorToast', 'Digite a senha!');
+        return false;
+    }
+    
+    var param = {
+        email: $('#txtEmail').val(),
+        password: $('#txtSenha').val()
+    };
+
+    $.ajax({
+        type: "POST",
+        url: urlDados + "UserLogin/Login",
+        data: param,
+        success: SucessoLogin,
+        dataType: "json"
+    });
+    
+}
+
+function SucessoLogin(dados) {
+
+    console.log("Dados retornados do login");
+    console.log(dados);
+    console.log("-------------------------");
+
+    //Gravando um objeto com dados do usuário em sessão
+    var usuarioObj = {
+        Id: dados.UserId,
+        Token: dados.Token,
+        Email: $('#txtEmail').val(),
+        Senha: $('#txtSenha').val(),
+        StatusCode: dados.StatusCode
+    };
+    sessionStorage.setItem('Usuario', JSON.stringify(usuarioObj));
+    var usuarioObj = JSON.parse(sessionStorage.Usuario);
+    $('#txtEmail').val("");
+    $('#txtSenha').val("");
+
+    //Se o usuário foi logado, e se houver um Id de cuppm de
+    //desconto para adicionar aos cupons digitais, adiciona
+    if (sessionStorage.Acao && sessionStorage.CupomId) {
+        if (sessionStorage.Acao == "add-cupom-digital") 
+            AddCupomDigital(sessionStorage.CupomId);
+        //else if ("altera-senha")
+    }
+    else {
+        Redireciona();
+    }
+
+}
+//## Login - fim ##################################################
+
+//Adiciona cupom digital
+function AddCupomDigital(cupomId) {
+
+    if (!sessionStorage.Usuario) {
+        sessionStorage.Acao     = "add-cupom-digital";
+        sessionStorage.Redirect = "#";
+        sessionStorage.CupomId  = cupomId;
+        console.log("cupom digital recem armazenado: " + sessionStorage.CupomId);
+        window.location = "#login";
+    }
+    else {
+        //Adiciona o cupom digital
+        sessionStorage.CupomId = cupomId;
+        var usuarioObj = JSON.parse(sessionStorage.Usuario);
+
+        /*
+        console.log("add cupom digital (v3):");
+        console.log("cupom id:: "   + sessionStorage.CupomId);
+        console.log("user id:: "    + usuarioObj.Id);
+        console.log("Token:: "      + usuarioObj.Token);
+        console.log("DiscountId:: " + sessionStorage.CupomId);
+        */
+
+        var userDiscount = {
+            Token: usuarioObj.Token,
+            DiscountId: sessionStorage.CupomId
+        };
+
+        var param = {
+            userId: usuarioObj.Id,
+            userDiscount: userDiscount
+        };
+
+        /*
+        var param = {
+            userId: usuarioObj.Id,
+            userDiscount: {
+                Token: usuarioObj.Token,
+                DiscountId: sessionStorage.CupomId
+            }
+        };
+        */
+
+        $.ajax({
+            type: "POST",
+            url: urlDados + "UserDiscount/AddUserDiscount",
+            data: param,
+            success: SucessoAddCupomDigital,
+            dataType: "json"
+        });
+    }
+}
+
+function SucessoAddCupomDigital(dados) {
+
+    if (StatusCode != 1) 
+        $().toastmessage('showSuccessToast', 'Cupom adicionado com sucesso!');
+    else
+        $().toastmessage('showErrorToast', 'Não foi possível adicionar o cupom. Tente novamente mais tarde. Erro: ' + dados.StatusCode);
+
+    sessionStorage.removeItem("Acao");
+    sessionStorage.removeItem("Redirect");
+    sessionStorage.removeItem("CupomId");
+    window.location = "#"; //Aqui eu estou tentando fazer um back (voltar para a pg anterior) dinamicamente
+
+    $().toastmessage('showSuccessToast', 'Cupom adicionado com sucesso!');
+}
+//## Add cupom digital - fim ############################################
+
+//Redireciona
+function Redireciona() {
+    if (!sessionStorage.Redirect)
+        window.location = "#home";
+    else
+        window.location = sessionStorage.Redirect;
+}
+//## Redireciona - fim ##################################################
+
+//Reenvio de senha
+function ReenvioDeSenha() {
+    var param = {
+        EmailouCpf:  $('#txtEmailOuCpf').val()
+    }
+
+    $.ajax({
+        type: "POST",
+        url: urlDados + "UserLogin/EsqueciSenha",
+        data: param,
+        success: SucessoReenvioDeSenha,
+        dataType: "json"
+    });
+}
+
+function SucessoReenvioDeSenha(dados) {
+    window.location = "#";
+    $().toastmessage('showSuccessToast', 'Senha reenviada com sucesso!');
+}
+//## Reenvio de senha - fim ###########################################
+
+// LoadUserDados()
+function LoadUserDados() {
+
+    console.log("dados do sessionStorage.Usuario: ");
+    console.log(sessionStorage.Usuario);
+    if (!sessionStorage.Usuario) {
+        sessionStorage.Acao = "altera-senha";
+        sessionStorage.Redirect = "#altera-senha";
+        window.location = "#login";
+    }
+    else {
+        var usuarioObj = JSON.parse(sessionStorage.Usuario);
+        console.log("dados:: ");
+        console.log(usuarioObj);
+        window.location = "#senha-altera";
+        $('.user-email').text(usuarioObj.Email);
+    }
+
+}

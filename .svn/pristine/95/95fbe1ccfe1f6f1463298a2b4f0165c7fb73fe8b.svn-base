@@ -1,0 +1,8 @@
+﻿<div class='header-content'>
+     <!--input type="button" id="btnMenuHeader" value="menu"/-->
+    <a href="#menu"><img src="../themes/img/menu.png" alt="menu"></a>
+    <img src="http://www.guiademoteis.com.br/imagens/logo.png" style="height:40px;width:40px;" />
+    <input id='txtNomeBusca' type="text" size="20" maxlength="30"/><br><br>
+    <input type="button" id="btnBuscaHeader" value="OK"/><br>
+    <p id="status">Procurando sua localização...</p>
+</div>

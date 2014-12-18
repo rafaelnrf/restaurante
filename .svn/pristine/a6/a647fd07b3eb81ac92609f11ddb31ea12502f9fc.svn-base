@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3224C05F-5DC8-4991-8652-7DBF7CBC50B3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>aaaZepto</RootNamespace>
+    <AssemblyName>aaaZepto</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="extensions\jqt.autotitles.js" />
+    <Content Include="extensions\jqt.autotitles.min.js" />
+    <Content Include="extensions\jqt.floaty.js" />
+    <Content Include="extensions\jqt.floaty.min.js" />
+    <Content Include="extensions\jqt.location.js" />
+    <Content Include="extensions\jqt.location.min.js" />
+    <Content Include="extensions\jqt.offline.js" />
+    <Content Include="extensions\jqt.offline.min.js" />
+    <Content Include="extensions\jqt.themeswitcher.js" />
+    <Content Include="extensions\jqt.themeswitcher.min.js" />
+    <Content Include="geral.js" />
+    <None Include="Includes\_header.html_" />
+    <Content Include="Includes\_baixaApp.html" />
+    <Content Include="Includes\_footer.html" />
+    <Content Include="Includes\_header.html" />
+    <Content Include="Includes\_moteisPremium.html" />
+    <Content Include="Includes\_suite.html" />
+    <Content Include="src\jqtouch-jquery.js" />
+    <Content Include="src\jqtouch-jquery.min.js" />
+    <Content Include="src\jqtouch.js" />
+    <Content Include="src\jqtouch.min.js" />
+    <Content Include="src\lib\jquery-1.7.js" />
+    <Content Include="src\lib\jquery-1.7.min.js" />
+    <Content Include="src\lib\zepto.js" />
+    <Content Include="src\lib\zepto.min.js" />
+    <Content Include="swipeslide.css" />
+    <Content Include="swipeslide.js" />
+    <Content Include="themes\compass-recipes\fonts\iconic\demo.html" />
+    <Content Include="themes\compass-recipes\fonts\iconic\iconic.css" />
+    <Content Include="themes\compass-recipes\fonts\iconic\iconic_stroke.svg" />
+    <Content Include="themes\compass-recipes\fonts\OFL-FAQ.txt" />
+    <Content Include="themes\compass-recipes\fonts\OFL.txt" />
+    <Content Include="themes\compass-recipes\fonts\websymbols\websymbols-regular-webfont.svg" />
+    <Content Include="themes\compass-recipes\tests\recipes\background\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\background\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\base\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\base\normalize\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\base\normalize\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\color\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\color\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\bevel\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\bevel\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\corner-folded\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\corner-folded\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\cutout\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\cutout\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\glass\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\glass\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\form\element\inline\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\form\element\inline\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\form\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\form\skin\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\form\skin\natural\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\form\skin\natural\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\google-webfont\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\google-webfont\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\layout\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\layout\vertical-align\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\layout\vertical-align\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\media-queries\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shadow\drop\curved\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shadow\drop\curved\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\shadow\drop\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shadow\drop\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\shadow\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\ellipse\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\ellipse\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\polygon\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\polygon\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\polygon\star\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\polygon\star\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\polygon\triangle\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\polygon\triangle\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\symbol\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\symbol\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\shared\clearfix\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\shared\clearfix\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\shared\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\convex\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\convex\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\gradient\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\gradient\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\keyboard\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\keyboard\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\menu\dropdown\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\menu\dropdown\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\menu\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\overlay\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\overlay\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\separator\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\separator\s.css" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\webfont-icons\index.html" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\webfont-icons\s.css" />
+    <Content Include="themes\css\apple.css" />
+    <Content Include="themes\css\jqtouch.css" />
+    <Content Include="themes\css\vanilla.css" />
+    <Content Include="themes\img\apple\loading.gif" />
+    <Content Include="themes\img\apple\on_off.png" />
+    <Content Include="themes\img\jqt\loading.gif" />
+    <Content Include="themes\img\jqt\on_off.png" />
+    <Content Include="themes\scss\reference\apple.old.css" />
+    <Content Include="themes\scss\reference\default.old.css" />
+    <Content Include="themes\scss\reference\jqtouch.old.css" />
+    <Content Include="Web.config" />
+    <Content Include="web\Includes\_baixaApp.html" />
+    <Content Include="web\Includes\_footer.html" />
+    <Content Include="web\Includes\_header.html" />
+    <Content Include="web\Includes\_moteisPremium.html" />
+    <Content Include="web\lib\zepto.min.js" />
+    <Content Include="web\media\amsterdam.jpg" />
+    <Content Include="web\media\barpark.jpg" />
+    <Content Include="web\media\clody.jpg" />
+    <Content Include="web\media\gate.jpg" />
+    <Content Include="web\media\IMG_0730.JPG" />
+    <Content Include="web\media\IMG_0743.JPG" />
+    <Content Include="web\media\IMG_0829.JPG" />
+    <Content Include="web\media\IMG_0860.JPG" />
+    <Content Include="web\media\japan_clock.jpg" />
+    <Content Include="web\media\multi\amsterdam.jpg" />
+    <Content Include="web\media\multi\barpark.jpg" />
+    <Content Include="web\media\multi\clody.jpg" />
+    <Content Include="web\media\multi\gate.jpg" />
+    <Content Include="web\media\multi\IMG_0730.JPG" />
+    <Content Include="web\media\multi\IMG_0743.JPG" />
+    <Content Include="web\media\multi\IMG_0829.JPG" />
+    <Content Include="web\media\multi\IMG_0860.JPG" />
+    <Content Include="web\media\multi\japan_clock.jpg" />
+    <Content Include="web\media\multi\ny.jpg" />
+    <Content Include="web\media\multi\panorama.jpg" />
+    <Content Include="web\media\multi\pool.jpg" />
+    <Content Include="web\media\multi\port.jpg" />
+    <Content Include="web\media\multi\praga.jpg" />
+    <Content Include="web\media\multi\provence.jpg" />
+    <Content Include="web\media\multi\river.jpg" />
+    <Content Include="web\media\multi\saarschleife.jpg" />
+    <Content Include="web\media\multi\santa-marta-pano-large.jpg" />
+    <Content Include="web\media\multi\seul.jpg" />
+    <Content Include="web\media\multi\sur.jpg" />
+    <Content Include="web\media\multi\taxi_istanbul.jpg" />
+    <Content Include="web\media\multi\taxi_london.jpg" />
+    <Content Include="web\media\multi\taxi_mexicocity.jpg" />
+    <Content Include="web\media\multi\taxi_newyork.jpg" />
+    <Content Include="web\media\ny.jpg" />
+    <Content Include="web\media\panorama.jpg" />
+    <Content Include="web\media\pool.jpg" />
+    <Content Include="web\media\port.jpg" />
+    <Content Include="web\media\praga.jpg" />
+    <Content Include="web\media\provence.jpg" />
+    <Content Include="web\media\river.jpg" />
+    <Content Include="web\media\saarschleife.jpg" />
+    <Content Include="web\media\santa-marta-pano-large.jpg" />
+    <Content Include="web\media\seul.jpg" />
+    <Content Include="web\media\sur.jpg" />
+    <Content Include="web\media\taxi_istanbul.jpg" />
+    <Content Include="web\media\taxi_london.jpg" />
+    <Content Include="web\media\taxi_mexicocity.jpg" />
+    <Content Include="web\media\taxi_newyork.jpg" />
+    <Content Include="web\index.html" />
+    <Content Include="_Suite.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="themes\compass-recipes\compass-recipes.gemspec" />
+    <Content Include="themes\compass-recipes\config.rb" />
+    <Content Include="themes\compass-recipes\fonts\heydings\heydings_icons.ttf" />
+    <Content Include="themes\compass-recipes\fonts\iconic\iconic_stroke.eot" />
+    <Content Include="themes\compass-recipes\fonts\iconic\iconic_stroke.otf" />
+    <Content Include="themes\compass-recipes\fonts\iconic\iconic_stroke.ttf" />
+    <Content Include="themes\compass-recipes\fonts\websymbols\websymbols-regular-webfont.eot" />
+    <Content Include="themes\compass-recipes\fonts\websymbols\websymbols-regular-webfont.ttf" />
+    <Content Include="themes\compass-recipes\Gemfile" />
+    <Content Include="themes\compass-recipes\lib\compass-recipes.rb" />
+    <Content Include="themes\compass-recipes\lib\compass-recipes\sass_extensions.rb" />
+    <Content Include="themes\compass-recipes\LICENSE" />
+    <Content Include="themes\compass-recipes\Rakefile.rb" />
+    <Content Include="themes\compass-recipes\README.md" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\animation\_keyframes.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\background\_blueprint-grid.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\background\_carbon-fiber.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\background\_gradients.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\background\_noise.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\background\_radial-overlay.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\background\_striped.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\background\_tartan.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\base\_normalize.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\effect\_bevel.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\effect\_corner-folded.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\effect\_cutout.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\effect\_folded-corner.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\effect\_glass.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\effect\_tape.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\form\element\_inline.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\form\skin\_natural.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\form\_element.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\form\_skin.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\layout\_flexible-box-model.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\layout\_vertical-align.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shadow\drop\_curled-corners.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shadow\drop\_curved.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shadow\drop\_flying.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shadow\drop\_lifted-corners.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shadow\drop\_perspective.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shadow\drop\_raised.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shadow\drop\_transform-requirement.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shadow\_drop.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shadow\_top-edge.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_hexagon.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_octagon.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_parallelogram.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_pentagon.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_rectangle.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_rhombus.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_square.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_star.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_trapezoid.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\polygon\_triangle.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\symbol\_diamond.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\symbol\_egg.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\symbol\_heart.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\symbol\_infinity.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\symbol\_pacman.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\symbol\_yin-yang.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\_ellipse.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\_polygon.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shape\_symbol.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shared\_block-inline-block.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shared\_clearfix.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shared\_list-inline-block.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shared\_pseudo-element.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\shared\_user-select.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\border\_bevel.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\helper\_arrow.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\menu\_dropdown.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\_convex.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\_glossy.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\_gradient.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\_helper.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\_keyboard.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\_menu.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\_overlay.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\ui\_separator.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_background.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_base.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_color.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_effect.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_form.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_google-webfont.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_icons.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_layout.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_media-queries.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_shadow.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_shape.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_shared.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_ui.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\recipes\_webfont-icon.scss" />
+    <Content Include="themes\compass-recipes\stylesheets\_recipes.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\background\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\base\normalize\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\color\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\bevel\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\corner-folded\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\cutout\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\effect\glass\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\form\element\inline\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\form\skin\natural\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\google-webfont\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\layout\vertical-align\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\media-queries\s.scssx" />
+    <Content Include="themes\compass-recipes\tests\recipes\shadow\drop\curved\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\shadow\drop\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\ellipse\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\polygon\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\polygon\star\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\polygon\triangle\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\shape\symbol\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\shared\clearfix\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\convex\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\gradient\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\keyboard\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\menu\dropdown\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\overlay\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\separator\s.scss" />
+    <Content Include="themes\compass-recipes\tests\recipes\ui\webfont-icons\s.scss" />
+    <Content Include="themes\compass-recipes\tests\_tests.scss" />
+    <Content Include="themes\compass-recipes\VERSION" />
+    <Content Include="themes\scss\.sass-cache\003ffe4b9a31e923bea5e28a170e27d25aeaaa1a\_block-inline-block.scssc" />
+    <Content Include="themes\scss\.sass-cache\003ffe4b9a31e923bea5e28a170e27d25aeaaa1a\_clearfix.scssc" />
+    <Content Include="themes\scss\.sass-cache\003ffe4b9a31e923bea5e28a170e27d25aeaaa1a\_list-inline-block.scssc" />
+    <Content Include="themes\scss\.sass-cache\003ffe4b9a31e923bea5e28a170e27d25aeaaa1a\_pseudo-element.scssc" />
+    <Content Include="themes\scss\.sass-cache\003ffe4b9a31e923bea5e28a170e27d25aeaaa1a\_user-select.scssc" />
+    <Content Include="themes\scss\.sass-cache\01800b2a1111359b28f761ff09af68a7d23f8fd6\_drop.scssc" />
+    <Content Include="themes\scss\.sass-cache\01800b2a1111359b28f761ff09af68a7d23f8fd6\_top-edge.scssc" />
+    <Content Include="themes\scss\.sass-cache\07a403e39c89e922a720c390be200c3a36139557\_blueprint-grid.scssc" />
+    <Content Include="themes\scss\.sass-cache\07a403e39c89e922a720c390be200c3a36139557\_carbon-fiber.scssc" />
+    <Content Include="themes\scss\.sass-cache\07a403e39c89e922a720c390be200c3a36139557\_gradients.scssc" />
+    <Content Include="themes\scss\.sass-cache\07a403e39c89e922a720c390be200c3a36139557\_noise.scssc" />
+    <Content Include="themes\scss\.sass-cache\07a403e39c89e922a720c390be200c3a36139557\_radial-overlay.scssc" />
+    <Content Include="themes\scss\.sass-cache\07a403e39c89e922a720c390be200c3a36139557\_striped.scssc" />
+    <Content Include="themes\scss\.sass-cache\07a403e39c89e922a720c390be200c3a36139557\_tartan.scssc" />
+    <Content Include="themes\scss\.sass-cache\0acede2a2f475bbd8b350f01eb80bf38605095a3\_compass.scssc" />
+    <Content Include="themes\scss\.sass-cache\0d37110cda1ca6325fd6193710013d35241b6067\_diamond.scssc" />
+    <Content Include="themes\scss\.sass-cache\0d37110cda1ca6325fd6193710013d35241b6067\_egg.scssc" />
+    <Content Include="themes\scss\.sass-cache\0d37110cda1ca6325fd6193710013d35241b6067\_heart.scssc" />
+    <Content Include="themes\scss\.sass-cache\0d37110cda1ca6325fd6193710013d35241b6067\_infinity.scssc" />
+    <Content Include="themes\scss\.sass-cache\0d37110cda1ca6325fd6193710013d35241b6067\_pacman.scssc" />
+    <Content Include="themes\scss\.sass-cache\0d37110cda1ca6325fd6193710013d35241b6067\_yin-yang.scssc" />
+    <Content Include="themes\scss\.sass-cache\0e7ad79db9aa97a22446e123bf8802e9ef46e7a0\_dropdown.scssc" />
+    <Content Include="themes\scss\.sass-cache\18eb6e73f314b327da9bf059c7b79e213e6c9e87\_curled-corners.scssc" />
+    <Content Include="themes\scss\.sass-cache\18eb6e73f314b327da9bf059c7b79e213e6c9e87\_curved.scssc" />
+    <Content Include="themes\scss\.sass-cache\18eb6e73f314b327da9bf059c7b79e213e6c9e87\_flying.scssc" />
+    <Content Include="themes\scss\.sass-cache\18eb6e73f314b327da9bf059c7b79e213e6c9e87\_lifted-corners.scssc" />
+    <Content Include="themes\scss\.sass-cache\18eb6e73f314b327da9bf059c7b79e213e6c9e87\_perspective.scssc" />
+    <Content Include="themes\scss\.sass-cache\18eb6e73f314b327da9bf059c7b79e213e6c9e87\_raised.scssc" />
+    <Content Include="themes\scss\.sass-cache\18eb6e73f314b327da9bf059c7b79e213e6c9e87\_transform-requirement.scssc" />
+    <Content Include="themes\scss\.sass-cache\199aadc25bbf6a925f2cbf7d7be9b6ef24f4cba3\_natural.scssc" />
+    <Content Include="themes\scss\.sass-cache\1e07824912f6353420e5b1a62254c059047a5062\_bevel.scssc" />
+    <Content Include="themes\scss\.sass-cache\1e07824912f6353420e5b1a62254c059047a5062\_corner-folded.scssc" />
+    <Content Include="themes\scss\.sass-cache\1e07824912f6353420e5b1a62254c059047a5062\_cutout.scssc" />
+    <Content Include="themes\scss\.sass-cache\1e07824912f6353420e5b1a62254c059047a5062\_folded-corner.scssc" />
+    <Content Include="themes\scss\.sass-cache\1e07824912f6353420e5b1a62254c059047a5062\_glass.scssc" />
+    <Content Include="themes\scss\.sass-cache\1e07824912f6353420e5b1a62254c059047a5062\_tape.scssc" />
+    <Content Include="themes\scss\.sass-cache\2176140271a7864ab69a15b1c6711e4a235daf1f\_contrast.scssc" />
+    <Content Include="themes\scss\.sass-cache\22cd290597f2559be0a6bb6048609578f582cbb1\_animations.scssc" />
+    <Content Include="themes\scss\.sass-cache\22cd290597f2559be0a6bb6048609578f582cbb1\_base.scssc" />
+    <Content Include="themes\scss\.sass-cache\22cd290597f2559be0a6bb6048609578f582cbb1\_core.scssc" />
+    <Content Include="themes\scss\.sass-cache\22cd290597f2559be0a6bb6048609578f582cbb1\_skeleton.scssc" />
+    <Content Include="themes\scss\.sass-cache\2a2ada4b0ca6310bb5764b063041faf81997ec34\_ellipse.scssc" />
+    <Content Include="themes\scss\.sass-cache\2a2ada4b0ca6310bb5764b063041faf81997ec34\_polygon.scssc" />
+    <Content Include="themes\scss\.sass-cache\2a2ada4b0ca6310bb5764b063041faf81997ec34\_symbol.scssc" />
+    <Content Include="themes\scss\.sass-cache\2b7e1fe21ae164db9c22ecee93176eaae18e16c9\_links.scssc" />
+    <Content Include="themes\scss\.sass-cache\2b7e1fe21ae164db9c22ecee93176eaae18e16c9\_lists.scssc" />
+    <Content Include="themes\scss\.sass-cache\2b7e1fe21ae164db9c22ecee93176eaae18e16c9\_text.scssc" />
+    <Content Include="themes\scss\.sass-cache\2b7e1fe21ae164db9c22ecee93176eaae18e16c9\_vertical_rhythm.scssc" />
+    <Content Include="themes\scss\.sass-cache\3db2b353de0d98dbd1e3150310b6dc81c9e55003\_inline.scssc" />
+    <Content Include="themes\scss\.sass-cache\431703159a18af6798ff782dff48141d073edefb\apple.scssc" />
+    <Content Include="themes\scss\.sass-cache\431703159a18af6798ff782dff48141d073edefb\jqtouch.scssc" />
+    <Content Include="themes\scss\.sass-cache\431703159a18af6798ff782dff48141d073edefb\vanilla.scssc" />
+    <Content Include="themes\scss\.sass-cache\48793a0de1844dda49f6ae5548c44561b0dc6be3\_bullets.scssc" />
+    <Content Include="themes\scss\.sass-cache\48793a0de1844dda49f6ae5548c44561b0dc6be3\_horizontal-list.scssc" />
+    <Content Include="themes\scss\.sass-cache\48793a0de1844dda49f6ae5548c44561b0dc6be3\_inline-block-list.scssc" />
+    <Content Include="themes\scss\.sass-cache\48793a0de1844dda49f6ae5548c44561b0dc6be3\_inline-list.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_appearance.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_background-clip.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_background-origin.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_background-size.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_border-radius.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_box-shadow.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_box-sizing.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_box.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_columns.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_font-face.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_gradient.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_images.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_inline-block.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_opacity.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_shared.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_text-shadow.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_transform.scssc" />
+    <Content Include="themes\scss\.sass-cache\552c2ff9454325f387df983834b2331c3bf22054\_transition.scssc" />
+    <Content Include="themes\scss\.sass-cache\57d16a576b3b539d12b5eab40658983de7f6840d\_normalize.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_background.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_base.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_color.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_effect.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_form.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_google-webfont.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_layout.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_media-queries.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_shadow.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_shape.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_shared.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_ui.scssc" />
+    <Content Include="themes\scss\.sass-cache\5c0016c5f10d74582bd92faf514b2534505d4067\_webfont-icon.scssc" />
+    <Content Include="themes\scss\.sass-cache\5d416177a11ece7902cd476b30269a642b0425a1\_recipes.scssc" />
+    <Content Include="themes\scss\.sass-cache\63ae60d71a823fed1ca740551e7e82de445e8dfe\_convex.scssc" />
+    <Content Include="themes\scss\.sass-cache\63ae60d71a823fed1ca740551e7e82de445e8dfe\_glossy.scssc" />
+    <Content Include="themes\scss\.sass-cache\63ae60d71a823fed1ca740551e7e82de445e8dfe\_gradient.scssc" />
+    <Content Include="themes\scss\.sass-cache\63ae60d71a823fed1ca740551e7e82de445e8dfe\_helper.scssc" />
+    <Content Include="themes\scss\.sass-cache\63ae60d71a823fed1ca740551e7e82de445e8dfe\_keyboard.scssc" />
+    <Content Include="themes\scss\.sass-cache\63ae60d71a823fed1ca740551e7e82de445e8dfe\_menu.scssc" />
+    <Content Include="themes\scss\.sass-cache\63ae60d71a823fed1ca740551e7e82de445e8dfe\_overlay.scssc" />
+    <Content Include="themes\scss\.sass-cache\63ae60d71a823fed1ca740551e7e82de445e8dfe\_separator.scssc" />
+    <Content Include="themes\scss\.sass-cache\65a0d134b5249c8386a20acdf7f3c76a697f4347\_vertical-align.scssc" />
+    <Content Include="themes\scss\.sass-cache\6d85d57c0b834e1b6d26c14894cc7feb0b81c67d\_alternating-rows-and-columns.scssc" />
+    <Content Include="themes\scss\.sass-cache\6d85d57c0b834e1b6d26c14894cc7feb0b81c67d\_borders.scssc" />
+    <Content Include="themes\scss\.sass-cache\6d85d57c0b834e1b6d26c14894cc7feb0b81c67d\_scaffolding.scssc" />
+    <Content Include="themes\scss\.sass-cache\7549acea8be443c3885bf4537fa7ca485bd6291c\_sprite-img.scssc" />
+    <Content Include="themes\scss\.sass-cache\7c17c5c252c693e7fb9d979622d50f9c15a64c39\_utilities.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_hexagon.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_octagon.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_parallelogram.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_pentagon.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_rectangle.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_rhombus.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_square.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_star.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_trapezoid.scssc" />
+    <Content Include="themes\scss\.sass-cache\9347c9b303134ecdb4079e3c8d9795cca3c2c4da\_triangle.scssc" />
+    <Content Include="themes\scss\.sass-cache\a4b6a372988651c0645c7cd2f883b75cb87e190c\_clearfix.scssc" />
+    <Content Include="themes\scss\.sass-cache\a4b6a372988651c0645c7cd2f883b75cb87e190c\_float.scssc" />
+    <Content Include="themes\scss\.sass-cache\a4b6a372988651c0645c7cd2f883b75cb87e190c\_hacks.scssc" />
+    <Content Include="themes\scss\.sass-cache\a4b6a372988651c0645c7cd2f883b75cb87e190c\_min.scssc" />
+    <Content Include="themes\scss\.sass-cache\a4b6a372988651c0645c7cd2f883b75cb87e190c\_reset.scssc" />
+    <Content Include="themes\scss\.sass-cache\a4b6a372988651c0645c7cd2f883b75cb87e190c\_tag-cloud.scssc" />
+    <Content Include="themes\scss\.sass-cache\ac8b78d239b556bc6991e2d247abd326310d2ccc\_color.scssc" />
+    <Content Include="themes\scss\.sass-cache\ac8b78d239b556bc6991e2d247abd326310d2ccc\_general.scssc" />
+    <Content Include="themes\scss\.sass-cache\ac8b78d239b556bc6991e2d247abd326310d2ccc\_sprites.scssc" />
+    <Content Include="themes\scss\.sass-cache\ac8b78d239b556bc6991e2d247abd326310d2ccc\_tables.scssc" />
+    <Content Include="themes\scss\.sass-cache\b266051be966ae830cf3f5eac831ef3f1b6479ea\_ellipsis.scssc" />
+    <Content Include="themes\scss\.sass-cache\b266051be966ae830cf3f5eac831ef3f1b6479ea\_force-wrap.scssc" />
+    <Content Include="themes\scss\.sass-cache\b266051be966ae830cf3f5eac831ef3f1b6479ea\_nowrap.scssc" />
+    <Content Include="themes\scss\.sass-cache\b266051be966ae830cf3f5eac831ef3f1b6479ea\_replacement.scssc" />
+    <Content Include="themes\scss\.sass-cache\ca051e9e74b6002ca4cb69b2bf757838037d0ca2\_hover-link.scssc" />
+    <Content Include="themes\scss\.sass-cache\ca051e9e74b6002ca4cb69b2bf757838037d0ca2\_link-colors.scssc" />
+    <Content Include="themes\scss\.sass-cache\ca051e9e74b6002ca4cb69b2bf757838037d0ca2\_unstyled-link.scssc" />
+    <Content Include="themes\scss\.sass-cache\ce0c310e9d11672240f19c14ed0a616d4d012a92\_arrow.scssc" />
+    <Content Include="themes\scss\.sass-cache\d1b815ffbd075e4ffb86d3300f8f3092795d4e29\_css3.scssc" />
+    <Content Include="themes\scss\.sass-cache\d1b815ffbd075e4ffb86d3300f8f3092795d4e29\_support.scssc" />
+    <Content Include="themes\scss\.sass-cache\d1b815ffbd075e4ffb86d3300f8f3092795d4e29\_typography.scssc" />
+    <Content Include="themes\scss\.sass-cache\d1b815ffbd075e4ffb86d3300f8f3092795d4e29\_utilities.scssc" />
+    <Content Include="themes\scss\.sass-cache\d32148868ed05cab321b73962d7a8bfdb9a0b2ad\_element.scssc" />
+    <Content Include="themes\scss\.sass-cache\d32148868ed05cab321b73962d7a8bfdb9a0b2ad\_skin.scssc" />
+    <Content Include="themes\scss\apple.scss" />
+    <Content Include="themes\scss\config.rb" />
+    <Content Include="themes\scss\include\_animations.scss" />
+    <Content Include="themes\scss\include\_base.scss" />
+    <Content Include="themes\scss\include\_core.scss" />
+    <Content Include="themes\scss\include\_skeleton.scss" />
+    <Content Include="themes\scss\jqtouch.scss" />
+    <Content Include="themes\scss\vanilla.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5528/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,120 @@
+.slidemenu_btn {
+	margin-top:3px;
+	margin-left:3px;
+    position:absolute;
+    z-index:9999999;
+    cursor:pointer;
+}
+.btn-header {
+	position: relative;
+	float: right;
+	margin-top:4.5px;
+	margin-right:6px;
+	color: #DFE2EE !important;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 12px;
+	background: rgb(71,92,158);
+	background: -moz-linear-gradient(top,  rgba(71,92,158,1) 0%, rgba(37,41,54,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,92,158,1)), color-stop(100%,rgba(37,41,54,1)));
+	background: -webkit-linear-gradient(top,  rgba(71,92,158,1) 0%,rgba(37,41,54,1) 100%);
+	background: -o-linear-gradient(top,  rgba(71,92,158,1) 0%,rgba(37,41,54,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(71,92,158,1) 0%,rgba(37,41,54,1) 100%);
+	background: linear-gradient(to bottom,  rgba(71,92,158,1) 0%,rgba(37,41,54,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#475c9e', endColorstr='#252936',GradientType=0 );
+	width: 53px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.slidemenu {
+	position: absolute;
+	top: 0px;
+	left: -80%;
+	width: 80%;
+	height: 100%;
+	background-color: #212D50;
+	-webkit-box-shadow: 3px 0px 5px -2px #32394A;
+	box-shadow: 3px 0px 5px -2px #32394A;
+	z-index: 2147483647;
+	display: none;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+.slidemenu h3{
+	font-size:12px;
+	color:#D0D6E6;
+	text-shadow: 0 1px 0 #272D39;
+	margin:0;
+	padding:4px 0 4px 10px;
+	background: rgb(68,87,144);
+	background: -moz-linear-gradient(top,  rgba(68,87,144,1) 0%, rgba(56,65,88,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(68,87,144,1)), color-stop(100%,rgba(56,65,88,1)));
+	background: -webkit-linear-gradient(top,  rgba(68,87,144,1) 0%,rgba(56,65,88,1) 100%);
+	background: -o-linear-gradient(top,  rgba(68,87,144,1) 0%,rgba(56,65,88,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(68,87,144,1) 0%,rgba(56,65,88,1) 100%);
+	background: linear-gradient(to bottom,  rgba(68,87,144,1) 0%,rgba(56,65,88,1) 100%);
+	border-top:solid #4E5567 1px;
+	border-bottom:solid #2F3955 1px;
+}
+
+.slidemenu ul {
+	margin: 0;
+	padding: 0;
+	width: inherit;
+}
+
+.slidemenu ul li {
+	list-style-type: none;
+	margin: 0px 0;
+	overflow: none;
+}
+
+.slidemenu ul li a:link, .slidemenu ul li a:visited {
+	border-top: 1px #2F3955 solid;
+	border-bottom: 1px #191D27 solid;
+	color: #FBFBFB;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	width: 147px;
+	display: block;
+	padding: 10px 0px 10px 10px;
+	text-shadow: 0px 1px 1px #141C32;
+}
+
+.slidemenu ul li img {
+	margin-right:8px;
+}
+
+.slidemenu ul li a:hover, .slidemenu ul li a:active {
+	background-color: #32394A;
+}
+		
+.slidemenu_btn .ui-icon-shadow {
+	-moz-box-shadow: 0 0px 0 rgba(255,255,255,0);
+	-webkit-box-shadow: 0 0px 0 rgba(255,255,255,0);
+	box-shadow: 0 0px 0 rgba(255,255,255,0);
+}
+
+.slidemenu_btn .ui-btn-inner {
+	border-top: 0px;
+}
+.slidemenu_btn .ui-icon {
+	margin: 4px 1px 2px 2px !important;
+	width: 25px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.slidemenu_btn .ui-icon, .ui-icon-searchfield::after {
+	background: none;
+}
+
+.slidemenu_btn.ui-btn-icon-notext {
+	width: 30px;
+}
+

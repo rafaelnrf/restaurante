@@ -1,0 +1,7 @@
+﻿<div class='header-content'>
+    <span class="menu-bt"></span>
+    <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
+    <input type="button" class="bt-search" onclick='BuscaPorNome(this);'/>
+    <input type="text" size="20" maxlength="30" class="search" placeholder="motel, cidade ou bairro" />
+    <p id="status">Procurando sua localização...</p>
+</div>

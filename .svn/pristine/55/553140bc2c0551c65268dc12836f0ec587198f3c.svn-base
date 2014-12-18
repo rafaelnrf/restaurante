@@ -1,0 +1,10 @@
+﻿<script type="text/html">
+    //Le motéis Premium
+    $.ajax({
+        type: "POST",
+        url: "http://api.guiademoteis.com.br/macro/getall",
+        data: "",
+        success: SucessoMacros,
+        dataType: "json"
+    });
+</script>
