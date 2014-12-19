@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<plugins>
-<feature name="InAppBrowser">
- <param name="ios-package" value="CDVInAppBrowser" />
-</feature>
-<feature name="InAppBrowser">
-<param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-</feature>
-</plugins>
