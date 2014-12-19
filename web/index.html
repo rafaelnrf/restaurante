@@ -106,31 +106,6 @@
           }); //TV
       }
 
-	  
-	  function _GET(name)
-{
-	   var url   = window.location.search.replace("?", "");
-	   var itens = url.split("&");
-
-	  for(n in itens)
-	  {
-		if( itens[n].match(name) )
-		{
-		  return decodeURIComponent(itens[n].replace(name+"=", ""));
-		}
-	  }
-	  return null;
-	}
-	
-	var teste = _GET("cat_id");
-	if(teste != null){
-		LoadRestCategoria(teste);
-	}
-	
-	
-	
-	//
-					
 
   </script>
   <!-- Referência:
@@ -518,10 +493,6 @@
                 toggleStatus = false;
             };
         }
-		var teste2 = _GET("res_id");
-		if(teste2 != null){
-			LoadRestaurante(teste2);
-		}
 	</script>
     <div class="loader"><p>Carregando...</p></div>
 	<div id="bannerFooter">

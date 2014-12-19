@@ -212,7 +212,7 @@ function locSucesso(position, callback) {
     }
 
     function SucessoRestCategoria(dados) {
-		
+		//alert("SucessoRestCategoria1");
 		$("#rest-premium").empty();
 		$("h2").empty();
         $.each(dados, function (i, item) {
@@ -284,7 +284,7 @@ function LoadTVPorIP(callback) {
 	//alert(urlImg_nova + "imagem.png");
     $.ajax({
         type: "POST",
-        url: urlDados_nova + "destaque_preview.php",
+        url: urlDados_nova + "destaque.php",
         //url: urlDados + "Motel/GetDestaqueTV/",
         data: param,
         success: SucessoLoadTVPorIP,
@@ -321,30 +321,24 @@ function HomeTVLoad() {
 
 function LoadRestCategoria(categoria_id, callback) {
 		//alert(urlDados_nova + "srv/rest_categoria.asp");
-		/*
-	   var param = {
+        var param = {
             latitude:   $('#hidLatitude').val().replace(".", ","),
             longitude:  $('#hidLongitude').val().replace(".", ","),
             pageNumber: $('#hidPagina').val(),
             pageSize:   "6" 
         };
-		*/
-		
         $.ajax({
             type: "POST",
-            url: urlDados_nova + "rest_categoria_preview.php?categoria_id="+categoria_id,
+            url: urlDados_nova + "rest_categoria.php?categoria_id="+categoria_id,
 //            data: param,
             success: SucessoRestCategoria,
-            complete: function(xhr,status){    },
+            complete: callback,
             dataType: "json"
         });
 }
 
-
-
-
 function LoadDetalhesCategoria(categoria_id) {
-	
+	alert("LoadDetalhesCategoria");
     //Limpa os dados do motel anterior
 	window.location = "#detalhes"; // novidade geral.js
     $('#detalhes h1').html("");
@@ -1386,14 +1380,13 @@ function LoadRestaurante(rest_id) {
     //$('.det-endereco').html("");
     //$('.det-end-bai-cid').html("");
     //$('#btn_det_ligar').attr("href", "");
-	
     $('#det-suites').empty();
     $('#det-descontos').empty();
     //$('.loader').show();
     var param = {
         id: rest_id
     };
-	//console.log(urlDados_nova + "rest_detalhe.php?id="+rest_id);
+	console.log(urlDados_nova + "rest_detalhe.php?id="+rest_id);
     $.ajax({
         'async'   : false,
 		type: "POST",
@@ -1405,15 +1398,12 @@ function LoadRestaurante(rest_id) {
 }
 
 function SucessoLoadRestaurante(dados) {
-	
+		//alert("SucessoLoadRestaurante");
         //var rest = dados;
 
     $.each(dados, function (i, item) {
         //$('#hidMoelId').val(item.id);
-		//alert(item.cliente)
-	
         $('#detalhes h1').html(item.cliente);
-	
         var logotipo = item.logo;
 		if ( logotipo.indexOf("thumb") == -1)
 		{
@@ -1450,13 +1440,8 @@ function SucessoLoadRestaurante(dados) {
         $('#btn_det_ligar').attr("href", "tel: " + item.telefone);
         $('#btn_det_leia').attr("href", "http://" + item.site_chezcroque);
         $('#btn_det_site').attr("href", "http://" + item.site);
-        //$('.loader').hide();
-		
-		//document.getElementById("id_det-descricao").innerHTML = "qual razão";
-		//$('#id_det-descricao').html("qual razão");
-		
+        $('.loader').hide();
 	});
-		
         //Descontos
         //Se houver, habilita  o botão
         //if (Discounts.length >= 1)
@@ -1465,5 +1450,5 @@ function SucessoLoadRestaurante(dados) {
         //    $('#btn_det_descontos').parent().hide();
 
 		/* Verificar se tem desconto ou outros flags*/
-	    //$('.loader').hide();
+	    $('.loader').hide();
     };
