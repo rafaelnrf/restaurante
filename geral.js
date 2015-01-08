@@ -1,6 +1,9 @@
 ﻿//var urlDados = "http://www.api.guiademoteis.com.br/";
 //var urlImg = "http://www.guiademoteis.com.br/";
 //var urlDados = "http://localhost:2236/";
+//var tipo_chamada = ".asp";
+//var urlDados_nova = "http://www.penabola.com.br/chezmenu1/srv/";
+var tipo_chamada = ".php";
 var urlDados_nova = "http://www.chezmenu.com.br/webservice/";
 var urlWebservice = "http://www.chezmenu.com.br/webservice/"
 var urlImg_nova = "http://www.penabola.com.br/chezmenu1/imagens/";
@@ -66,13 +69,13 @@ function inicio(callback) {
             pageNumber: $('#hidPagina').val(),
             pageSize:   "6"
         };
-
-		//alert(urlDados_nova + "srv/categoria.asp");
+		console.log(urlDados_nova + "categoria" + tipo_chamada);
+ 
         //Motéis Perto
         $.ajax({
             type: "POST",
             //url: urlDados + "Motel/GetNearMotels",
-            url: urlDados_nova + "categoria.php",
+            url: urlDados_nova + "categoria" + tipo_chamada,
             data: param,
             success: SucessoLoadMoteisPerto,
             complete: callback,
@@ -116,12 +119,11 @@ function locSucesso(position, callback) {
             pageSize:   "6"
         };
 
-		//alert(urlDados_nova + "srv/categoria.asp");
         //Motéis Perto
         $.ajax({
             type: "POST",
             //url: urlDados + "Motel/GetNearMotels",
-            url: urlDados_nova + "categoria.php",
+            url: urlDados_nova + "categoria" + tipo_chamada,
             data: param,
             success: SucessoLoadMoteisPerto,
             complete: callback,
@@ -165,7 +167,7 @@ function locSucesso(position, callback) {
 
         $.each(dados, function (i, item) {
             //var km = item.Distance.toString();
-            var texto = "<li id='categoria-" + item.categoriaId + "' class='arrow'>";
+            var texto = "<li id='categoria-" + item.categoriaId + "' class='arrow' data-categoriaid='" + item.categoriaId + "'>";
             //texto = texto + "<a href='#detalhes' onclick='LoadDetalhesMotel(" + item.MotelId + ")'>";
             texto = texto + "<a href='#rest' data-categoriaid='" + item.categoriaId + "'>";
             texto = texto + "<div class='premium-left'/>";
@@ -192,8 +194,9 @@ function locSucesso(position, callback) {
             texto = texto + "<span class='nome'>" + item.categoria + "</span>";
             //texto = texto + "<span class='endereco'>" + item.City + " - " + item.Uf + "</span>";
             texto = texto + "</div>"; 
-            texto = texto + "</a></li>"
-            texto = texto + "</li>"
+            texto = texto + "</a>";
+            texto = texto + "</li>";
+            //texto = texto + "</li>";
             $("#moteis-premium").append(texto);
             $('.loader').hide();
         });
@@ -245,15 +248,19 @@ function locSucesso(position, callback) {
             texto = texto + "<span class='nome'>" + item.cliente + "</span>";
             texto = texto + "<span class='endereco'>" + item.cidade + " - " + item.estado + "</span>";
             texto = texto + "</div>"; 
-            texto = texto + "</a></li>"
-            texto = texto + "</li>"
+            texto = texto + "</a>"; //</li>"
+            texto = texto + "</li>";
             $("#rest-premium").append(texto);
 			$("h2").empty();
+			/*
 			if (item.categoria == 1) { $("h2").append("Categoria: A dois") };
 			if (item.categoria == 2) { $("h2").append("Categoria: Em família")};
 			if (item.categoria == 3) { $("h2").append("Categoria: Com amigos")};
 			if (item.categoria == 4) { $("h2").append("Categoria: Business")};
 			if (item.categoria == 5) { $("h2").append("Categoria: Chefs")};
+			*/
+			$("#titulo2").append("Categoria: " + item.nome_categoria)
+			//$("#nome_categoria").attr("src", urlImg_externa + item.propaganda);
 			$(".det-imagem").attr("src", urlImg_externa + item.propaganda);
             $('.loader').hide();
         });
@@ -278,13 +285,12 @@ function LoadTVPorIP(callback) {
         longitude: $('#hidLongitude').val().replace(".", ","),
         pageNumber: "1"
     };
-
+	console.log(urlDados_nova + "destaque" + tipo_chamada);
+ 
     //$('#spiner-tv').show();
-	//alert(urlDados_nova + "srv/destaque.asp");
-	//alert(urlImg_nova + "imagem.png");
     $.ajax({
         type: "POST",
-        url: urlDados_nova + "destaque.php",
+        url: urlDados_nova + "destaque" + tipo_chamada,
         //url: urlDados + "Motel/GetDestaqueTV/",
         data: param,
         success: SucessoLoadTVPorIP,
@@ -307,7 +313,7 @@ function SucessoLoadTVPorIP(dados) {
 		};
 
         // Titando o nome do restaurante
-		//texto = texto + "<figcaption >" + item.Titulo + "</figcaption>";
+		//texto = texto + "<figcaption>" + item.Titulo + "</figcaption>";
         //texto = texto + "</a>";
         //texto = texto + "</figure>"
         $("#slider-3-content").append(texto);
@@ -320,8 +326,8 @@ function HomeTVLoad() {
 //##############################################################
 
 function LoadRestCategoria(categoria_id, callback) {
-		//alert(urlDados_nova + "srv/rest_categoria.asp");
-        var param = {
+     	console.log(urlDados_nova + "rest_categoria" + tipo_chamada + "?categoria_id="+categoria_id);
+         var param = {
             latitude:   $('#hidLatitude').val().replace(".", ","),
             longitude:  $('#hidLongitude').val().replace(".", ","),
             pageNumber: $('#hidPagina').val(),
@@ -329,7 +335,7 @@ function LoadRestCategoria(categoria_id, callback) {
         };
         $.ajax({
             type: "POST",
-            url: urlDados_nova + "rest_categoria.php?categoria_id="+categoria_id,
+            url: urlDados_nova + "rest_categoria" + tipo_chamada + "?categoria_id="+categoria_id,
 //            data: param,
             success: SucessoRestCategoria,
             complete: callback,
@@ -1386,11 +1392,11 @@ function LoadRestaurante(rest_id) {
     var param = {
         id: rest_id
     };
-	console.log(urlDados_nova + "rest_detalhe.php?id="+rest_id);
+	console.log(urlDados_nova + "rest_detalhe" + tipo_chamada + "?id="+rest_id);
     $.ajax({
         'async'   : false,
 		type: "POST",
-        url: urlDados_nova + "rest_detalhe.php?id="+rest_id,
+        url: urlDados_nova + "rest_detalhe" + tipo_chamada + "?id="+rest_id,
         //data: param,
         success: SucessoLoadRestaurante,
         dataType: "json"
@@ -1436,10 +1442,14 @@ function SucessoLoadRestaurante(dados) {
         $('.det-rolha').html("Rolha: " + item.rolha);
         $('.det-cartoes').html("Cartões: " + item.cartoes);
         $('.det-informacoes').html("Informações: " + item.informacoes);
-        $('#det-mapa').attr("href", "https://www.google.com.br/maps/place/" + item.endereco + "," + item.bairro + "," + item.cidade + "," + item.estado + "," + item.cep);
+        //$('#det-mapa').attr("href", "https://www.google.com.br/maps/place/" + item.endereco + "," + item.bairro + "," + item.cidade + "," + item.estado + "," + item.cep);
+        //$('#btn_det_ligar').attr("href", "tel: " + item.telefone);
+        //$('#btn_det_leia').attr("href", "http://" + item.site_chezcroque);
+        //$('#btn_det_site').attr("href", "http://" + item.site);
+		$("#det-mapa").attr("onclick", "window.open('https://www.google.com.br/maps/place/" + item.endereco + "," + item.bairro + "," + item.cidade + "," + item.estado + "," + item.cep + "','_blank','location=yes','CloseButtonCaption=Retorna');");
         $('#btn_det_ligar').attr("href", "tel: " + item.telefone);
-        $('#btn_det_leia').attr("href", "http://" + item.site_chezcroque);
-        $('#btn_det_site').attr("href", "http://" + item.site);
+		$("#btn_det_leia").attr("onclick", "window.open('http://" + item.site_chezcroque + "','_blank','location=yes','CloseButtonCaption=Retorna');");
+		$("#btn_det_site").attr("onclick", "window.open('http://" + item.site +"','_blank','location=yes','CloseButtonCaption=Retorna');");
         $('.loader').hide();
 	});
         //Descontos

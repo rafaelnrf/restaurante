@@ -15,11 +15,11 @@
         left: 10px;
     }
     .menu-bt {
-        width: 20px;
+        width: 10px;
         height: 20px;
     }
     .mobile-logo {
-        width: 48px;
+        width: 50px;
         height: 45px;
         top: -4px;
     }
@@ -219,10 +219,6 @@
         margin: 12px 0 19px 0;
 	}
 	#det-imagem {
-        height: 116px;
-		width: 100%;
-	}
-	#det-imagem-rest {
         height: 116px;
 		width: 100%;
 	}
@@ -447,11 +443,6 @@
         height: 116px;
 		width: 100%;
 	}
-	.det-imagem-rest {
-        height: 116px;
-		width: 100%;
-	}
-
 #bannerFooter > .bannerFechar {
     position: absolute;
     z-index: 999;
@@ -515,14 +506,14 @@
         left: 18px;
     }
     .menu-bt {
-        width: 30px;
+        width: 15px;
         height: 30px;
     }
     .mobile-logo {
         //width: 97px;
         //height: 96px;
-        width: 83px;
-        height: 82px;
+        width: 88px;
+        height: 78px;
         top: -7px;
         left: 20px;
     }
@@ -535,10 +526,6 @@
         font-size:19px;
     }
 	.det-imagem {
-        height: 166px;
-		width: 100%;
-	}
-	.det-imagem-rest {
         height: 166px;
 		width: 100%;
 	}
@@ -929,10 +916,6 @@
         height: 230px;
 		width: 100%;
 	}
-	.det-imagem-rest {
-        height: 230px;
-		width: 100%;
-	}
     .banner_home {
         width: 280px;
         height: 94px;
@@ -960,13 +943,13 @@
         left:21px;
     }
     .menu-bt {
-        width: 35px;
+        width: 17px;
         height: 36px;
     }
     .mobile-logo {
         //width: 116px;
         //height: 111px;
-        width: 95px;
+        width: 101px;
         height: 90px;
         top: -2px;
         left: 30px;
