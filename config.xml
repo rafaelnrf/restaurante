@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "br.pontesassociados.chezmenu"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>ChezMenu Restaurante</name>
+
+    <description>
+        5 categorias para 5 momentos da sua vida. Os 5 melhores restaurantes para cada um desses momentos	
+    </description>
+
+    <author href="https://build.phonegap.com" email="support@phonegap.com">
+        Anderson Pontes
+    </author>
+
+<gap:platform name="ios" />
+<gap:platform name="android" />
+<gap:platform name="winphone" />
+<icon src="themes/img/mobile_logo.png" />
+<gap:splash src="splash/ios/splash.png" gap:platform="ios" width="320" height="480" />
+
+<feature name="http://api.phonegap.com/1.0/network" />
+<feature name="http://api.phonegap.com/1.0/geolocation" />
+<feature name="http://api.phonegap.com/1.0/device" />
+
+<gap:plugin name="org.li8.inappbrowser" version="0.1" />
+
+<access origin="*" />	
+<script src="cordova.js"></script>
+</widget>
