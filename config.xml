@@ -20,7 +20,7 @@
 <gap:platform name="ios" />
 <gap:platform name="android" />
 <gap:platform name="winphone" />
-<icon src="themes/img/mobile_logo.png" />
+<icon src="themes/img/mobile-logo.png" />
 <gap:splash src="splash/ios/splash.png" gap:platform="ios" width="320" height="480" />
 
 <feature name="http://api.phonegap.com/1.0/network" />
