@@ -62,11 +62,8 @@
                 IncludeHeader();
                 $('.loader').hide();
                 $('#rest-premium li').click(function () { //.bind('click', function () {
-					alert("ok");
 					var rest_id = $(this).attr('data-restid');
-					alert(rest_id);
-                    if (rest_id != undefined) {
-						alert("ok 234");	
+                    if (rest_id != undefined) {	
                     	LoadRestaurante(rest_id)
                     }
                 });
@@ -335,7 +332,7 @@
                 <div class="toolbar"><div class='header'></div></div>
                 <section id="tv-categoria"><div id="img_rest">
 				<a href="#detalhes">
-				<img class="det-imagem-rest" src="" alt=""/>
+				<img class="det-imagem-rest" src="" alt="" width="320px" height="116px"/>
 				</a></div></section>
                 <div class="det-topo">
                     <div class="premium-left">
