@@ -69,9 +69,11 @@
                     }
                 });
                 $('#moteis-premium li').dblclick(function () {
+					alert("aqui");
 					if(localStorage.JQMGostClick == 0 || localStorage.JQMGostClick == "" || typeof(localStorage.JQMGostClick) === "undefined") {
 						localStorage.JQMGostClick = 1;
-								var categoria_id = $(this).data('categoriaid');
+								var categoria_id = $(this).attr('categoriaid');
+								alert(categoria_id)
 								if (categoria_id != undefined) {
 									LoadRestCategoria(categoria_id)
 								}                    	
