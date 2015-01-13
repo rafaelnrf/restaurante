@@ -63,7 +63,9 @@
                 $('.loader').hide();
                 $('#rest-premium li').click(function () { //.bind('click', function () {
 					var rest_id = $(this).attr('data-restid');
-                    if (rest_id != undefined) { 
+					alert(rest_id);
+                    if (rest_id != undefined) {
+						alert("ok 234");	
                     	LoadRestaurante(rest_id)
                     }
                 });
