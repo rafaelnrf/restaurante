@@ -61,8 +61,8 @@
                 HomeTVLoad();
                 IncludeHeader();
                 $('.loader').hide();
-                $('#rest-premium li a').click(function () { //.bind('click', function () {
-					var rest_id = $(this).data('restid');
+                $('#rest-premium li').click(function () { //.bind('click', function () {
+					var rest_id = $(this).attr('data-restid');
                     if (rest_id != undefined) { 
                     	LoadRestaurante(rest_id)
                     }

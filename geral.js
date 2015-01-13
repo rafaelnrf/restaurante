@@ -1455,6 +1455,12 @@ function SucessoLoadRestaurante(dados) {
 		$("#btn_det_site").attr("onclick", "window.open('http://" + item.site +"','_blank','location=yes','CloseButtonCaption=Retorna');");
         $('.loader').hide();
 	});
+	
+	
+	    $("#home").hide();
+		$("#rest").hide();
+		$("#detalhes").show();
+		
         //Descontos
         //Se houver, habilita  o botão
         //if (Discounts.length >= 1)
