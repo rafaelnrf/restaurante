@@ -68,18 +68,19 @@
                     	LoadRestaurante(rest_id)
                     }
                 });
-                $('#moteis-premium li a').tap(function () {
-        if(localStorage.JQMGostClick == 0 || localStorage.JQMGostClick == "" || typeof(localStorage.JQMGostClick) === "undefined") {
-            localStorage.JQMGostClick = 1;
-					var categoria_id = $(this).data('categoriaid');
-                    if (categoria_id != undefined) {
-                    	LoadRestCategoria(categoria_id)
-					}                    	
-			}
-        else if(localStorage.JQMGostClick == 1){
-            localStorage.JQMGostClick = 0;
-            return false;
-        }
+                $('#moteis-premium li a').click(function () {
+				alert('teste')
+					if(localStorage.JQMGostClick == 0 || localStorage.JQMGostClick == "" || typeof(localStorage.JQMGostClick) === "undefined") {
+						localStorage.JQMGostClick = 1;
+								var categoria_id = $(this).data('categoriaid');
+								if (categoria_id != undefined) {
+									LoadRestCategoria(categoria_id)
+								}                    	
+						}
+					else if(localStorage.JQMGostClick == 1){
+						localStorage.JQMGostClick = 0;
+						return false;
+					}
                 });
 
             }); //TV
