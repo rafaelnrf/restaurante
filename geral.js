@@ -26,7 +26,7 @@ function IncludeHeader() {
     var newRodape = $('#rodape').clone();
 
     //Replica header
-    $('#detalhes .header').append(newHeader.html());
+    //$('#detalhes .header').append(newHeader.html());
     $('#buscaPorNome .header').append(newHeader.html());
     $('#login .header').append(newHeader.html());
     $('#esqueci-senha .header').append(newHeader.html());
@@ -347,7 +347,7 @@ function LoadRestCategoria(categoria_id, callback) {
 }
 
 function LoadDetalhesCategoria(categoria_id) {
-	alert("LoadDetalhesCategoria");
+
     //Limpa os dados do motel anterior
 	window.location = "#detalhes"; // novidade geral.js
     $('#detalhes h1').html("");

@@ -112,8 +112,18 @@
 	  
 	  function VoltaHome(){
 	  
+		  $("#titulo1").html("Categorias");	
 		  $("#home").show();
 		  $("#rest").hide();
+		  $("#detalhes").hide();	
+	  
+	  }
+	  
+	  
+	  function VoltaCategoria(){
+	  
+		  $("#home").hide();
+		  $("#rest").show();
 		  $("#detalhes").hide();	
 	  
 	  }
@@ -335,7 +345,14 @@
             <!------------------------------------------------------->
             <!-- Detalhes ------------------------------------------->
             <div id="detalhes">
-                <div class="toolbar"><div class='header'></div></div>
+                <div class="toolbar"><div class='header'>
+					    <span class="menu-bt"></span>
+                        <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
+						<input type="button" class="bt-search" onclick='VoltaCategoria();'/>
+                        <!--<input type="button" class="bt-search" onclick='#home'/>-->
+						<!--<input type="text" size="20" maxlength="30" class="search" placeholder="Busca Restaurante" />-->
+						
+				</div></div>
                 <section id="tv-categoria"><div id="img_rest">
 				<a href="#detalhes">
 				<img class="det-imagem-rest" src="" alt="" width="320px" height="116px"/>
