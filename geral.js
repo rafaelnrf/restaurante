@@ -222,8 +222,8 @@ function locSucesso(position, callback) {
             //var km = item.Distance.toString();
             var km = item.km;
 			var categoria = item.categoria
-            var texto = "<li id='rest-" + item.id + "' class='arrow'>";
-            texto = texto + "<a href='#detalhes' onclick='LoadRestaurante(" + item.id + ");'>";
+            var texto = "<li id='rest-" + item.id + "' ondblclick='LoadRestaurante(" + item.id + ");' class='arrow'>";
+            //texto = texto + "<a href='#detalhes' onclick='LoadRestaurante(" + item.id + ");'>";
             //texto = texto + "<a href='#detalhes' data-restid='" + item.id + "'>";
             texto = texto + "<div class='premium-left'>";
             var logotipo = item.logo;
@@ -248,7 +248,7 @@ function locSucesso(position, callback) {
             texto = texto + "<span class='nome'>" + item.cliente + "</span>";
             texto = texto + "<span class='endereco'>" + item.cidade + " - " + item.estado + "</span>";
             texto = texto + "</div>"; 
-            texto = texto + "</a>"; //</li>"
+            //texto = texto + "</a>"; //</li>"
             texto = texto + "</li>";
             $("#rest-premium").append(texto);
 			$("h2").empty();
