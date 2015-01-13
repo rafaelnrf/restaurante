@@ -250,6 +250,7 @@ function locSucesso(position, callback) {
             texto = texto + "</div>"; 
             //texto = texto + "</a>"; //</li>"
             texto = texto + "</li>";
+			alert(texto)
             $("#rest-premium").append(texto);
 			$("h2").empty();
 			/*
