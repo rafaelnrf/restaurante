@@ -203,9 +203,7 @@
                     <div class="header">
                         <span class="menu-bt"></span>
                         <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
-						<input type="button" class="bt-search" onclick='$("#titulo1").empty;
-																		$("#titulo1").append("Categoria");
-																		window.history.back();'/>
+						<input type="button" class="bt-search" onclick='window.history.back();'/>
                         <!--<input type="button" class="bt-search" onclick='#home'/>-->
 						<!--<input type="text" size="20" maxlength="30" class="search" placeholder="Busca Restaurante" />-->
 						<img src="../imagens/banner_home.png" class="banner_rest">
@@ -222,7 +220,7 @@
                     <div class="info">
                         <div id="go-site">
                             <ul class="individual">
-                                 <li class="versao-desktop"><a target="_blank" href="http://www.chezcroque.com.br" style="" ><span></span></a></li>
+                                 <li class="versao-desktop"><a target="_blank" onclick="window.open('http://www.chezcroque.com.br','_blank','location=yes','CloseButtonCaption=Retorna');"  ><span></span></a></li>
                                  <li class="topo"><a href="#" onclick="GoTop();" style="" ><span></span>Topo da página</a></li>
                              </ul>
                             <br /><br />
