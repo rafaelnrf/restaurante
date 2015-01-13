@@ -265,6 +265,9 @@ function locSucesso(position, callback) {
             $('.loader').hide();
         });
 
+		$("#home").hide();
+		$("#rest").show();
+		
 		//Paginação
         var TotPaginas = parseInt(dados.PagesCount);
         var Pagina     = parseInt($('#hidPagina').val());
