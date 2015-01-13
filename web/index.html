@@ -68,8 +68,7 @@
                     	LoadRestaurante(rest_id)
                     }
                 });
-                $('#moteis-premium li a').click(function () {
-				alert('teste')
+                $('#moteis-premium li a').dblclick(function () {
 					if(localStorage.JQMGostClick == 0 || localStorage.JQMGostClick == "" || typeof(localStorage.JQMGostClick) === "undefined") {
 						localStorage.JQMGostClick = 1;
 								var categoria_id = $(this).data('categoriaid');
