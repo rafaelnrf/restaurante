@@ -61,27 +61,27 @@
                 HomeTVLoad();
                 IncludeHeader();
                 $('.loader').hide();
-                $('#rest-premium li a').tap(function () { //.bind('click', function () {
-					//alert('evento2');
+                $('#rest-premium li a').click(function () { //.bind('click', function () {
+					alert('evento2');
                     var rest_id = $(this).data('restid');
                     if (rest_id != undefined) { 
                     	LoadRestaurante(rest_id)
                     }
                 });
-                $('#moteis-premium li').dblclick(function () {
+                $('#moteis-premium li').click(function () {
 					alert("aqui");
-					if(localStorage.JQMGostClick == 0 || localStorage.JQMGostClick == "" || typeof(localStorage.JQMGostClick) === "undefined") {
-						localStorage.JQMGostClick = 1;
-								var categoria_id = $(this).attr('categoriaid');
+					//if(localStorage.JQMGostClick == 0 || localStorage.JQMGostClick == "" || typeof(localStorage.JQMGostClick) === "undefined") {
+						//localStorage.JQMGostClick = 1;
+								var categoria_id = $(this).attr('data-categoriaid');
 								alert(categoria_id)
 								if (categoria_id != undefined) {
 									LoadRestCategoria(categoria_id)
 								}                    	
-						}
-					else if(localStorage.JQMGostClick == 1){
-						localStorage.JQMGostClick = 0;
-						return false;
-					}
+						//}
+					//else if(localStorage.JQMGostClick == 1){
+						//localStorage.JQMGostClick = 0;
+						//return false;
+					//}
                 });
 
             }); //TV
