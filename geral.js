@@ -222,7 +222,7 @@ function locSucesso(position, callback) {
             //var km = item.Distance.toString();
             var km = item.km;
 			var categoria = item.categoria
-            var texto = "<li id='rest-" + item.id + "' data-restid='" + item.id + "'  class='arrow'>";
+            var texto = "<li id='rest-" + item.id + "' data-restid='" + item.id + "' onclick='LoadRestaurante(" + item.id + ");'  class='arrow'>";
             //texto = texto + "<a href='#detalhes' onclick='LoadRestaurante(" + item.id + ");'>";
             //texto = texto + "<a href='#detalhes' data-restid='" + item.id + "'>";
             texto = texto + "<div class='premium-left'>";
