@@ -109,6 +109,14 @@
           themeSelectionSelector: '#jqt #themes ul',
           useFastTouch: false
       });
+	  
+	  function VoltaHome(){
+	  
+		  $("#home").show();
+		  $("#rest").hide();
+		  $("#detalhes").hide();	
+	  
+	  }
 
       function ReloadTV() {
           $('#slider-3-content').empty();
@@ -203,7 +211,7 @@
                     <div class="header">
                         <span class="menu-bt"></span>
                         <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
-						<input type="button" class="bt-search" onclick='window.history.back();'/>
+						<input type="button" class="bt-search" onclick='VoltaHome();'/>
                         <!--<input type="button" class="bt-search" onclick='#home'/>-->
 						<!--<input type="text" size="20" maxlength="30" class="search" placeholder="Busca Restaurante" />-->
 						<img src="../imagens/banner_home.png" class="banner_rest">
