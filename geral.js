@@ -326,8 +326,6 @@ function SucessoLoadTVPorIP(dados) {
 
 function testandoclick(){
 
-		alert("ok clicou");
-
 }
 
 function HomeTVLoad() {
