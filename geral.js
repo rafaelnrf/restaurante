@@ -310,9 +310,9 @@ function SucessoLoadTVPorIP(dados) {
         var img_destaque = item.Imagem;
 		if (img_destaque.indexOf("thumb") == -1)
 		{
-			texto = texto + "<img onclick='LoadRestaurante(" + item.cliente + ")'  src='" + urlImg_dest +  item.Imagem + "'/>";
+			texto = texto + "<img onclick='testandoclick()'  src='" + urlImg_dest +  item.Imagem + "'/>";
 		} else {
-			texto = texto + "<img onclick='LoadRestaurante(" + item.cliente + ")'  src='" + urlImg_dest +  item.Imagem + "'/>";
+			texto = texto + "<img onclick='testandoclick()'  src='" + urlImg_dest +  item.Imagem + "'/>";
 		};
 
         // Titando o nome do restaurante
@@ -321,6 +321,13 @@ function SucessoLoadTVPorIP(dados) {
         texto = texto + "</figure>";
         $("#slider-3-content").append(texto);
     });
+}
+
+
+function testandoclick(){
+
+		alert("ok clicou");
+
 }
 
 function HomeTVLoad() {
