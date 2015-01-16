@@ -306,7 +306,7 @@ function SucessoLoadTVPorIP(dados) {
     $.each(dados, function (i, item) {
         i++;
         var texto = "<figure id='" + item.Id + "'>";
-        texto = texto + "<a href='#detalhes' onclick='LoadDetalhesMotel(" + item.Id + ")' >";
+        texto = texto + "<a href='#detalhes' onclick='LoadRestaurante(" + item.cliente + ")' >";
         var img_destaque = item.Imagem;
 		if (img_destaque.indexOf("thumb") == -1)
 		{
