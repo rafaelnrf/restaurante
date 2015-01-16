@@ -306,18 +306,18 @@ function SucessoLoadTVPorIP(dados) {
     $.each(dados, function (i, item) {
         i++;
         var texto = "<figure id='" + item.Id + "'>";
-        //texto = texto + "<a onclick='LoadRestaurante(" + item.cliente + ")' >";
+        texto = texto + "<a onclick='LoadRestaurante(" + item.cliente + ")' >";
         var img_destaque = item.Imagem;
 		if (img_destaque.indexOf("thumb") == -1)
 		{
-			texto = texto + "<img onclick='testandoclick()'  src='" + urlImg_dest +  item.Imagem + "'/>";
+			texto = texto + "<img  src='" + urlImg_dest +  item.Imagem + "'/>";
 		} else {
-			texto = texto + "<img onclick='testandoclick()'  src='" + urlImg_dest +  item.Imagem + "'/>";
+			texto = texto + "<img  src='" + urlImg_dest +  item.Imagem + "'/>";
 		};
 
         // Titando o nome do restaurante
 		//texto = texto + "<figcaption>" + item.Titulo + "</figcaption>";
-        //texto = texto + "</a>";
+        texto = texto + "</a>";
         texto = texto + "</figure>";
         $("#slider-3-content").append(texto);
     });
