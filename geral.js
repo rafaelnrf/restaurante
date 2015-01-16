@@ -9,7 +9,7 @@ var urlWebservice = "http://www.chezmenu.com.br/webservice/"
 var urlImg_nova = "http://www.penabola.com.br/chezmenu1/imagens/";
 var urlImg_externa = "http://www.chezmenu.com.br/upload/categoria/";
 var urlImg_cat = "http://www.chezmenu.com.br/upload/categoria/";
-var urlImg_dest = "http://www.chezmenu.com.br/upload/dest/";
+var urlImg_dest = "http://www.chezmenu.com.br/upload/destaque/";
 var urlImg_rest = "http://www.chezmenu.com.br/upload/restaurante/";
 
 //Vai para o topo da home
