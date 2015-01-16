@@ -52,6 +52,9 @@
 
   <script type="text/javascript">
 
+	  
+  
+  
       $(document).ready(function () {
       	
         $('.loader').show();
@@ -122,10 +125,15 @@
 	  
 	  function VoltaCategoria(){
 	  
-		  $("#home").hide();
-		  $("#rest").show();
-		  $("#detalhes").hide();	
-	  
+		  if(e_categoria == 0){
+				$("#home").show();
+				$("#rest").hide();
+				$("#detalhes").hide();
+		  }else{
+				$("#home").hide();
+			    $("#rest").show();
+				$("#detalhes").hide();
+		  }	
 	  }
 
       function ReloadTV() {

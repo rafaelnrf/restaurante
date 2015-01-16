@@ -11,6 +11,7 @@ var urlImg_externa = "http://www.chezmenu.com.br/upload/categoria/";
 var urlImg_cat = "http://www.chezmenu.com.br/upload/categoria/";
 var urlImg_dest = "http://www.chezmenu.com.br/upload/destaque/";
 var urlImg_rest = "http://www.chezmenu.com.br/upload/restaurante/";
+var e_categoria = 0;	
 
 //Vai para o topo da home
 function GoTop() {
@@ -265,6 +266,7 @@ function locSucesso(position, callback) {
             $('.loader').hide();
         });
 
+		e_categoria = 1;	
 		$("#home").hide();
 		$("#rest").show();
 		
@@ -325,7 +327,7 @@ function SucessoLoadTVPorIP(dados) {
 
 
 function testandoclick(){
-
+	e_categoria = 0;
 }
 
 function HomeTVLoad() {
