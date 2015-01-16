@@ -305,8 +305,8 @@ function LoadTVPorIP(callback) {
 function SucessoLoadTVPorIP(dados) {
     $.each(dados, function (i, item) {
         i++;
-        var texto = "<figure id='" + item.Id + "'>";
-        texto = texto + "<a onclick='LoadRestaurante(" + item.cliente + ")' >";
+        var texto = "<figure id='" + item.Id + "' onclick='LoadRestaurante(" + item.cliente + ")'>";
+        texto = texto + "<a href=\"javascript:LoadRestaurante('" + item.cliente + "');\"  >";
         var img_destaque = item.Imagem;
 		if (img_destaque.indexOf("thumb") == -1)
 		{
