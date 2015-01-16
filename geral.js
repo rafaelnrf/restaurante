@@ -1,5 +1,5 @@
 ﻿//var urlDados = "http://www.api.guiademoteis.com.br/";
-//var urlImg = "http://www.guiademoteis.com.br/";
+//var urlImg = "http://www.chez.com.br/";
 //var urlDados = "http://localhost:2236/";
 //var tipo_chamada = ".asp";
 //var urlDados_nova = "http://www.penabola.com.br/chezmenu1/srv/";
@@ -174,7 +174,7 @@ function locSucesso(position, callback) {
             var logotipo = item.logo;
 			if ( logotipo.indexOf("thumb") == -1)
 			{
-				texto = texto + "<img src='" + '../imagens/' +  item.logo + "'/>";
+				texto = texto + "<img src='" + urlImg_cat +  item.logo + "'/>";
 			} else {
 				texto = texto + "<img src='" + urlImg_cat +  item.logo + "'/>";
 			};
@@ -229,7 +229,7 @@ function locSucesso(position, callback) {
             var logotipo = item.logo;
 			if (logotipo.indexOf("thumb") == -1)
 			{
-				texto = texto + "<img src='" + '../imagens/' +  item.logo + "'/>";
+				texto = texto + "<img src='" + urlImg_rest +  item.logo + "'/>";
 			} else {
 				texto = texto + "<img src='" + urlImg_rest +  item.logo + "'/>";
 			};
@@ -310,7 +310,7 @@ function SucessoLoadTVPorIP(dados) {
         var img_destaque = item.Imagem;
 		if (img_destaque.indexOf("thumb") == -1)
 		{
-			texto = texto + "<img src='" + '../imagens/' +  item.Imagem + "'/>";
+			texto = texto + "<img src='" + urlImg_dest +  item.Imagem + "'/>";
 		} else {
 			texto = texto + "<img src='" + urlImg_dest +  item.Imagem + "'/>";
 		};
@@ -1425,7 +1425,7 @@ function SucessoLoadRestaurante(dados) {
         var logotipo = item.logo;
 		if ( logotipo.indexOf("thumb") == -1)
 		{
-			$(".det-imagem-rest").attr("src", '../imagens/' + item.imagem);
+			$(".det-imagem-rest").attr("src", urlImg_rest + item.imagem);
 		} else {
 			$(".det-imagem-rest").attr("src", urlImg_rest + item.imagem);
 		};
