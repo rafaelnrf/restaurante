@@ -73,7 +73,6 @@ function locSucesso(position, callback) {
         //Motéis Perto
         $.ajax({
             type: "POST",
-            //url: urlDados + "Motel/GetNearMotels",
             url: urlDados_nova + "categoria" + tipo_chamada,
             data: param,
             success: SucessoLoadMoteisPerto,
@@ -81,27 +80,14 @@ function locSucesso(position, callback) {
             dataType: "json"
         });
 		
-		/*
-		$.ajax({
-            type: "POST",
-            url: urlDados_nova + "popup.php",
-            data: param,
-            success: SucessoBannerHome,
-            complete: callback,
-            dataType: "json"
-        });
-		*/
+		$.post(urlDados_nova + "popup.php",{},function(data){
+				var dados = eval(data);
+				$.each(dados, function (i, item) {
+					$("#bannerCadastro").css("background-image","http://www.chezmenu.com.br/upload/popup/"+item.imagem);
+				});
+		});
 
     }
-
-	
-	
-    function SucessoBannerHome(dados) {
-        $.each(dados, function (i, item) {
-			$("#bannerCadastro").css("background-image","http://www.chezmenu.com.br/upload/popup/"+item.imagem);
-		});
-	}	
-	
 
     function SucessoLoadMoteisPerto(dados) {
 	
