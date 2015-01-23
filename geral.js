@@ -1459,7 +1459,7 @@ function SucessoLoadRestaurante(dados) {
 		$("#det-mapa").attr("onclick", "window.open('https://www.google.com.br/maps/place/" + item.endereco + "," + item.bairro + "," + item.cidade + "," + item.estado + "," + item.cep + "','_blank','location=yes','CloseButtonCaption=Retorna');");
         $('#btn_det_ligar').attr("href", "tel: " + item.telefone);
 		$("#btn_det_leia").attr("onclick", "window.open('http://" + item.site_chezcroque + "','_blank','location=yes','CloseButtonCaption=Retorna');");
-		if(item.site == ""){
+		if(item.site){
 			$("#btn_det_site").attr("onclick", "window.open('http://" + item.site +"','_blank','location=yes','CloseButtonCaption=Retorna');");
         }else{
 			$("#btn_det_site").attr("onclick", "alert('Este restaurante não possui site!')");
