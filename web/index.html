@@ -172,17 +172,6 @@
     <!-- Menu ----------------------------------------------------->
 	<div class="menu">
 		<ul>
-            <!--li><a apple-interchange-newline="" href="#" onclick="javascript:tog<br class=">Informativos</a></li-->
-			<li id="menu-login"><a href="#login" onclick="javascript:toggleMenu();">Login</a></li>
-			<li><a href="#home" onclick="javascript:toggleMenu(); ReloadTV();">home</a></li>
-			<li id="menu-cupomdigital"><a href="#" onclick="javascript:toggleMenu(); LoadCuponsDigitais();">Cupons Digitais</a></li>
-			<li id="menu-cadastro"><a href="#cadastro" onclick="javascript:toggleMenu();">Cadastro</a></li>
-            <li id="menu-altera-dados"><a href="#" onclick="javascript:toggleMenu(); AlterarMeusDados();">Alterar meus dados</a></li>
-            <li id="menu-senha-altera"><a href="#senha-altera" onclick="javascript:toggleMenu();">Altera Senha</a></li>
-            <li id="menu-informativo"><a href="#" onclick="javascript:toggleMenu(); LoadInformativo();">Informativos</a></li>
-            <li id="menu-meus-moteis"><a href="#" onclick="javascript:toggleMenu(); LoadMeusMoteis();">Meus motéis</a></li>
-			<li id="menu-logout" style="display:none"><a href="#" onclick="javascript:toggleMenu(); Logout();">Sair</a></li>
-            <li><a href="#sem-geolocation" onclick="javascript:toggleMenu();">Sem GeoLocation - lnk p/testse</a></li>
 		</ul>
 	</div>
     <!-- Menu - Fim ------------------------------------------------->
@@ -212,7 +201,7 @@
                                  <!--<li class="versao-desktop"><a target="_blank" href="http://www.chezcroque.com.br" style="" ><span></span></a></li>-->
                                  <li class="versao-desktop"><a target="_blank" onclick="window.open('http://www.chezcroque.com.br','_blank','location=yes','CloseButtonCaption=Retorna');" style="" ><span></span></a></li>
 								 
-                                 <li class="topo"><a href="#" onclick="GoTop();" style="" ><span></span>Topo da página</a></li>
+                                 <li class="topo"><a onclick="GoTop();" style="" ><span></span>Topo da página</a></li>
                              </ul>
                             <br /><br />
                         </div>
@@ -245,7 +234,7 @@
                         <div id="go-site">
                             <ul class="individual">
                                  <li class="versao-desktop"><a target="_blank" onclick="window.open('http://www.chezcroque.com.br','_blank','location=yes','CloseButtonCaption=Retorna');"  ><span></span></a></li>
-                                 <li class="topo"><a href="#" onclick="GoTop();" style="" ><span></span>Topo da página</a></li>
+                                 <li class="topo"><a onclick="GoTop();" style="" ><span></span>Topo da página</a></li>
                              </ul>
                             <br /><br />
                         </div>
@@ -266,12 +255,12 @@
                         <li>
                             <input type="password" name="txtSenha" placeholder="Senha" id="txtSenha" />
                         </li>
-                        <li class="f-l"><a href="#esqueci-senha" class="forgotpass">Recuperar Senha</a></li>
+                        <li class="f-l"><a  class="forgotpass">Recuperar Senha</a></li>
                         <li class="f-l"><input type="button" id="btnFazerLogin" value="Continuar"  onclick="Login();" /><span class="seta-blue"></span></li>
                     </ul>
                 </form>
                 <div id="register">
-                    <a href="#cadastro" >Ainda não é cadastrado? <br />
+                    <a>Ainda não é cadastrado? <br />
                     <span>Cadastre-se grátis!</span></a>
 
                 </div>
@@ -360,7 +349,7 @@
 						<img src="../imagens/banner_home.png" class="banner_rest">
 				</div></div>
                 <section id="tv-categoria"><div id="img_rest">
-				<a href="#detalhes">
+				<a>
 				<img class="det-imagem-rest" src="" alt="" width="320px" height="116px"/>
 				</a></div></section>
                 <div class="det-topo">
@@ -429,7 +418,7 @@
                 <div id="meus-cupons"></div>
                 <!-- Template accordion -->
                 <div class="accord" style="display:none;">
-                    <span class="cupom"><a href="#">Motel</a></span>
+                    <span class="cupom"><a>Motel</a></span>
                 </div>
                 <div class="cupom-dados" style="display:none;">
                     <div class="cupom-dados-2">
@@ -437,7 +426,7 @@
                         <span class="cupom-titulo" style="color: red; font: bold;"></span><br/><br />
                         <span class="cupom-vaidade"></span><br/>
          		        <span class="cupom-descricao"></span><br/>
-                        <a class="cupom-remover" href="#">Remover</a>
+                        <a class="cupom-remover">Remover</a>
                     </div>
                 </div>
                 <!-- Template accordion - Fim -->
@@ -464,7 +453,7 @@
                         <span class="meus-mts-star-rating"></span>
                         <br/><br />
          		        <span class="meus-mts-descricao"></span><br/>
-                        <a class="meus-mts-remover" href="#">Remover</a>
+                        <a class="meus-mts-remover">Remover</a>
                     </div>
                 </div>
                 <!-- Template accordion - Fim -->
@@ -477,7 +466,7 @@
                 <ul id="pre-result" class="edgetoedge scroll"></ul>
                 <!--Templates - Inicio -->
                 <li class="pre-result-sep" style="display:none"><span class="titulo"></span></li>
-                <li id="pre-result-item" style="display:none"><a href="#"></a></li>
+                <li id="pre-result-item" style="display:none"><a></a></li>
                 <!--Templates - Inicio - Fim -->
                 <div class="rodape"></div>
             </div>
@@ -540,7 +529,7 @@
     <div class="loader"><p>Carregando...</p></div>
 	<div id="bannerFooter">
         <span class="bannerFechar" onclick="FechaModal('bannerFooter');"></span>
-        <a href="#" id="bannerCadastro" onclick="FechaModal('bannerFooter');"></a>
+        <a id="bannerCadastro" onclick="FechaModal('bannerFooter');"></a>
     </div></body>
 </html>
 

@@ -208,7 +208,7 @@ function locSucesso(position, callback) {
         Pagina = Pagina + 1;
         if (Pagina < TotPaginas) {
             $('#hidPagina').val(Pagina);
-            texto = "<li id='moteisperto-next'><a href='#' onclick='LoadMaisMoteiePerto(" + Pagina + ")'>VER MAIS MOTÉIS</a><div class='premium-right'/></div></li>"
+            texto = "<li id='moteisperto-next'><a onclick='LoadMaisMoteiePerto(" + Pagina + ")'>VER MAIS MOTÉIS</a><div class='premium-right'/></div></li>"
             $("#moteis-premium").append(texto);
         }
         else 
@@ -276,7 +276,7 @@ function locSucesso(position, callback) {
         Pagina = Pagina + 1;
         if (Pagina < TotPaginas) {
             $('#hidPagina').val(Pagina);
-            texto = "<li id='moteisperto-next'><a href='#' onclick='LoadMaisMoteiePerto(" + Pagina + ")'>VER MAIS MOTÉIS</a><div class='premium-right'/></div></li>"
+            texto = "<li id='moteisperto-next'><a onclick='LoadMaisMoteiePerto(" + Pagina + ")'>VER MAIS MOTÉIS</a><div class='premium-right'/></div></li>"
             $("#moteis-premium").append(texto);
         }
         else 
@@ -439,11 +439,11 @@ function LoadDetalhesMotel(motel_id) {
             newDesconto.find(".subtitulo").html(desconto.DiscountSubTitle);
             newDesconto.find(".descricao").html(desconto.Description);
 
-            var botao = "<a class='btn-add-cupomdigital' href='#' onclick='AddCupomDigital(" + desconto.DiscountId + ")' >Adicionar Cupom</a>";
+            var botao = "<a class='btn-add-cupomdigital' onclick='AddCupomDigital(" + desconto.DiscountId + ")' >Adicionar Cupom</a>";
             newDesconto.find(".individual li.digital").html(botao);
             
             /*Configurar para imprimir o cupom*/
-            var botaoprint = "<a class='btn-print' href='#' onclick='javascript:window.print(" + desconto.DiscountId + ")' >Imprimir Cupom</a>";
+            var botaoprint = "<a class='btn-print' onclick='javascript:window.print(" + desconto.DiscountId + ")' >Imprimir Cupom</a>";
             newDesconto.find(".individual li.print").html(botaoprint);
 
             $('#det-descontos').append(newDesconto);
@@ -1087,7 +1087,7 @@ function SucessoLoadCuponsDigitais(dados) {
         newCupom.find(".cupom-titulo").html(cupom.DiscountId + " - " + cupom.DiscountTitle);
         newCupom.find(".cupom-vaidade").html(validade);
         newCupom.find(".cupom-descricao").html(cupom.Description);
-        newCupom.find(".cupom-remover").html("<a href='#' onclick='ExcluiCupom(" + cupom.DiscountId + ");'>Exclui</a>");
+        newCupom.find(".cupom-remover").html("<a onclick='ExcluiCupom(" + cupom.DiscountId + ");'>Exclui</a>");
         $(motelCupomId).append(newCupom.html());
     });
 
@@ -1177,11 +1177,11 @@ function SucessoLoadMeusMoteis(dados) {
 
         var newFavorito = $('.meus-mts-dados').clone();
         //newFavorito.find(".meus-mts-titulo").html("<ul class='rounded'><li class='arrow'><a href='#' onclick='LoadDetalhesMotel(" + favorito.MotelId + ");'>" + favorito.MotelName + "</a></li></ul>");
-        newFavorito.find(".meus-mts-titulo").html("<a href='#detalhes' onclick='LoadDetalhesMotel(" + favorito.MotelId + ");' class=''>" + favorito.MotelName + "</a>");
+        newFavorito.find(".meus-mts-titulo").html("<a onclick='LoadDetalhesMotel(" + favorito.MotelId + ");' class=''>" + favorito.MotelName + "</a>");
 
         //var rating = parseInt(favorito.Rating);
         newFavorito.find(".meus-mts-star-rating").html(favorito.Rating + " estrelas");
-        newFavorito.find(".meus-mts-remover").html("<a href='#' onclick='ExcluiMeusMoteis(" + favorito.FavoriteMotelId + ");'>Exclui</a>");
+        newFavorito.find(".meus-mts-remover").html("<a onclick='ExcluiMeusMoteis(" + favorito.FavoriteMotelId + ");'>Exclui</a>");
         $(meuMotelId).append(newFavorito.html());
     });
 
@@ -1268,7 +1268,7 @@ function SucessoBuscaPorNome(dados) {
         newItem.find("a").html(result.Nome + " - " + result.Complemento.trim());
         if (result.Tipo == "0") {
             var texto = "<li id='motel-" + result.Id + "'" + ">";
-            texto = texto + "<a href='#detalhes' onclick='LoadDetalhesMotel(" + result.Id + ")' >";
+            texto = texto + "<a onclick='LoadDetalhesMotel(" + result.Id + ")' >";
             texto = texto + "<div class='premium-left'/>";
             texto = texto + "<img src='" + urlImg + result.Logo + "'/>";
             texto = texto + "</div>";
@@ -1321,7 +1321,7 @@ function SucessoLoadMoteisPorRegiao(dados) {
         //var km = item.Distance.toString();
 
         var texto = "<li id='motel-" + item.categoriaId + "'" + ">";
-        texto = texto + "<a href='#detalhes' onclick='LoadDetalhesMotel(" + item.categoriaId + ")' >";
+        texto = texto + "<a onclick='LoadDetalhesMotel(" + item.categoriaId + ")' >";
         texto = texto + "<div class='premium-left'/>";
         texto = texto + "<img src='" + item.logo + "'/>";
         texto = texto + "</div>";
