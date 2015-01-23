@@ -130,6 +130,16 @@ function locSucesso(position, callback) {
             complete: callback,
             dataType: "json"
         });
+		
+		
+		$.ajax({
+            type: "POST",
+            url: urlDados_nova + "popup.php",
+            data: param,
+            success: SucessoBannerHome,
+            complete: callback,
+            dataType: "json"
+        });
 
     }
 
@@ -161,6 +171,14 @@ function locSucesso(position, callback) {
         });
 
     }
+	
+	
+    function SucessoBannerHome(dados) {
+        $.each(dados, function (i, item) {
+			$("#bannerCadastro").css("background-image","http://www.chezmenu.com.br/upload/popup/"+item.imagem);
+		});
+	}	
+	
 
     function SucessoLoadMoteisPerto(dados) {
 	//alert("SucessoLoadMoteisPerto");
