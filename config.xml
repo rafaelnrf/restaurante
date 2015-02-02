@@ -22,6 +22,19 @@
 <gap:platform name="winphone" />
 <icon src="themes/img/mobile-logo.png" />
 <gap:splash src="splash/ios/splash.png" gap:platform="ios" width="320" height="480" />
+<gap:splash src="splash/ios/splash640x960.png" gap:platform="ios" width="640" height="960" />
+<gap:splash src="splash/ios/splash640x1136.png" gap:platform="ios" width="640" height="1136" />
+<!-- iPhone 6 -->
+<gap:splash src="splash/ios/splash750x1334.png" gap:platform="ios" width="750" height="1334" />
+<gap:splash src="splash/ios/splash1242x2208.png" gap:platform="ios" width="1242" height="2208" />
+<gap:splash src="splash/ios/splash2208x1242.png" gap:platform="ios" width="2208" height="1242" />
+<!-- iPad -->
+<gap:splash src="splash/ios/splash768x1024.png" gap:platform="ios" width="768" height="1024" />
+<gap:splash src="splash/ios/splash1024x768.png" gap:platform="ios" width="1024" height="768" />
+<!-- Retina iPad -->
+<gap:splash src="splash/ios/splash.png1536x2048" gap:platform="ios" width="1536" height="2048" />
+<gap:splash src="splash/ios/splash.png2048x1536" gap:platform="ios" width="2048" height="1536" />
+
 
 <feature name="http://api.phonegap.com/1.0/network" />
 <feature name="http://api.phonegap.com/1.0/geolocation" />
