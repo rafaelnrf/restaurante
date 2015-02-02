@@ -88,7 +88,7 @@
         }); //geo
 
 
-          $('#home').bind(HomeTVLoad);
+          //$('#home').bind(HomeTVLoad);
           //$('#cadastro form').submit(ValidaDadosUsuario);
 
           $('#menu-cadastro').hide();
@@ -117,6 +117,7 @@
 	  
 		  $("#titulo1").html("Categorias");	
 		  $("#home").show();
+		  HomeTVLoad();
 		  $("#rest").hide();
 		  $("#detalhes").hide();	
 	  
@@ -129,6 +130,7 @@
 				$("#home").show();
 				$("#rest").hide();
 				$("#detalhes").hide();
+				HomeTVLoad();
 		  }else{
 				$("#home").hide();
 			    $("#rest").show();
@@ -136,12 +138,7 @@
 		  }	
 	  }
 
-      function ReloadTV() {
-          //$('#slider-3-content').empty();
-          //LoadTVPorIP(function () {
-            //  HomeTVLoad();
-          // }); //TV
-      }
+    
 
 
   </script>
