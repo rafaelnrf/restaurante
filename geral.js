@@ -101,9 +101,9 @@ function locSucesso(position, callback) {
             var logotipo = item.logo;
 			if ( logotipo.indexOf("thumb") == -1)
 			{
-				texto = texto + "<img src='" + urlImg_cat +  item.logo + "'/>";
+				texto = texto + "<img src='" + urlImg_cat +  item.logo + "' width='100%'/>";
 			} else {
-				texto = texto + "<img src='" + urlImg_cat +  item.logo + "'/>";
+				texto = texto + "<img src='" + urlImg_cat +  item.logo + "' width='100%'/>";
 			};
             //texto = texto + "<span class='distancia'>Distância: <strong>" + km.substring(0, 4) + " km</strong></span>";
             
