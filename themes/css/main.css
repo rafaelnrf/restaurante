@@ -1,5 +1,5 @@
 /* Versão portrait pra iphone - largura 320px*/
-@media only screen and (max-width : 470px) {
+@media only screen and (max-width : 374px) {
    #wrapper, body {
         width:320px;
     }
@@ -47,6 +47,485 @@
         height: 45px;
         background-size: 133px 45px;
         margin: 0px 0 0 20px;
+    }
+    #tv-home {
+        border-bottom: 2px solid #000000;
+        height: 116px;
+    }
+    #tv-home > div {
+        height: 116px;
+    }
+    #tv-categoria {
+        border-bottom: 2px solid #000000;
+        height: 116px;
+    }
+    #tv-categoria > div {
+        height: 116px;
+    }
+    figcaption {
+        font-size:12px;
+        /*bottom: 19px*/
+        bottom: 56px;
+    }
+    ul.ui-swipeslide-bullets {
+        margin-top: -20px !important;
+    }
+    .ui-swipeslide-bullets li {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px 0 0 !important;
+        background-size: 11px 11px;
+    }
+    .ui-swipeslide-bullets li.active {
+        background-size: 11px 11px;
+    }
+    #home h2 {
+        background-size: 13px 21px;
+        text-indent: 21px;
+        font-size: 21px;
+        background-position: 13px 11px;
+        border-bottom: 3px solid #FF3F00 ; /*#e64177;*/
+        padding-left: 13px;
+        padding-top: 6px;
+    }
+    #jqt ul#moteis-premium li {
+        height: 93px;
+        background-size: 100% 93px;
+    }
+    #jqt ul#rest-premium li {
+        height: 93px;
+        background-size: 100% 93px;
+    }
+    .premium-left {
+        height: 59px;
+        background-size: 88px 59px;
+        margin-top: 18px;
+    }
+    .premium-left img {
+        width: 50px; /*60px;*/
+        margin: 5px 0 0 12px;
+    }
+    .premium-left .distancia {
+        font-size: 8px;
+        margin: 6px 0 0 14px;
+    }
+    .premium-right {
+        height: 94px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 37px;
+    }
+    .premium-right .nome {
+        margin: 23px 0 0 7px;
+        /*font-size: 15px;*/
+        font-size: 23px;
+    }
+    .premium-right .endereco {
+        margin: 0px 0 0 7px;
+        font-size: 11px;
+    }
+    #go-site {
+        margin-top:22px;
+    }
+    #go-site .versao-desktop {
+        width:148px;
+        margin-right:35px;
+    }
+    #go-site .topo {
+        width:131px;
+    }
+    #go-site .versao-desktop, #go-site .topo, #go-site .versao-desktop a, #go-site .topo a{
+        height:37px;
+        font-size:12px;
+        line-height:37px;
+    }
+    #go-site .versao-desktop a span{
+        width: 94px;
+        height: 30px;
+        background-size:94px 30px;
+        margin: 0 8px 0 25px;
+        top: 2px;
+    }
+    #go-site .topo a span{
+        width: 13px;
+        height: 14px;
+        background-size:13px 14px;
+        margin: 0 6px 0 0px;
+        top: 2px;
+    }
+    .info ul.links li, .info ul.links li a{
+       font-size:12px;
+    }
+    .m-l {
+        margin-left:0;
+    }
+    #jqt ul li input[type="email"], #jqt ul li input[type="password"], #jqt ul li input[type="text"], input[type="date"], #txtCep  {
+        height:32px;
+        margin-bottom:14px;
+        text-indent:9px;
+        font-size:18px;
+    }
+    #login h2, #cadastro h2{
+        font-size:21px;
+        border-bottom:3px solid #e2316b;
+        text-indent:13px;
+        margin:20px 0 20px 0; 
+    }
+    .forgotpass, #btnFazerLogin {
+        width:141px;
+        font-size:12px;
+    }
+    .forgotpass {
+        margin:0 14px 0 13px!important;
+        height:38px;
+        line-height:38px;
+    }
+    #btnFazerLogin {
+        margin:0!important;
+        height:43px;
+        line-height:40px;
+        text-indent: -12px;
+    }
+    .seta-blue {
+        width: 7px;
+        height: 11px;
+        right: 35px;
+        top: 15px;
+        background-size:7px 11px;
+    }
+    #register {
+        margin: 21px 0 13px 0;
+    }
+    #register a{
+      height:65px;
+      padding:22px 0  0 13px;
+      font-size:19px;
+      background-position:95% 35px;
+      background-size:11px 17px;
+    }
+    .bt-call, .bt-descontos, .bt-cortesias {
+        height:38px;
+        line-height:38px;
+        font-size:15px;
+    }
+    .bt-call{
+        width:82px;
+    }
+    .bt-descontos{
+        width:82px;
+    }
+    .bt-cortesias{
+        width:97px;
+    }
+    #det-botoes {
+        margin: 12px 0 19px 0;
+	}
+	#det-imagem {
+        height: 116px;
+		width: 100%;
+	}
+	#det-imagem-rest {
+        height: 116px;
+		width: 100%;
+	}
+    .bt-call, .bt-descontos, .bt-cortesias{
+        margin-left:6px;
+    }
+    .bt-call span, .bt-descontos span, .bt-cortesias span, #det-descontos .seta{
+        height:19px;
+    }
+    .bt-call span{
+        width: 16px;
+        background-position: 0 0;
+        margin: 9px 5px 0 10px;
+    }
+    .bt-cortesias span{
+        width: 18px;
+        background-position: -64px 0;
+		/* top, reight, botton, left */
+        margin: 15px 6px 0 1px;
+    }
+    .bt-descontos span{
+        width: 18px;
+        background-position: -43px 0;
+        margin: 10px 3px 0 15px;
+    }
+    #det-descontos .seta{
+        width: 19px;
+        background-position: -64px 0;
+        top: -7px;
+    }
+    .det-dados {
+        margin: 18px 0 0 13px;
+    }
+    .det-dados h2{
+        font-size:18px;
+    }
+    .det-dados span{
+        font-size:14px;
+    }
+    #det-suites .entry h2{
+        font-size:17px;
+        text-indent:35px;
+    }
+    #descontos h2 {
+        font-size:23px;
+    }
+    #det-suites .entry span {
+        height: 8px;
+        background-size: auto 8px;
+    }
+    #det-suites .entry .infos {
+        margin-left:26px;
+        padding-right: 21px;
+        font-size:11px;
+    }
+    .ui-swipeslide-reel {
+        height:215px;
+    }
+    #det-suites .entry {    
+        padding-bottom:10px;
+    }
+    .donot-print {
+        font-size:7px;
+    }
+    .desc-aviso {
+        font-size:11px;
+    }
+    .oqueeh-cupomdigital, #det-descontos {
+        padding:10px;
+        font-size:9px;
+        margin-top:10px;
+    }
+    .oqueeh-cupomdigital h4 {
+        font-size:14px;
+    }
+    #descontos #conteudo{
+        padding:15px 10px 0 10px;
+    }
+    #det-descontos .desconto {
+        margin-bottom:10px;
+        padding-bottom:10px;
+        font-size:11px; 
+    }
+    #det-descontos .desconto h3{
+        margin:0 0 5px 0;
+        font-size:15px;
+    }
+    #det-descontos .desconto p{
+        margin-bottom:5px;
+    }
+    .btn-add-cupomdigital, .btn-print {
+        width:121px;
+        height:33px;
+        line-height:36px;
+        font-size:11px;
+    }
+    .ou {
+        line-height:36px;
+        font-size:10px;
+        margin:0 3px 0 3px;
+    }
+    .desconto ul {
+        margin-top:10px;
+    }
+    li#moteisperto-next {
+        height:86px !important;
+    }
+    #moteisperto-next a{
+        line-height: 86px;
+        text-indent:15px;
+        font-size:19px;
+    }
+    .scroll.alterardados, #senha-altera .scroll {
+        margin:24px 7px 0 7px;
+    }
+    #cadastro.alterardados > h2, #senha-altera .scroll > h2{
+        font-size:16px;
+        line-height: 26px;
+        margin:10px 0 10px 13px;
+    }
+    #cadastro li label:first-child, #senha-altera label, li.user-nome .user-nome, li.user-email .user-email  {
+        font-size:16px;
+        line-height: 26px;
+        margin:0 0 0 13px;
+    }
+    .option-wrap {
+        margin: 10px 0 10px 13px;
+        height: 35px;
+    }
+    .option-wrap label{
+        font-size:18px;
+        margin-right: 10px;
+    }
+    #cadastro.alterardados input[type="date"] {
+        margin: 0 0 10px 13px;
+        width:148px !important;
+        text-indent: 2px !important;
+    }
+    #cadastro.alterardados input[type="text"]#txtCpf, #cadastro.alterardados input#txtCep {
+        width:148px !important;
+    }
+    #cadastro input.submit, #senha-altera input.submit {
+        font-size:15px;
+        height:37px;
+        width:183px;
+        left:68px;
+        margin:0 0 20px 0;
+    }
+    #cadastro.alterardados .maior{
+        margin:0 0 20px 17px;
+    }
+    #cadastro.alterardados .maior,
+    #cadastro.alterardados .cpf-aviso,
+    #cadastro.alterardados .cep-aviso {
+        font-size:11px;
+    }
+    #cadastro.alterardados .cpf-aviso,
+    #cadastro.alterardados .cep-aviso{
+        margin:0 0 0 5px;
+    }
+
+    #jqt ul li input[type="checkbox"] {
+        margin: 0 0 0 13px;
+        font-size:32px;
+    }
+    #det-mapa {
+        height:49px;
+        margin-top:20px;
+    }
+    .motel-premium, .motel-indicado {
+        width:70px;
+        height:70px;
+    }
+    #cortesia ul{
+        padding-top:10px;
+    }
+    #cortesia-dados ul li{
+        padding:10px 20px 10px 20px;
+    }
+    .cortesia-nome {
+        font-size:17px;
+    }
+    .cortesia-obs {
+        font-size:11px;
+    }
+    .instrucao {
+        font-size:18px;
+        margin:0 13px 22px 13px;
+    }
+    #cadastro.cadastro li > input[type="date"]{
+        width:134px !important;
+        text-indent: 5px;
+    }
+    #cadastro.cadastro #txtCep{
+        width:149px !important;
+        text-indent: 5px;
+    }
+    #cadastro.cadastro .txtData {
+        margin-left: 7px;
+        padding-right: 7px;
+    }
+    #cadastro.cadastro .txtCep {
+        padding-right: 7px;
+    }
+    #cadastro.cadastro .cbxNews label, #cadastro.cadastro .cbxPubli label  {
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    #cadastro.cadastro .cbxNews input, #cadastro.cadastro .cbxPubli input {
+        margin-top: 3px;
+    }
+    #cadastro.cadastro .cbxNews, #cadastro.cadastro .cbxPubli  {
+        margin-bottom:18px;
+    }
+    li.user-email{
+        margin-bottom:20px;
+    }
+    li.user-nome .user-nome, li.user-email .user-email{
+        margin-left:7px !important;
+    }
+ 	.det-imagem {
+        height: 116px;
+		width: 100%;
+	}
+	.det-imagem-rest {
+        height: 116px;
+		width: 100%;
+	}
+
+#bannerFooter > .bannerFechar {
+    position: absolute;
+    z-index: 999;
+    right: -1.4%;
+    top: -13%;
+    background-image: url(../../imagens/mobileBannerFechar.png);
+    background-repeat: no-repeat;
+}
+	#bannerCadastro, #bannerFooter {
+        width: 311px;
+        height: 83px;
+        margin-left: -155px;
+		z-index: 998;
+    }
+
+    #bannerCadastro {
+        background-size: 311px 83px;
+    }
+
+    #bannerFooter > .bannerFechar {
+        width: 33px;
+        height: 40px;
+        background-size: 32px 32px;
+    }
+}
+/* Versão portrait pra iphone - largura 320px*/
+@media only screen and (min-width : 375px) and (max-width : 469px){
+   #wrapper, body {
+        width:320px;
+    }
+    #wrapper {
+        top: -25px;
+    }
+    #jqt .toolbar {
+        height: 60px;
+        background-size: auto 60px;
+    }
+    .toggle{
+        top: 20px;
+        left: 10px;
+    }
+    .menu-bt {
+        width: 10px;
+        height: 20px;
+    }
+    .mobile-logo {
+        width: 48px;
+        height: 45px;
+        top: -4px;
+    }
+    .search {
+        width: 169px;
+        height: 28px;
+        //margin-top: -58px;
+        margin-top: -42px;
+        margin-right: 47px;
+        text-indent:8px;
+    }
+    .bt-search {
+        width: 35px;
+        height: 28px;
+        background-size: 35px 28px;
+        margin: 8px 0 0 4px;
+    }
+    .banner_home {
+        width: 180px;
+        height: 25px;
+        background-size: 180px 25px;
+    }
+    .banner_rest {
+        width: 133px;
+        height: 45px;
+        background-size: 133px 45px;
+        margin: 0px 0 0 50px;
     }
     #tv-home {
         border-bottom: 2px solid #000000;

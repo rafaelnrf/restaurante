@@ -21,6 +21,12 @@
 <gap:platform name="android" />
 <gap:platform name="winphone" />
 <icon src="themes/img/mobile-logo.png" />
+<!-- Android -->
+<gap:splash src="splash.png" />
+<gap:splash src="ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
+<gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+<gap:splash src="hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
+<!-- iPhone 6 -->
 <gap:splash src="splash/ios/splash.png" gap:platform="ios" width="320" height="480" />
 <gap:splash src="splash/ios/splash640x960.png" gap:platform="ios" width="640" height="960" />
 <gap:splash src="splash/ios/splash640x1136.png" gap:platform="ios" width="640" height="1136" />
@@ -34,6 +40,8 @@
 <!-- Retina iPad -->
 <gap:splash src="splash/ios/splash.png1536x2048" gap:platform="ios" width="1536" height="2048" />
 <gap:splash src="splash/ios/splash.png2048x1536" gap:platform="ios" width="2048" height="1536" />
+<!-- winPhone -->
+<gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
 
 
 <feature name="http://api.phonegap.com/1.0/network" />
