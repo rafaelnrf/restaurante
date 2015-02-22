@@ -257,7 +257,7 @@ function testandoclick(){
 }
 
 function HomeTVLoad() {
-    $('#tv-home').swipeSlide({ visibleSlides: 1 });
+    $('#tv-home').swipeSlide({ visibleSlides: 1, autoPlay: true });
 }
 //##############################################################
 
