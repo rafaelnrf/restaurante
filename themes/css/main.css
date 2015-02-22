@@ -1,4 +1,4 @@
-/* Versão portrait pra iphone - largura 320px*/
+/* Versão portrait pra iphone4 - largura 320px*/
 @media only screen and (max-width : 374px) {
    #wrapper, body {
         width:320px;
@@ -89,29 +89,29 @@
         padding-top: 6px;
     }
     #jqt ul#moteis-premium li {
-        height: 93px;
-        background-size: 100% 93px;
+        height: 74px;
+        background-size: 100% 74px;
     }
     #jqt ul#rest-premium li {
-        height: 93px;
-        background-size: 100% 93px;
+        height: 74px;
+        background-size: 100% 74px;
     }
     .premium-left {
-        height: 59px;
-        background-size: 88px 59px;
-        margin-top: 18px;
+        height: 47px;
+        background-size: 88px 47px;
+        margin-top: 14px;
     }
     .premium-left img {
-        width: 50px; /*60px;*/
-        margin: 5px 0 0 12px;
+        width: 40px; /*60px;*/
+        margin: 4px 0 0 20px;
     }
     .premium-left .distancia {
         font-size: 8px;
-        margin: 6px 0 0 14px;
+        margin: 0px 0 0 14px;
     }
     .premium-right {
-        height: 94px;
-        background: url(../img/premium-arrow.png) no-repeat 95% 37px;
+        height: 74px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 25px;
     }
     .premium-right .nome {
         margin: 23px 0 0 7px;
@@ -240,7 +240,7 @@
     .bt-cortesias span{
         width: 18px;
         background-position: -64px 0;
-		/* top, reight, botton, left */
+		/* top, right, botton, left */
         margin: 15px 6px 0 1px;
     }
     .bt-descontos span{
@@ -477,7 +477,7 @@
         background-size: 32px 32px;
     }
 }
-/* Versão portrait pra iphone - largura 320px*/
+/* Versão portrait pra Iphone6 - largura 375px*/
 @media only screen and (min-width : 375px) and (max-width : 413px){
    #wrapper, body {
         width:320px;
@@ -568,29 +568,29 @@
         padding-top: 6px;
     }
     #jqt ul#moteis-premium li {
-        height: 93px;
-        background-size: 100% 93px;
+        height: 74px;
+        background-size: 100% 74px;
     }
     #jqt ul#rest-premium li {
-        height: 93px;
-        background-size: 100% 93px;
+        height: 74px;
+        background-size: 100% 74px;
     }
     .premium-left {
-        height: 59px;
+        height: 47px; /*60px;*/
         background-size: 88px 59px;
-        margin-top: 18px;
+        margin-top: 14px;
     }
     .premium-left img {
-        width: 50px; /*60px;*/
-        margin: 5px 0 0 12px;
+        width: 40px; /*50px;*/
+        margin: 4px 0 0 20px;
     }
     .premium-left .distancia {
         font-size: 8px;
-        margin: 6px 0 0 14px;
+        margin: 0px 0 0 14px;
     }
     .premium-right {
-        height: 94px;
-        background: url(../img/premium-arrow.png) no-repeat 95% 37px;
+        height: 74px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 25px;
     }
     .premium-right .nome {
         margin: 23px 0 0 7px;
@@ -956,7 +956,7 @@
         background-size: 32px 32px;
     }
 }
-/* Versão portrait pra iphone - largura 320px*/
+/* Versão portrait pra Iphone 6 Plus - largura 414px*/
 @media only screen and (min-width : 414px) and (max-width : 470px){
    #wrapper, body {
         width:320px;
@@ -1047,20 +1047,20 @@
         padding-top: 6px;
     }
     #jqt ul#moteis-premium li {
-        height: 93px;
-        background-size: 100% 93px;
+        height: 74px;
+        background-size: 100% 74px;
     }
     #jqt ul#rest-premium li {
-        height: 93px;
-        background-size: 100% 93px;
+        height: 74px;
+        background-size: 100% 74px;
     }
     .premium-left {
-        height: 59px;
+        height: 47px;
         background-size: 88px 59px;
-        margin-top: 18px;
+        margin-top: 14px;
     }
     .premium-left img {
-        width: 50px; /*60px;*/
+        width: 40px; /*60px;*/
         margin: 5px 0 0 12px;
     }
     .premium-left .distancia {
@@ -1068,8 +1068,8 @@
         margin: 6px 0 0 14px;
     }
     .premium-right {
-        height: 94px;
-        background: url(../img/premium-arrow.png) no-repeat 95% 37px;
+        height: 74px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 31px;
     }
     .premium-right .nome {
         margin: 23px 0 0 7px;
@@ -1539,26 +1539,26 @@
         padding-top: 7px;
     }
     #jqt ul#moteis-premium li {
-        height: 140px;
-        background-size: 100% 140px;
+        height: 112px;
+        background-size: 100% 112px;
     }
     .premium-left {
-        height: 87px;
-        background-size: 132px 87px;
+        height: 71px;
+        background-size: 132px 71px;
         margin-top: 28px;
     }
     .premium-left img {
         /*width: 106px;*/
         width: 80px;
-        margin: 6px 0 0 18px;
+        margin: 0px 0 0 14px;
     }
     .premium-left .distancia {
         font-size: 12px;
-        margin: 4px 0 0 18px;
+        margin: 0px 0 0 14px;
     }
     .premium-right {
-        height: 94px;
-        background: url(../img/premium-arrow.png) no-repeat 95% 58px;
+        height: 74px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 46px;
     }
     .premium-right .nome {
         margin: 31px 0 0 7px;
@@ -1982,26 +1982,26 @@
         padding-top: 7px;
     }
     #jqt ul#moteis-premium li {
-        height: 167px;
-        background-size: 100% 167px;
+        height: 133px;
+        background-size: 100% 133px;
     }
     .premium-left {
-        height: 102px;
-        background-size: 156px 102px;
+        height: 82px;
+        background-size: 156px 82px;
         margin-top: 28px;
     }
     .premium-left img {
         /* width: 125px;*/
         width: 106px;
-        margin: 8px 0 0 21px;
+        margin: 0px 0 0 17px;
     }
     .premium-left .distancia {
         font-size: 14px;
-        margin: 4px 0 0 26px;
+        margin: 0px 0 0 21px;
     }
     .premium-right {
-        height: 166px;
-        background: url(../img/premium-arrow.png) no-repeat 95% 69px;
+        height: 164px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 55px;
     }
     .premium-right .nome {
         margin: 31px 0 0 7px;
@@ -2338,7 +2338,7 @@
     }
 }
 
-/* Versão Landscape pra iphone6 - largura 570px*/
+/* Versão Landscape pra iphone6 - largura 750px*/
 @media only screen and (min-width : 750px) and (max-width : 1023px) {
 	.det-imagem {
         /*height: 166px;*/
@@ -2450,16 +2450,16 @@
     }
     .premium-left img {
         /* width: 125px;*/
-        width: 106px;
-        margin: 8px 0 0 21px;
+        width: 100px;
+        margin: 0px 0 0 25px;
     }
     .premium-left .distancia {
         font-size: 14px;
         margin: 4px 0 0 26px;
     }
     .premium-right {
-        height: 166px;
-        background: url(../img/premium-arrow.png) no-repeat 95% 69px;
+        height: 134px;
+        background: url(../img/premium-arrow.png) no-repeat 95% 55px;
     }
     .premium-right .nome {
         margin: 31px 0 0 7px;
