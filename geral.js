@@ -1,9 +1,4 @@
-﻿//var urlDados = "http://www.api.guiademoteis.com.br/";
-//var urlImg = "http://www.chez.com.br/";
-//var urlDados = "http://localhost:2236/";
-//var tipo_chamada = ".asp";
-//var urlDados_nova = "http://www.penabola.com.br/chezmenu1/srv/";
-var tipo_chamada = ".php";
+﻿var tipo_chamada = ".php";
 var urlDados_nova = "http://www.chezmenu.com.br/webservice/";
 var urlWebservice = "http://www.chezmenu.com.br/webservice/"
 var urlImg_nova = "http://www.penabola.com.br/chezmenu1/imagens/";
@@ -143,7 +138,12 @@ function locSucesso(position, callback) {
 		$("#rest-premium").empty();
 		$("h2").empty();
         $.each(dados, function (i, item) {
-            //var km = item.Distance.toString();
+			if (primeiro == 1) {
+				primeiro = 2;
+				$(".det-imagem1").attr("src", urlImg_externa + item.propaganda);
+				$(".det-imagem2").attr("src", urlImg_externa + item.propaganda1);
+				$(".det-imagem3").attr("src", urlImg_externa + item.propaganda2);
+			};
             var km = item.km;
 			var categoria = item.categoria
             var texto = "<li id='rest-" + item.id + "' data-restid='" + item.id + "' onclick='LoadRestaurante(" + item.id + ");'  class='arrow'>";
@@ -240,6 +240,10 @@ function SucessoLoadTVPorIP(dados) {
 
 function testandoclick(){
 	e_categoria = 0;
+}
+
+function CategoriaTVLoad() {
+    //$('#tv-categoria').swipeSlide({ first: 0, visibleSlides: 1, autoPlay: true, bulletNavigation: false, delay: 0, directionalNavigation: false });
 }
 
 function HomeTVLoad() {
