@@ -174,7 +174,7 @@ function locSucesso(position, callback) {
             $("#rest-premium").append(texto);
 			$("h2").empty();
 			$("#titulo2").append("Categoria: " + item.nome_categoria)
-			$(".det-imagem").attr("src", urlImg_externa + item.propaganda);
+			//$(".det-imagem").attr("src", urlImg_externa + item.propaganda);
             $('.loader').hide();
         });
 
