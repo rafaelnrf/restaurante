@@ -90,7 +90,7 @@ function locSucesso(position, callback) {
     }
 
     function SucessoLoadMoteisPerto(dados) {
-        $.each(dados, function (i, item) {
+       $.each(dados, function (i, item) {
             //var km = item.Distance.toString();
             var texto = "<li id='categoria-" + item.categoriaId + "' class='arrow' data-categoriaid='" + item.categoriaId + "'>";
             //texto = texto + "<a href='#detalhes' onclick='LoadDetalhesMotel(" + item.MotelId + ")'>";
@@ -142,37 +142,8 @@ function locSucesso(position, callback) {
     function SucessoRestCategoria(dados) {
 		$("#rest-premium").empty();
 		$("h2").empty();
-		var primeiro = 1;
-		var prop1 = "";
-		var prop2 = "";
-		var prop3 = "";
-		var prop4 = "";
-		var prop5 = "";
         $.each(dados, function (i, item) {
-			if (primeiro == 1) {
-				$("#slider-cat-content").empty();
-				primeiro = 2;
-				$(".det-imagem1").attr("src", urlImg_externa + item.propaganda);
-				$(".det-imagem2").attr("src", urlImg_externa + item.propaganda1);
-				$(".det-imagem3").attr("src", urlImg_externa + item.propaganda2);
-				
-				// prop1 = urlImg_externa + item.propaganda;
-				// prop2 = urlImg_externa + item.propaganda1;
-				// prop3 = urlImg_externa + item.propaganda2;
-				// prop4 = urlImg_externa + item.propaganda;
-				// prop5 = urlImg_externa + item.propaganda;
-				// var texto = "<figure id='prop1'>";
-				// texto = texto + "<img src='" + urlImg_externa + item.propaganda + "'/></figure>";
-				// $("#slider-cat-content").append(texto);
-				// var texto1 = "<figure id='prop2'>";
-				// texto1 = texto1 + "<img src='" + urlImg_externa + item.propaganda1 + "'/></figure>";
-				// $("#slider-cat-content").append(texto1);
-				// var texto2 = "<figure id='prop3'>";
-				// texto2 = texto2 + "<img src='" + urlImg_externa + item.propaganda2 + "'/></figure>";
-				// $("#slider-cat-content").append(texto2);
-				// $("#slider-cat-content").reload;
-				//CategoriaTVLoad();
-			};
+            //var km = item.Distance.toString();
             var km = item.km;
 			var categoria = item.categoria
             var texto = "<li id='rest-" + item.id + "' data-restid='" + item.id + "' onclick='LoadRestaurante(" + item.id + ");'  class='arrow'>";
@@ -202,17 +173,11 @@ function locSucesso(position, callback) {
             texto = texto + "</li>";
             $("#rest-premium").append(texto);
 			$("h2").empty();
-			/*
-			if (item.categoria == 1) { $("h2").append("Categoria: A dois") };
-			if (item.categoria == 2) { $("h2").append("Categoria: Em família")};
-			if (item.categoria == 3) { $("h2").append("Categoria: Com amigos")};
-			if (item.categoria == 4) { $("h2").append("Categoria: Business")};
-			if (item.categoria == 5) { $("h2").append("Categoria: Chefs")};
-			*/
 			$("#titulo2").append("Categoria: " + item.nome_categoria)
-			//$(".det-imagem").attr("src", urlImg_externa + item.propaganda);
+			$(".det-imagem").attr("src", urlImg_externa + item.propaganda);
             $('.loader').hide();
         });
+
 		e_categoria = 1;	
 		$("#home").hide();
 		$("#rest").show();
@@ -230,7 +195,6 @@ function locSucesso(position, callback) {
             $("#moteisperto-next").hide();
     }
 
-
 //TV por IP
 function LoadTVPorIP(callback) {
     var param = {
@@ -238,7 +202,7 @@ function LoadTVPorIP(callback) {
         longitude: $('#hidLongitude').val().replace(".", ","),
         pageNumber: "1"
     };
-	//console.log(urlDados_nova + "destaque" + tipo_chamada);
+	console.log(urlDados_nova + "destaque" + tipo_chamada);
  
     //$('#spiner-tv').show();
     $.ajax({
@@ -264,7 +228,8 @@ function SucessoLoadTVPorIP(dados) {
 		} else {
 			texto = texto + "<img  src='" + urlImg_dest +  item.Imagem + "'/>";
 		};
-        // Tirando o nome do restaurante
+
+        // Titando o nome do restaurante
 		//texto = texto + "<figcaption>" + item.Titulo + "</figcaption>";
         texto = texto + "</a>";
         texto = texto + "</figure>";
@@ -277,17 +242,13 @@ function testandoclick(){
 	e_categoria = 0;
 }
 
-function CategoriaTVLoad() {
-    //$('#tv-categoria').swipeSlide({ first: 0, visibleSlides: 1, autoPlay: true, bulletNavigation: false, delay: 0, directionalNavigation: false });
-}
-
 function HomeTVLoad() {
-    //$('#tv-home').swipeSlide({ first: 0, visibleSlides: 1, autoPlay: true, bulletNavigation: false, delay: 0.3, directionalNavigation: false });
+    $('#tv-home').swipeSlide({ visibleSlides: 1, autoPlay: true });
 }
 //##############################################################
 
 function LoadRestCategoria(categoria_id, callback) {
-     	//console.log(urlDados_nova + "rest_categoria" + tipo_chamada + "?categoria_id="+categoria_id);
+     	console.log(urlDados_nova + "rest_categoria" + tipo_chamada + "?categoria_id="+categoria_id);
          var param = {
             latitude:   $('#hidLatitude').val().replace(".", ","),
             longitude:  $('#hidLongitude').val().replace(".", ","),

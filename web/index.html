@@ -221,23 +221,9 @@
 						<img src="../imagens/banner_home.png" class="banner_rest">
                     </div>
                 </div>
-                <section id="tv-categoria">
-                    <div id="img_rest" class="swiper-slide" style="display:block;">
-                        <a href="#detalhes">
-                            <img class="det-imagem1" width="100%">
-                        </a>
-                    </div>
-                    <div id="img_rest" class="swiper-slide" style="display:none;">
-                        <a href="#detalhes">
-                            <img class="det-imagem2" width="100%">
-                                </a>
-                    </div>
-                    <div id="img_rest" class="swiper-slide" style="display:none;">
-                        <a href="#detalhes">
-                            <img class="det-imagem3"  width="100%"">
-                                </a>
-                    </div>
-                </section>
+                <section id="tv-categoria"><div id="img_rest">
+				<img class="det-imagem" src="">
+				</div></section>
                 <h2 id=titulo2><div id=nome_categoria>Categoria: </div></h2>
                 <ul id="rest-premium" class="rounded"></ul>
                 <div id="rodape">
@@ -537,27 +523,7 @@
             };
         }
 	</script>
-    <!-- Initialize Swiper -->
-    <script>
-        
-        var item_atual = Number($('.swiper-slide').length) -1;
-        //var item_atual = Number($('.yourclass').length) -1;
-        setInterval(function(){
-                    item_atual++;
-                    if(item_atual > 2){ item_atual = 0;}
-                    $(".swiper-slide").each(function(i){
-                          if(i==item_atual){
-                                $(this).show("slow");
-                          }else{
-                                $(this).hide("slow");
-                          }
-                    });
-                   
-        },5000);
-        
-        
-        </script>    
-	<div class="loader"><p>Carregando...</p></div>
+    <div class="loader"><p>Carregando...</p></div>
 	<div id="bannerFooter">
         <span class="bannerFechar" onclick="FechaModal('bannerFooter');"></span>
         <a  id="bannerCadastro" onclick="FechaModal('bannerFooter');"></a>
