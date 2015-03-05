@@ -8,7 +8,6 @@
   <title>Chez Menu</title>
   <link rel="stylesheet" href="../themes/css/apple.css" title="jQTouch">
   <script src="lib/zepto.min.js" type="text/javascript"></script>
-  <script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
   <script src="../swipeslide.js" type="text/javascript"></script>
   <script src="../src/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="../extensions/jqt.themeswitcher.min.js" type="application/x-javascript" charset="utf-8"></script>
@@ -49,14 +48,12 @@
     }
 
   </style>
+  
+
 
   <script type="text/javascript">
 
-	  
-  
-  
       $(document).ready(function () {
-      	
         $('.loader').show();
 		$('.bannerFooter').show();
 		initGeoLocalizacao(function () {
@@ -71,19 +68,11 @@
                     }
                 });
                 $('#moteis-premium li').click(function () {
-					//if(localStorage.JQMGostClick == 0 || localStorage.JQMGostClick == "" || typeof(localStorage.JQMGostClick) === "undefined") {
-						//localStorage.JQMGostClick = 1;
 								var categoria_id = $(this).attr('data-categoriaid');
 								if (categoria_id != undefined) {
 									LoadRestCategoria(categoria_id)
 								}                    	
-						//}
-					//else if(localStorage.JQMGostClick == 1){
-						//localStorage.JQMGostClick = 0;
-						//return false;
-					//}
                 });
-
             }); //TV
         }); //geo
 
@@ -135,6 +124,7 @@
 				$("#home").hide();
 			    $("#rest").show();
 				$("#detalhes").hide();
+				CategoriaTVLoad();
 		  }	
 	  }
 
@@ -221,9 +211,23 @@
 						<img src="../imagens/banner_home.png" class="banner_rest">
                     </div>
                 </div>
-                <section id="tv-categoria"><div id="img_rest">
-				<img class="det-imagem" src="">
-				</div></section>
+                <section id="tv-categoria">
+                    <div id="img_rest" class="swiper-slide" style="display:block;">
+                        <a href="#detalhes">
+                            <img class="det-imagem1" width="100%">
+                        </a>
+                    </div>
+                    <div id="img_rest" class="swiper-slide" style="display:none;">
+                        <a href="#detalhes">
+                            <img class="det-imagem2" width="100%">
+                                </a>
+                    </div>
+                    <div id="img_rest" class="swiper-slide" style="display:none;">
+                        <a href="#detalhes">
+                            <img class="det-imagem3"  width="100%"">
+                                </a>
+                    </div>
+                </section>
                 <h2 id=titulo2><div id=nome_categoria>Categoria: </div></h2>
                 <ul id="rest-premium" class="rounded"></ul>
                 <div id="rodape">
@@ -523,6 +527,27 @@
             };
         }
 	</script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+        
+        var item_atual = Number($('.swiper-slide').length) -1;
+        //var item_atual = Number($('.yourclass').length) -1;
+        setInterval(function(){
+                    item_atual++;
+                    if(item_atual > 2){ item_atual = 0;}
+                    $(".swiper-slide").each(function(i){
+                          if(i==item_atual){
+                                $(this).show("slow");
+                          }else{
+                                $(this).hide("slow");
+                          }
+                    });
+                   
+        },10000);
+        
+        
+        </script>
     <div class="loader"><p>Carregando...</p></div>
 	<div id="bannerFooter">
         <span class="bannerFechar" onclick="FechaModal('bannerFooter');"></span>
