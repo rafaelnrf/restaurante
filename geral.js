@@ -137,6 +137,7 @@ function locSucesso(position, callback) {
     function SucessoRestCategoria(dados) {
 		$("#rest-premium").empty();
 		$("h2").empty();
+		var primeiro = 1;
         $.each(dados, function (i, item) {
 			if (primeiro == 1) {
 				primeiro = 2;
