@@ -282,6 +282,7 @@ function CategoriaTVLoad() {
 }
 
 function HomeTVLoad() {
+<<<<<<< HEAD
     $('#tv-home').swipeSlide({ first: 0, visibleSlides: 1, autoPlay: true, bulletNavigation: false, delay: 0.3, directionalNavigation: false });
 }
 //##############################################################
