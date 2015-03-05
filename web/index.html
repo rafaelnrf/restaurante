@@ -537,7 +537,27 @@
             };
         }
 	</script>
-    <div class="loader"><p>Carregando...</p></div>
+    <!-- Initialize Swiper -->
+    <script>
+        
+        var item_atual = Number($('.swiper-slide').length) -1;
+        //var item_atual = Number($('.yourclass').length) -1;
+        setInterval(function(){
+                    item_atual++;
+                    if(item_atual > 2){ item_atual = 0;}
+                    $(".swiper-slide").each(function(i){
+                          if(i==item_atual){
+                                $(this).show("slow");
+                          }else{
+                                $(this).hide("slow");
+                          }
+                    });
+                   
+        },5000);
+        
+        
+        </script>    
+	<div class="loader"><p>Carregando...</p></div>
 	<div id="bannerFooter">
         <span class="bannerFechar" onclick="FechaModal('bannerFooter');"></span>
         <a  id="bannerCadastro" onclick="FechaModal('bannerFooter');"></a>
