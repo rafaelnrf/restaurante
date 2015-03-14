@@ -141,9 +141,29 @@ function locSucesso(position, callback) {
         $.each(dados, function (i, item) {
 			if (primeiro == 1) {
 				primeiro = 2;
-				$(".det-imagem1").attr("src", urlImg_externa + item.propaganda);
-				$(".det-imagem2").attr("src", urlImg_externa + item.propaganda1);
-				$(".det-imagem3").attr("src", urlImg_externa + item.propaganda2);
+				var htmlslide_cat = "";
+                                var total_slidecat = 0;
+                                var display_cat = "block";
+                                if(item.link1 !=""){
+                                    total_slidecat++;
+                                    htmlslide_cat = "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a href='#detalhes'><img src='"+urlImg_externa + item.propaganda+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    display_cat = "none";
+                                }
+
+                                if(item.link2 !=""){
+                                    total_slidecat++;
+                                    htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a href='#detalhes'><img src='"+urlImg_externa + item.propaganda1+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    display_cat = "none";
+                                }
+
+                                if(item.link3 !=""){
+                                    total_slidecat++;
+                                    htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a href='#detalhes'><img src='"+urlImg_externa + item.propaganda2+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    display_cat = "none";
+                                }
+                                $("#tv-categoria").html(htmlslide_cat);
+                                item_atual = 0;
+                                total_item = total_slidecat -1;
 			};
             var km = item.km;
 			var categoria = item.categoria
