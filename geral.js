@@ -146,19 +146,19 @@ function locSucesso(position, callback) {
                                 var display_cat = "block";
                                 if(item.link1 !=""){
                                     total_slidecat++;
-                                    htmlslide_cat = "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a href='#detalhes'><img src='"+urlImg_externa + item.propaganda+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    htmlslide_cat = "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a onclick=\"window.open('http://" + item.link1 +"','_blank','location=yes','CloseButtonCaption=Retorna');\"><img src='"+urlImg_externa + item.propaganda+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
                                     display_cat = "none";
                                 }
 
                                 if(item.link2 !=""){
                                     total_slidecat++;
-                                    htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a href='#detalhes'><img src='"+urlImg_externa + item.propaganda1+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a onclick=\"window.open('http://" + item.link2 +"','_blank','location=yes','CloseButtonCaption=Retorna');\"><img src='"+urlImg_externa + item.propaganda1+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
                                     display_cat = "none";
                                 }
 
                                 if(item.link3 !=""){
                                     total_slidecat++;
-                                    htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a href='#detalhes'><img src='"+urlImg_externa + item.propaganda2+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a onclick=\"window.open('http://" + item.link3 +"','_blank','location=yes','CloseButtonCaption=Retorna');\"><img src='"+urlImg_externa + item.propaganda2+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
                                     display_cat = "none";
                                 }
                                 $("#tv-categoria").html(htmlslide_cat);
