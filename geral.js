@@ -144,21 +144,36 @@ function locSucesso(position, callback) {
 				var htmlslide_cat = "";
                                 var total_slidecat = 0;
                                 var display_cat = "block";
-                                if(item.link1 !=""){
+                                if(item.propaganda !=""){
                                     total_slidecat++;
-                                    htmlslide_cat = "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a onclick=\"window.open('http://" + item.link1 +"','_blank','location=yes','CloseButtonCaption=Retorna');\"><img src='"+urlImg_externa + item.propaganda+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    if(item.link1 !=""){
+                                    	htmlslide_cat = "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a onclick=\"window.open('http://" + item.link1 +"','_blank','location=yes','CloseButtonCaption=Retorna');\"><img src='"+urlImg_externa + item.propaganda+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    }else{
+                                    	htmlslide_cat = "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a ><img src='"+urlImg_externa + item.propaganda+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    }	
+                                    
                                     display_cat = "none";
                                 }
 
-                                if(item.link2 !=""){
+                                if(item.propaganda1 !=""){
                                     total_slidecat++;
-                                    htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a onclick=\"window.open('http://" + item.link2 +"','_blank','location=yes','CloseButtonCaption=Retorna');\"><img src='"+urlImg_externa + item.propaganda1+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    if(item.link2 !=""){
+                                    	htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a onclick=\"window.open('http://" + item.link2 +"','_blank','location=yes','CloseButtonCaption=Retorna');\"><img src='"+urlImg_externa + item.propaganda1+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    }else{
+                                    	htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a><img src='"+urlImg_externa + item.propaganda1+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    }	
+                                    
                                     display_cat = "none";
                                 }
 
-                                if(item.link3 !=""){
+                                if(item.propaganda2 !=""){
                                     total_slidecat++;
-                                    htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a onclick=\"window.open('http://" + item.link3 +"','_blank','location=yes','CloseButtonCaption=Retorna');\"><img src='"+urlImg_externa + item.propaganda2+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    if(item.link3 !=""){
+                                    	htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a onclick=\"window.open('http://" + item.link3 +"','_blank','location=yes','CloseButtonCaption=Retorna');\"><img src='"+urlImg_externa + item.propaganda2+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    }else{
+                                    	htmlslide_cat += "<div id='img_rest' class='swiper-slide' style='display:"+display_cat+";'><a><img src='"+urlImg_externa + item.propaganda2+"' class='det-imagem"+total_slidecat+"' width='100%'></a></div>";
+                                    }	
+                                    
                                     display_cat = "none";
                                 }
                                 $("#tv-categoria").html(htmlslide_cat);
