@@ -4,7 +4,7 @@ var urlWebservice = "http://www.chezmenu.com.br/webservice/"
 var urlImg_nova = "http://www.penabola.com.br/chezmenu1/imagens/";
 var urlImg_externa = "http://www.chezmenu.com.br/upload/categoria/";
 var urlImg_cat = "http://www.chezmenu.com.br/upload/categoria/";
-var urlImg_dest = "http://www.chezmenu.com.br/upload/destaque/";
+var urlImg_dest = "http://www.chezmenu.com.br/upload/restaurante/";
 var urlImg_rest = "http://www.chezmenu.com.br/upload/restaurante/";
 var e_categoria = 0;	
 
@@ -255,14 +255,14 @@ function LoadTVPorIP(callback) {
 function SucessoLoadTVPorIP(dados) {
     $.each(dados, function (i, item) {
         i++;
-        var texto = "<figure id='" + item.Id + "' onclick='LoadRestaurante(" + item.cliente + ")'>";
+        var texto = "<figure id='" + item.id + "' onclick='LoadRestaurante(" + item.id + ")'>";
         texto = texto + "<a href=\"javascript:testandoclick();\"  >";
-        var img_destaque = item.Imagem;
+        var img_destaque = item.img_prato;
 		if (img_destaque.indexOf("thumb") == -1)
 		{
-			texto = texto + "<img  src='" + urlImg_dest +  item.Imagem + "'/>";
+			texto = texto + "<img  src='" + urlImg_dest +  item.img_prato + "'/>";
 		} else {
-			texto = texto + "<img  src='" + urlImg_dest +  item.Imagem + "'/>";
+			texto = texto + "<img  src='" + urlImg_dest +  item.img_prato + "'/>";
 		};
 
         // Titando o nome do restaurante
@@ -283,7 +283,7 @@ function CategoriaTVLoad() {
 }
 
 function HomeTVLoad() {
-    $('#tv-home').swipeSlide({ visibleSlides: 1, autoPlay: true });
+    $('#tv-home').swipeSlide({ visibleSlides: 1, autoPlay: true, delay: 0.6, });
 }
 //##############################################################
 
