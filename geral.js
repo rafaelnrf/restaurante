@@ -238,12 +238,12 @@ function LoadTVPorIP(callback) {
         longitude: $('#hidLongitude').val().replace(".", ","),
         pageNumber: "1"
     };
-	console.log(urlDados_nova + "destaque" + tipo_chamada);
+	//console.log(urlDados_nova + "destaque_novo" + tipo_chamada);
  
     //$('#spiner-tv').show();
     $.ajax({
         type: "POST",
-        url: urlDados_nova + "destaque" + tipo_chamada,
+        url: urlDados_nova + "destaque_novo" + tipo_chamada,
         //url: urlDados + "Motel/GetDestaqueTV/",
         data: param,
         success: SucessoLoadTVPorIP,
