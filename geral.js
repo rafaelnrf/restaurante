@@ -395,6 +395,17 @@ function SucessoLoadRestaurante(dados) {
         $('.det-lugares').html("Lugares: " + item.lugares);
         $('.det-rolha').html("Rolha: " + item.rolha);
         $('.det-cartoes').html("Cartões: " + item.cartoes);
+        if(item.flag_reserva == "SIM"){
+        	$('.det-reserva').html("Reserva: SIM");	
+        }else{
+        	$('.det-reserva').html("Reserva: NÃO");
+        }
+        if(item.flag_desconto != ""){
+        	$('.det-desconto').html("Desconto: " + item.flag_desconto);
+        }
+        if(item.flag_cortesia != ""){
+        	$('.det-cortesia').html("Cortesia: " + item.flag_cortesia);
+        }
         $('.det-informacoes').html("Informações: " + item.informacoes);
         //$('#det-mapa').attr("href", "https://www.google.com.br/maps/place/" + item.endereco + "," + item.bairro + "," + item.cidade + "," + item.estado + "," + item.cep);
         //$('#btn_det_ligar').attr("href", "tel: " + item.telefone);
