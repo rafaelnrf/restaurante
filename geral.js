@@ -396,15 +396,19 @@ function SucessoLoadRestaurante(dados) {
         $('.det-rolha').html("Rolha: " + item.rolha);
         $('.det-cartoes').html("Cartões: " + item.cartoes);
         if(item.flag_reserva == "SIM"){
-        	$('.det-reserva').html("Reserva: SIM");	
+        	$('.det-reserva').html("Reserva: Sim");	
         }else{
-        	$('.det-reserva').html("Reserva: NÃO");
+        	$('.det-reserva').html("Reserva: Não");
         }
         if(item.flag_desconto != ""){
         	$('.det-desconto').html("Desconto: " + item.flag_desconto);
+        }else{
+        	$('.det-desconto').html("");	
         }
         if(item.flag_cortesia != ""){
         	$('.det-cortesia').html("Cortesia: " + item.flag_cortesia);
+        }else{
+        	$('.det-cortesia').html("");	
         }
         $('.det-informacoes').html("Informações: " + item.informacoes);
         //$('#det-mapa').attr("href", "https://www.google.com.br/maps/place/" + item.endereco + "," + item.bairro + "," + item.cidade + "," + item.estado + "," + item.cep);
