@@ -184,7 +184,7 @@
                            <span class="menu-bt"></span>
                             <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
                         </div>
-                        <div clss='totl_categoria' style="width:54%;float:left;text-align: center;font-weight: bold;font-size:10px;line-height:10px;">
+                        <div class='totl_categoria' style="width:54%;float:left;text-align: center;font-weight: bold;font-size:10px;line-height:10px;">
                             <br><span style="color:#FF3F00;font-size:20px;">5</span><br/>Restaurantes exclusivos<br>Clique na categoria escolhida
                         </div>
                         <div style="width:20%;float:left;">
@@ -217,12 +217,16 @@
             <div id="rest">
                 <div class="toolbar">
                     <div class="header">
-                        <span class="menu-bt"></span>
-                        <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
-						<input type="button" class="bt-search" onclick='VoltaHome();'/>
-                        <!--<input type="button" class="bt-search" onclick='#home'/>-->
-						<!--<input type="text" size="20" maxlength="30" class="search" placeholder="Busca Restaurante" />-->
-						<img src="../imagens/banner_home.png" class="banner_rest">
+                    	<div style="width:25%;float:left;">
+                           <span class="menu-bt"></span>
+                            <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
+                        </div>
+                        <div class='totl_categoria' style="width:54%;float:left;text-align: center;font-weight: bold;font-size:10px;line-height:10px;">
+                            <br><span style="color:#FF3F00;font-size:20px;">5</span><br/>Restaurantes exclusivos<br>Clique na categoria escolhida
+                        </div>
+                        <div style="width:20%;float:left;">
+                            <input type="button" class="bt-search" onclick='VoltaHome();'/>
+                        </div>	
                     </div>
                 </div>
                 <section id="tv-categoria">
@@ -349,14 +353,22 @@
             <!------------------------------------------------------->
             <!-- Detalhes ------------------------------------------->
             <div id="detalhes">
-                <div class="toolbar"><div class='header'>
-					    <span class="menu-bt"></span>
-                        <img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
-						<input type="button" class="bt-search" onclick='VoltaCategoria();'/>
-                        <!--<input type="button" class="bt-search" onclick='#home'/>-->
-						<!--<input type="text" size="20" maxlength="30" class="search" placeholder="Busca Restaurante" />-->
-						<img src="../imagens/banner_home.png" class="banner_rest">
-				</div></div>
+                <div class="toolbar">
+                	<div class='header'>
+                		<div style="width:25%;float:left;">
+                           		<span class="menu-bt"></span>
+                            		<img src="../themes/img/mobile-logo.png" class="mobile-logo"/>
+                        	</div>
+                        	<div class='totl_categoria' style="width:54%;float:left;text-align: center;font-weight: bold;font-size:10px;line-height:10px;">
+                            		<br><span style="color:#FF3F00;font-size:20px;">5</span><br/>Restaurantes exclusivos<br>Clique na categoria escolhida
+                        	</div>
+                        	<div style="width:20%;float:left;">
+                            		<input type="button" class="bt-search" onclick='VoltaCategoria();'/>
+                        	</div>	
+                		
+			</div>
+					
+		</div>
                 <section id="tv-categoria"><div id="img_rest">
 				<a>
 				<img class="det-imagem-rest" src="" alt="" width="100%" />
