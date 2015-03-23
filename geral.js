@@ -125,7 +125,7 @@ function locSucesso(position, callback) {
             count_cat++;
         });
 		
-	$(".totl_categoria").html("<br><span style='color:#FF3F00;font-size:20px;'>"+count_cat+"</span><br/>Restaurantes exclusivos<br>Clique na categoria escolhida";);	
+	$(".totl_categoria").html("<br><span style='color:#FF3F00;font-size:20px;'>"+count_cat+"</span><br/>Restaurantes exclusivos<br>Clique na categoria escolhida");	
         //Paginação
         var TotPaginas = parseInt(dados.PagesCount);
         var Pagina     = parseInt($('#hidPagina').val());
