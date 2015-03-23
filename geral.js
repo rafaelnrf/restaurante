@@ -85,6 +85,9 @@ function locSucesso(position, callback) {
     }
 
     function SucessoLoadMoteisPerto(dados) {
+    		
+       var count_cat = 0;	
+    	
        $.each(dados, function (i, item) {
             //var km = item.Distance.toString();
             var texto = "<li id='categoria-" + item.categoriaId + "' class='arrow' data-categoriaid='" + item.categoriaId + "'>";
@@ -119,8 +122,10 @@ function locSucesso(position, callback) {
             //texto = texto + "</li>";
             $("#moteis-premium").append(texto);
             $('.loader').hide();
+            count_cat++;
         });
 		
+	$(".totl_categoria").html("<br><span style='color:#FF3F00;font-size:20px;'>"+count_cat+"</span><br/>Restaurantes exclusivos<br>Clique na categoria escolhida";);	
         //Paginação
         var TotPaginas = parseInt(dados.PagesCount);
         var Pagina     = parseInt($('#hidPagina').val());
